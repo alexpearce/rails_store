@@ -1,0 +1,19 @@
+%p
+  %b Name:
+  = @item.name
+%p
+  %b Price:
+  = @item.price
+%p
+  %b Stock:
+  = @item.stock
+%p
+  %b Description:
+  = @item.description
+%p
+  %b Image:
+  = @item.image
+
+= link_to 'Edit', edit_item_path(@item)
+\|
+= link_to 'Back', items_path
