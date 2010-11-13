@@ -30,9 +30,9 @@ class ItemsController < ApplicationController
     @item = Item.new(params[:item])
     
     if @item.save
-      flash[:notice] = 'Item was successfully created.'
+      flash[:notice] = 'New item successfully created.'
     else
-      flash[:notice] = 'Item was not successfully created.'
+      flash[:notice] = 'New item not successfully created.'
     end
     
     respond_with(@item)
@@ -42,9 +42,9 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
 
     if @item.update_attributes(params[:item])
-      flash[:notice] = 'Item was successfully updated.'
+      flash[:notice] = 'Item successfully updated.'
     else
-      flash[:error] = 'Item was not successfully updated.'
+      flash[:error] = 'Item not successfully updated.'
     end
     
     respond_with(@item)

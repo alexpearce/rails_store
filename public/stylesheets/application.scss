@@ -1,0 +1,342 @@
+//$blue: #accecc;
+$blue: #8da5b7;
+$anchor-colour: #2c3945;
+$fancy-font: "St Ryde";
+$standard-shadow-colour: rgba(0, 0, 0, 0.25);
+
+@mixin standard-shadow($colour) {
+	text-shadow: 0 1px 1px $colour;
+}
+
+@mixin box-shadow($x: 0, $y: 0, $blur: 5px, $colour: $standard-shadow-colour) {
+	-webkit-box-shadow: $x $y $blur $colour;
+	-moz-box-shadow: $x $y $blur $colour;
+	-o-box-shadow: $x $y $blur $colour;
+	box-shadow: $x $y $blur $colour;
+}
+
+@mixin simple-gradient($top-colour, $bottom-colour) {
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0%, $top-colour),
+		color-stop(100%, $bottom-colour)
+	);
+	background: -moz-linear-gradient(
+		center top,
+		$top-colour 0%,
+		$bottom-colour 100%
+	);
+}
+
+@mixin nice-header($header-size: 18px, $header-weight: 600, $shadow-colour: $standard-shadow-colour) {
+	font-family: $fancy-font;
+	font-size: $header-size;
+	font-weight: $header-weight;
+	@include standard-shadow($shadow-colour);
+}
+
+@mixin round($radius: 3px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+html {
+	background-image: url('../images/texture.png');
+	background-color: #f2f2f2;
+	height: 100%;
+}
+
+body {
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	@include box-shadow();
+	background-color: #fff;
+}
+
+header {
+	padding: 0 10px;
+	font-family: $fancy-font;
+	background: $blue;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	color: #fff;
+	@include standard-shadow($standard-shadow-colour);
+	
+	h1 {
+		padding: 20px 0 10px 0;
+		@include nice-header(72px, 500);
+		border-bottom: 1px solid darken($blue, 5%);
+	}
+	
+	nav {
+		ul {
+			margin: 0;
+			border-top: 1px solid lighten($blue, 5%);
+		}
+		li {
+			float: left;
+			
+			a {
+				display: block;
+				padding: 10px;
+				color: #fff;
+				font-family: 'Helvetica Neue';
+				font-size: 16px;
+				font-weight: 400;
+				&:hover {
+					background-color: lighten($blue, 3%);
+					color: #fff;
+				}
+				&:active {
+					/* Shift it down a pixel when clicked */
+					padding: 11px 10px 9px 10px;
+				}
+			}
+			
+			&.search {
+				float: right;
+			}
+			form {
+				margin: 7px 10px 0 0;
+				input[type=text] {
+					width: 130px;
+					padding: 3px 25px 3px 3px;
+					border: 1px solid #d1d1d1;
+					background: #fff url('../images/search.png') no-repeat 138px 2px;
+					font-size: 12px;
+					&:focus {
+						outline: none;
+						@include box-shadow(0, 0, 3px, rgba(0, 0, 0, 0.4));
+					}
+				}
+			}
+		}
+	}
+}
+
+#container {
+	height: 100%;
+	h1 {
+		margin: 0 0 20px 0;
+		font-family: $fancy-font;
+		font-size: 32px;
+		color: #555;
+	}
+}
+
+#sidebar {
+	float: left;
+	width: 200px;
+	padding: 10px 9px 10px 10px;
+	border-right: 1px dashed #e8f0f5; 
+}
+
+#shopping-cart {
+	@include round(2px);
+	border: 1px solid #a3b6c5;
+	
+	h2 {
+		position: relative;
+		z-index: 0;
+		padding: 10px 15px;
+		border-bottom: 1px solid #a3b6c5;
+		color: #2c3945;
+		text-shadow: 0 1px 0 #fff;
+		@include box-shadow(0, 2px, 3px, rgba(193, 208, 219, 0.5));
+		@include simple-gradient(#e3eaf0, #d9e4ea);
+		&:after {
+	    position: absolute;
+	    z-index: -1;
+	    content: '';
+	    top: 0;
+			left: 0;
+	    width: 100%;
+	    height: 1px;
+	    border-top: 1px solid rgba(255, 255, 255, 0.6);
+	  }
+	}
+	
+	ul {
+		margin: 0
+	}
+	li {
+		list-style-type: none;
+		padding: 10px 20px 10px 20px;
+		color: #62778a;
+		border-bottom: 1px solid #e8f0f5;
+		&.total {
+			text-align: right;
+			color: #2c3945;
+		}
+		&:last-child {
+			border-bottom: none;
+		}
+		span {
+			color: #b0bbc4;
+		}
+	}
+}
+
+#main {
+	float: right;
+	width: 720px;
+	padding: 10px;
+	
+	form {
+		margin: 20px 0;
+		
+		& > div {
+			margin: 5px 0;
+		}
+	}
+	#error_explanation {
+		padding: 10px;
+		margin: 10px 20px;
+	}
+	#error_explanation h2 {
+		font-size: 14px;
+	}
+	#error_explanation h2, #error_explanation h3 {
+		margin: 0;
+	}
+	label, input[type=button], input[type=submit], button {
+		cursor: pointer;
+	}
+	label {
+		font-size: 12px;
+		float: left;
+		text-align: right;
+		width: 100px;
+		padding: 8px 10px 0 0;
+	}
+	label.req, .field_with_errors label {
+		font-weight: bold;
+	}
+	.field_with_errors label {
+		color: #f44;
+	}
+	input, textarea {
+		@include round(2px);
+		@include box-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.05));
+		
+		&:hover {
+			border: 1px solid #aaa;
+		}
+		&:focus {
+			border: 1px solid #888;
+		}
+	}
+	input[type=text], input[type=password], textarea {
+		padding: 5px;
+		border: 1px solid #d1d1d1;
+		background: #f9f9f9;
+		font-size: 12px;
+	}
+	input[type=text], input[type=password] {
+		width: 200px;
+	}
+	textarea {
+		width: 430px;
+		height: 180px;
+	}
+	input[type=checkbox], input[type=radio], select {
+		margin: 8px 0;
+	}
+	input[type=submit] {
+		border: 1px solid #d1d1d1;
+		padding: 4px 20px;
+		margin: 5px 0 0 110px;
+		color: #555960;
+		background: #e9e9e9;
+		@include simple-gradient(#ffffff, #eaeaea);
+		@include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.1));
+		text-shadow: 0 1px 1px #fff;
+		&:hover {
+			@include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+		}
+		&:active {
+			background: #d5d5d5;
+			border: 1px solid #888;
+		}
+	}
+	
+	a {
+		color: #5996da;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+#notice, #error, #alert {
+	margin: 0 0 20px 0;
+	padding: 7px 20px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+}
+#notice p, #error p, #alert p {
+	margin: 0;
+}
+#notice {
+	background: #cfc;
+	border: 1px solid #6c6;
+}
+#error, #alert {
+	background-color: #fcc;
+	border: 1px solid #c66;
+}
+
+.button {
+	width: 33px;
+	height: 33px;
+	background-image: url('../images/buttons.png');
+	background-position-y: 0;
+	
+	&.plus {
+		background-position-x: 0;
+	}
+	&.minus {
+		background-position-x: -33px;
+	}
+	&.cross {
+		background-position-x: -66px;
+	}
+	&.search {
+		background-position-x: -99px;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	&:active {
+		background-position-y: -33px;
+	}
+}
+
+table {
+	width: 100%;
+	margin: 10px 0;
+	text-align: center;
+	border: 1px solid #ddd;
+	th {
+		padding: 7px 0;
+		background: #eee;
+		@include simple-gradient(#eee, #e9e9e9);
+		font-weight: bold;
+	}
+	td {
+		padding: 5px 0;
+		border: 1px solid #ddd;
+	}
+	tr {
+		background: #fafafa;
+		&:nth-child(2n+1) {
+			background: #f4f4f4;
+		}
+	}
+}

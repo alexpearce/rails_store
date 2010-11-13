@@ -8,6 +8,11 @@ Given /^I have no items$/ do
   Item.delete_all
 end
 
-Then /^I should have ([1-9]+) items?$/ do |num|
+Then /^I should have (\d+) items?$/ do |num|
   Item.count == num
+end
+
+When /^I confirm the js dialog$/ do
+  page.evaluate_script("window.alert = function(msg) { return true; }")
+  page.evaluate_script("window.confirm = function(msg) { return true; }")
 end

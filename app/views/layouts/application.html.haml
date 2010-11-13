@@ -1,14 +1,60 @@
 !!!
 %html
 	%head
-		%title Store
-		=stylesheet_link_tag :all
+		%title
+			= content_for?(:title) ? yield(:title) + ' :: Generic Store' : 'Generic Store'
+		=stylesheet_link_tag 'reset', 'application'
 		=javascript_include_tag 'jquery', 'rails', 'application'
 		=csrf_meta_tag
 	%body
 
-		- flash.each do |key, msg|
-			%div{:id => key}
-				=msg
+		%header
+			%h1 Generic Store
+			
+			%nav
+				%ul
+					%li
+						%a{:href => '#'}
+							Home
+					%li
+						%a{:href => '#'}
+							Offers
+					%li
+						%a{:href => '#'}
+							DJ Sets
+					%li
+						%a{:href => '#'}
+							About Us
+					%li
+						%a{:href => '#'}
+							Contact
+					%li.search
+						%form
+							%input{:type => :text}
 
-		=yield
+			%div.clearfix
+
+		%div#container
+		
+			%div#sidebar
+				%div#shopping-cart
+					%h2 Shopping Cart
+					%ul
+						%li
+							Item 1
+							%span x2 £5.99
+						%li
+							Item 2
+							%span x1 £9.99
+						%li.total
+							£21.97
+		
+			%div#main
+			
+				- flash.each do |key, msg|
+					%div{:id => key}
+						=msg
+			
+				=yield
+				
+			%div.clearfix

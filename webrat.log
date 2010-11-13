@@ -1,0 +1,185 @@
+# Logfile created on 2010-11-11 19:49:10 +0000 by logger.rb/25413
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/6 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/9 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/12 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"AAA", "stock"=>"AAA", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/13 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/16 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"AAA", "stock"=>"AAA", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/19 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/20 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/23 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35.2", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/24 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/27 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"abc", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/30 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"abc", "stock"=>"3", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/33 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/37 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/38 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/41 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/42 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/45 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/46 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/49 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/53 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/54/edit with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items/54 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "item"=>{"name"=>"T-Shirt", "price"=>"15.99", "stock"=>"50", "description"=>"Funky description for the item.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/54/edit"}
+REQUESTING PAGE: GET http://example.org/items/54 with {} and HTTP headers {"HTTP_REFERER"=>"/items/54"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/57 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/58/edit with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items/58 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "item"=>{"name"=>"T-Shirt", "price"=>"15.99", "stock"=>"50", "description"=>"Funky description for the item.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/58/edit"}
+REQUESTING PAGE: GET http://example.org/items/58 with {} and HTTP headers {"HTTP_REFERER"=>"/items/58"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/61 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/62/edit with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items/62 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "item"=>{"name"=>"T-Shirt", "price"=>"15.99", "stock"=>"50", "description"=>"Funky description for the item.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/62/edit"}
+REQUESTING PAGE: GET http://example.org/items/62 with {} and HTTP headers {"HTTP_REFERER"=>"/items/62"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/65 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/66/edit with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items/66 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "item"=>{"name"=>"T-Shirt", "price"=>"15.99", "stock"=>"50", "description"=>"Funky description for the item.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/66/edit"}
+REQUESTING PAGE: GET http://example.org/items/66 with {} and HTTP headers {"HTTP_REFERER"=>"/items/66"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"T-Shirt", "price"=>"5.99", "stock"=>"35", "description"=>"Some text here.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/69 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"name"=>"", "price"=>"", "stock"=>"", "description"=>"", "image"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/70/edit with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: POST /items/70 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "item"=>{"name"=>"T-Shirt", "price"=>"15.99", "stock"=>"50", "description"=>"Funky description for the item.", "image"=>"image.jpg"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/70/edit"}
+REQUESTING PAGE: GET http://example.org/items/70 with {} and HTTP headers {"HTTP_REFERER"=>"/items/70"}

@@ -22,3 +22,20 @@ Feature: Manage Items
 		Then I should see "New item successfully created."
 		And I should see "T-Shirt"
 		And I should have 1 item
+		
+	Scenario: Create Invalid Item
+		Given I have no items
+		And I am on the list of items
+		When I follow "New Item"
+		And I press "Save"
+		Then I should see "New item not successfully created."
+		And I should see "Create new item"
+		
+	Scenario: Edit Item
+		Given I have items called New Album
+		And I am on the list of items
+		When I follow "Edit"
+		And I fill in "Name" with "T-Shirt"
+		And I press "Save"
+		Then I should see "Item successfully updated."
+		And I should see "T-Shirt"
