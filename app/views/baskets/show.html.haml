@@ -1,3 +1,46 @@
-- for li in @basket.line_items
-	%p
-		=li.item.image
+=title 'Basket'
+
+%p
+	This your shopping basket. Every time you had an item, it will appear here. If you add the same item
+	more than once, it's quantity will increase.
+%p
+	The total displayed is the final amount you will pay.
+
+%table
+	%tr
+		%th
+			Item
+		%th
+			Price
+		%th
+			Quantity
+		%th
+			Sub-Total
+	-for li in @basket.line_items
+		%tr
+			%td
+				=li.item.name
+			%td
+				=ntc li.item.price
+			%td
+				=li.quantity
+			%td
+				=ntc li.quantity * li.item.price
+	%tr
+		%td{:colspan => 2}
+		%td.b
+			Sub-Total
+		%td
+			=ntc @basket.total
+	%tr
+		%td{:colspan => 2}
+		%td.b
+			Postage
+		%td
+			=ntc 0
+	%tr
+		%td{:colspan => 2}
+		%td.b
+			Total
+		%td
+			=ntc @basket.total

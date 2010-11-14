@@ -1,7 +1,8 @@
 = title @item.name
 
 %div.item
-	%img{:src => @item.image_path, :class => 'fancy-border'}
+	%a{:href => @item.image.url}
+		%img{:src => @item.image.url(:thumb), :class => 'fancy-border'}
 	:markdown
 		#{@item.description}
 		

@@ -1,8 +1,8 @@
-//$blue: #accecc;
-$blue: #8da5b7;
+//$blue: #8da5b7;
+$blue: #ff6759;
 $border-image: "../images/border-image-blue.png";
 $anchor-colour: #2c3945;
-$fancy-font: "St Ryde";
+$fancy-font: "FSAlbert";
 $standard-shadow-colour: rgba(0, 0, 0, 0.25);
 
 @mixin standard-shadow($colour) {
@@ -160,7 +160,11 @@ header {
 	float: right;
 	width: 200px;
 	padding: 10px 9px 10px 10px;
-	border-left: 1px dashed #e8f0f5; 
+	border-left: 1px dashed #e8f0f5;
+	
+	p {
+		margin: 0 0 10px 0;
+	}
 }
 
 #shopping-basket {
@@ -186,6 +190,12 @@ header {
 	    height: 1px;
 	    border-top: 1px solid rgba(255, 255, 255, 0.6);
 	  }
+		a {
+			color: #2c3945;
+			&:hover {
+				color: #1e272f;
+			}
+		}
 	}
 	
 	ul {
@@ -202,6 +212,11 @@ header {
 		}
 		&:last-child {
 			border-bottom: none;
+		}
+		img {
+			float: right;
+			padding: 1px;
+			border: 1px solid #bdcfdd;
 		}
 		a {
 			color: #62778a;
@@ -229,6 +244,10 @@ header {
 	width: 720px;
 	padding: 10px;
 	
+	p {
+		margin: 0 0 15px 0;
+	}
+	
 	.fancy-border {
 		@include border-img($border-image, 6, 7, 7, 6)
 	}
@@ -249,7 +268,6 @@ header {
 			margin: 5px;
 		}
 		p {
-			margin: 0 0 15px 0;
 			&.price {
 				margin: 0 5px 0 0;
 				text-align: right;
@@ -307,6 +325,9 @@ header {
 		&:focus {
 			border: 1px solid #888;
 		}
+	}
+	input[type=file]:hover {
+		border: none;
 	}
 	input[type=text], input[type=password], textarea {
 		padding: 5px;
@@ -380,21 +401,32 @@ table {
 	width: 100%;
 	margin: 10px 0;
 	text-align: center;
-	border: 1px solid #ddd;
+	border: 1px solid #a3b6c5;
 	th {
 		padding: 7px 0;
 		background: #eee;
-		@include simple-gradient(#eee, #e9e9e9);
+		border-bottom: 1px solid #a3b6c5;
+		color: #2c3945;
 		font-weight: bold;
+		text-shadow: 0 1px 0 #fff;
+		@include simple-gradient(#e3eaf0, #d9e4ea);
 	}
 	td {
 		padding: 5px 0;
-		border: 1px solid #ddd;
+		&.b {
+			font-weight: bold;
+		}
 	}
 	tr {
 		background: #fafafa;
+		border-bottom: 1px solid #e8f0f5;
+		border-left: 1px solid #a3b6c5;
+		border-right: 1px solid #a3b6c5;
 		&:nth-child(2n+1) {
 			background: #f4f4f4;
+		}
+		&:last-child {
+			border-bottom: 1px solid #a3b6c5;
 		}
 	}
 }

@@ -9,7 +9,9 @@ class Item < ActiveRecord::Base
   validates_numericality_of :stock, :integer => true
   
   # paperclip
-  has_attached_file :image, :styles => { :thumb => '100x100#'}
+  has_attached_file :image,
+                    :styles => { :thumb => '128x128#', :icon => '16x16#' },
+                    :url => "/:class/:attachment/:id/:basename_:style.:extension"
   
   def image_path
     '/images/' + self.image

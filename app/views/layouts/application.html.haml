@@ -1,6 +1,8 @@
 !!!
 %html
 	%head
+		%meta{:charset => 'utf-8'}
+	
 		%title
 			= content_for?(:title) ? yield(:title) + ' :: Generic Store' : 'Generic Store'
 		=stylesheet_link_tag 'reset', 'application'
@@ -36,8 +38,7 @@
 
 		%div#container
 		
-			%div#sidebar
-				=render('layouts/basket')
+			=render('layouts/sidebar')
 		
 			%div#main
 			

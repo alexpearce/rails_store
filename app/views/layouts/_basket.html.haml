@@ -12,6 +12,7 @@
 					%span
 						x#{li.quantity}
 						=ntc li.item.price
+					%img{:src => li.item.image.url(:icon)}
 			%li.total
 				Total:
 				=ntc @basket.total
