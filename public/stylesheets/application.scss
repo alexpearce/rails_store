@@ -1,5 +1,6 @@
 //$blue: #accecc;
 $blue: #8da5b7;
+$border-image: "../images/border-image-blue.png";
 $anchor-colour: #2c3945;
 $fancy-font: "St Ryde";
 $standard-shadow-colour: rgba(0, 0, 0, 0.25);
@@ -42,6 +43,14 @@ $standard-shadow-colour: rgba(0, 0, 0, 0.25);
 	-moz-border-radius: $radius;
 	-o-border-radius: $radius;
 	border-radius: $radius;
+}
+
+@mixin border-img($url, $t, $r, $b, $l) {
+	-webkit-border-image: url($url) $t $r $b $l;
+	-moz-border-image: url($url) $t $r $b $l;
+	-o-border-image: url($url) $t $r $b $l;
+	border-image: url($url) $t $r $b $l;
+	border-width: #{$t}px #{$r}px #{$b}px #{$l}px;
 }
 
 html {
@@ -119,7 +128,6 @@ header {
 }
 
 #container {
-	height: 100%;
 	h1 {
 		margin: 0 0 20px 0;
 		font-family: $fancy-font;
@@ -128,14 +136,34 @@ header {
 	}
 }
 
-#sidebar {
-	float: left;
-	width: 200px;
-	padding: 10px 9px 10px 10px;
-	border-right: 1px dashed #e8f0f5; 
+#notice, #error, #alert {
+	margin: 0 0 10px 0;
+	padding: 7px 20px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+}
+#notice p, #error p, #alert p {
+	margin: 0;
+}
+#notice {
+	background: #cfc;
+	border: 1px solid #6c6;
+}
+#error, #alert {
+	background-color: #fcc;
+	border: 1px solid #c66;
 }
 
-#shopping-cart {
+#sidebar {
+	float: right;
+	width: 200px;
+	padding: 10px 9px 10px 10px;
+	border-left: 1px dashed #e8f0f5; 
+}
+
+#shopping-basket {
 	@include round(2px);
 	border: 1px solid #a3b6c5;
 	
@@ -175,16 +203,66 @@ header {
 		&:last-child {
 			border-bottom: none;
 		}
+		a {
+			color: #62778a;
+			&:hover {
+				border-bottom: 1px solid #c7d0d7;
+			}
+		}
 		span {
 			color: #b0bbc4;
 		}
 	}
 }
 
+.ie #main {
+	.item {
+		img {
+			padding: 1px;
+			border: 1px solid #c0c0c0;
+		}
+	}
+}
+
 #main {
-	float: right;
+	float: left;
 	width: 720px;
 	padding: 10px;
+	
+	.fancy-border {
+		@include border-img($border-image, 6, 7, 7, 6)
+	}
+	.fancy-border1 {
+		-webkit-border-image: url('../images/image-border.png') 6 7 7 6;
+		-moz-border-image: url('../images/image-border.png') 6 7 7 6;
+		-o-border-image: url('../images/image-border.png') 6 7 7 6;
+		border-image: url('../images/image-border.png') 6 7 7 6;
+		border-width: 6px 7px 7px 6px;
+	}
+	
+	.item {
+		form {
+			margin: 0;
+			text-align: right;
+		}
+		input[type=submit] {
+			margin: 5px;
+		}
+		p {
+			margin: 0 0 15px 0;
+			&.price {
+				margin: 0 5px 0 0;
+				text-align: right;
+				font-weight: bold;
+			}
+		}
+		img {
+			width: 128px;
+			height: 128px;
+			float: left;
+			margin: 0 10px 10px 0;
+		}
+	}
 	
 	form {
 		margin: 20px 0;
@@ -270,26 +348,6 @@ header {
 			text-decoration: underline;
 		}
 	}
-}
-
-#notice, #error, #alert {
-	margin: 0 0 20px 0;
-	padding: 7px 20px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	-o-border-radius: 2px;
-	border-radius: 2px;
-}
-#notice p, #error p, #alert p {
-	margin: 0;
-}
-#notice {
-	background: #cfc;
-	border: 1px solid #6c6;
-}
-#error, #alert {
-	background-color: #fcc;
-	border: 1px solid #c66;
 }
 
 .button {

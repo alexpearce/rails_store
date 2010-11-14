@@ -3,4 +3,8 @@ module ApplicationHelper
     content_for(:title) { title }
     content_tag(:h1, title)
   end
+  
+  def ntc(num)
+    number_to_currency(num, :unit => '&pound;')
+  end
 end

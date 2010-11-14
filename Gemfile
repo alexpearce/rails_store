@@ -10,11 +10,12 @@ gem 'mysql2'
 gem 'haml'
 # Haml generators
 gem 'haml-rails'
+# markdown
+gem 'rdiscount'
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.0.1'
   gem 'cucumber-rails'
-  # http://groups.google.com/group/webrat/browse_thread/thread/fb5ff3fccd97f3df
   gem 'webrat'
   gem 'factory_girl_rails'
   gem 'autotest'

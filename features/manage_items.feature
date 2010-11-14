@@ -9,6 +9,12 @@ Feature: Manage Items
 		Then I should see "New Album"
 		And I should see "T-Shirt"
 		
+	Scenario: Show Item
+		Given I have items called New Album
+		And I am on the list of items
+		When I follow "Show"
+		Then I should see "New Album"
+		
 	Scenario: Create Valid Item
 		Given I have no items
 		And I am on the list of items

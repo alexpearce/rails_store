@@ -75,9 +75,6 @@ header nav li form input[type=text]:focus {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
-#container {
-  height: 100%;
-}
 #container h1 {
   margin: 0 0 20px 0;
   font-family: "St Ryde";
@@ -85,21 +82,44 @@ header nav li form input[type=text]:focus {
   color: #555;
 }
 
-#sidebar {
-  float: left;
-  width: 200px;
-  padding: 10px 9px 10px 10px;
-  border-right: 1px dashed #e8f0f5;
+#notice, #error, #alert {
+  margin: 0 0 10px 0;
+  padding: 7px 20px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
 }
 
-#shopping-cart {
+#notice p, #error p, #alert p {
+  margin: 0;
+}
+
+#notice {
+  background: #cfc;
+  border: 1px solid #6c6;
+}
+
+#error, #alert {
+  background-color: #fcc;
+  border: 1px solid #c66;
+}
+
+#sidebar {
+  float: right;
+  width: 200px;
+  padding: 10px 9px 10px 10px;
+  border-left: 1px dashed #e8f0f5;
+}
+
+#shopping-basket {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
   border: 1px solid #a3b6c5;
 }
-#shopping-cart h2 {
+#shopping-basket h2 {
   position: relative;
   z-index: 0;
   padding: 10px 15px;
@@ -113,7 +133,7 @@ header nav li form input[type=text]:focus {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e3eaf0), color-stop(100%, #d9e4ea));
   background: -moz-linear-gradient(center top, #e3eaf0 0%, #d9e4ea 100%);
 }
-#shopping-cart h2:after {
+#shopping-basket h2:after {
   position: absolute;
   z-index: -1;
   content: '';
@@ -123,30 +143,76 @@ header nav li form input[type=text]:focus {
   height: 1px;
   border-top: 1px solid rgba(255, 255, 255, 0.6);
 }
-#shopping-cart ul {
+#shopping-basket ul {
   margin: 0;
 }
-#shopping-cart li {
+#shopping-basket li {
   list-style-type: none;
   padding: 10px 20px 10px 20px;
   color: #62778a;
   border-bottom: 1px solid #e8f0f5;
 }
-#shopping-cart li.total {
+#shopping-basket li.total {
   text-align: right;
   color: #2c3945;
 }
-#shopping-cart li:last-child {
+#shopping-basket li:last-child {
   border-bottom: none;
 }
-#shopping-cart li span {
+#shopping-basket li a {
+  color: #62778a;
+}
+#shopping-basket li a:hover {
+  border-bottom: 1px solid #c7d0d7;
+}
+#shopping-basket li span {
   color: #b0bbc4;
 }
 
+.ie #main .item img {
+  padding: 1px;
+  border: 1px solid #c0c0c0;
+}
+
 #main {
-  float: right;
+  float: left;
   width: 720px;
   padding: 10px;
+}
+#main .fancy-border {
+  -webkit-border-image: url("../images/border-image-blue.png") 6 7 7 6;
+  -moz-border-image: url("../images/border-image-blue.png") 6 7 7 6;
+  -o-border-image: url("../images/border-image-blue.png") 6 7 7 6;
+  border-image: url("../images/border-image-blue.png") 6 7 7 6;
+  border-width: 6px 7px 7px 6px;
+}
+#main .fancy-border1 {
+  -webkit-border-image: url("../images/image-border.png") 6 7 7 6;
+  -moz-border-image: url("../images/image-border.png") 6 7 7 6;
+  -o-border-image: url("../images/image-border.png") 6 7 7 6;
+  border-image: url("../images/image-border.png") 6 7 7 6;
+  border-width: 6px 7px 7px 6px;
+}
+#main .item form {
+  margin: 0;
+  text-align: right;
+}
+#main .item input[type=submit] {
+  margin: 5px;
+}
+#main .item p {
+  margin: 0 0 15px 0;
+}
+#main .item p.price {
+  margin: 0 5px 0 0;
+  text-align: right;
+  font-weight: bold;
+}
+#main .item img {
+  width: 128px;
+  height: 128px;
+  float: left;
+  margin: 0 10px 10px 0;
 }
 #main form {
   margin: 20px 0;
@@ -241,29 +307,6 @@ header nav li form input[type=text]:focus {
 }
 #main a:hover {
   text-decoration: underline;
-}
-
-#notice, #error, #alert {
-  margin: 0 0 20px 0;
-  padding: 7px 20px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-}
-
-#notice p, #error p, #alert p {
-  margin: 0;
-}
-
-#notice {
-  background: #cfc;
-  border: 1px solid #6c6;
-}
-
-#error, #alert {
-  background-color: #fcc;
-  border: 1px solid #c66;
 }
 
 .button {

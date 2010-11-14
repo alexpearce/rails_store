@@ -1,21 +1,14 @@
 = title @item.name
 
-%p
-  %b Name:
-  = @item.name
-%p
-  %b Price:
-  = @item.price
-%p
-  %b Stock:
-  = @item.stock
-%p
-  %b Description:
-  = @item.description
-%p
-  %b Image:
-  = @item.image
+%div.item
+	%img{:src => @item.image_path, :class => 'fancy-border'}
+	:markdown
+		#{@item.description}
+		
+	%p.price
+		=ntc @item.price
+	= button_to 'Add to Basket', line_items_path(:item_id => @item)
+	
+	%div.clearfix
 
-= link_to 'Edit', edit_item_path(@item)
-\|
-= link_to 'Back', items_path
+	= link_to 'Edit', edit_item_path(@item)

@@ -14,7 +14,7 @@
       %td= item.name
       %td= item.price
       %td= item.stock
-      %td= item.description
+      %td= truncate(item.description, :length => 30)
       %td= item.image
       %td= link_to 'Show', item
       %td= link_to 'Edit', edit_item_path(item)

@@ -1,0 +1,16 @@
+%div#shopping-basket
+	%h2 Shopping Basket
+	%ul
+		- if @basket.line_items.count.zero?
+			%li
+				You have no items in your basket.
+		- else
+			- for li in @basket.line_items
+				%li
+					=link_to li.item.name, li.item
+					%span
+						x#{li.quantity}
+						=ntc li.item.price
+			%li.total
+				Total:
+				=ntc @basket.total
