@@ -13,6 +13,9 @@ gem 'haml-rails'
 # markdown
 gem 'rdiscount'
 
+# attachments
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
+
 group :test, :development do
   gem 'rspec-rails', '~> 2.0.1'
   gem 'cucumber-rails'
