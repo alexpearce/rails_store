@@ -1,5 +1,6 @@
 %div#shopping-basket
-	%h2 Shopping Basket
+	%h2
+		=link_to 'Shopping Basket', basket_path(@basket)
 	%ul
 		- if @basket.line_items.count.zero?
 			%li

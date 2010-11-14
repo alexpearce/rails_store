@@ -9,10 +9,14 @@ module NavigationHelpers
     case page_name
 
     when /the home\s?page/
-      '/'
+      root_path
       
     when /the list of items/
       items_path
+      
+    when /the item page for "(.+)"/
+      i = Item.find_by_name($1)
+      item_path(i.id)
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

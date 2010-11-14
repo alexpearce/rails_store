@@ -5,3 +5,11 @@ Factory.define :item do |f|
   f.description 'Funky description for the item.'
   f.image 'image.jpg'
 end
+
+Factory.define :basket do |f|
+end
+
+Factory.define :line_item do |f|
+  f.item_id '1'
+  f.basket_id '1'
+end
