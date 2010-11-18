@@ -6,7 +6,7 @@ html {
 
 body {
   width: 960px;
-  height: 100%;
+  min-height: 100%;
   margin: 0 auto;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
@@ -18,7 +18,7 @@ body {
 header {
   padding: 0 10px;
   font-family: "FSAlbert";
-  background: #ff6759;
+  background: #8da5b7;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   color: #fff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
@@ -29,11 +29,11 @@ header h1 {
   font-size: 72px;
   font-weight: 500;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-  border-bottom: 1px solid #ff5040;
+  border-bottom: 1px solid #7d99ad;
 }
 header nav ul {
   margin: 0;
-  border-top: 1px solid #ff7e72;
+  border-top: 1px solid #9db1c1;
 }
 header nav li {
   float: left;
@@ -47,7 +47,7 @@ header nav li a {
   font-weight: 400;
 }
 header nav li a:hover {
-  background-color: #ff7568;
+  background-color: #96acbd;
   color: #fff;
 }
 header nav li a:active {
@@ -79,7 +79,7 @@ header nav li form input[type=text]:focus {
   margin: 0 0 20px 0;
   font-family: "FSAlbert";
   font-size: 32px;
-  color: #555;
+  color: #8da5b7;
 }
 
 #notice, #error, #alert {
@@ -109,7 +109,6 @@ header nav li form input[type=text]:focus {
   float: right;
   width: 200px;
   padding: 10px 9px 10px 10px;
-  border-left: 1px dashed #e8f0f5;
 }
 #sidebar p {
   margin: 0 0 10px 0;
@@ -192,6 +191,7 @@ header nav li form input[type=text]:focus {
   float: left;
   width: 720px;
   padding: 10px;
+  border-right: 1px dashed #e8f0f5;
 }
 #main p {
   margin: 0 0 15px 0;
@@ -203,12 +203,66 @@ header nav li form input[type=text]:focus {
   border-image: url("../images/border-image-blue.png") 6 7 7 6;
   border-width: 6px 7px 7px 6px;
 }
-#main .fancy-border1 {
-  -webkit-border-image: url("../images/image-border.png") 6 7 7 6;
-  -moz-border-image: url("../images/image-border.png") 6 7 7 6;
-  -o-border-image: url("../images/image-border.png") 6 7 7 6;
-  border-image: url("../images/image-border.png") 6 7 7 6;
-  border-width: 6px 7px 7px 6px;
+#main .less-fancy-border {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.2s;
+}
+#main .less-fancy-border:hover {
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+}
+#main #item_grid {
+  margin: 10px 0;
+}
+#main .grid_item {
+  float: left;
+  height: 151px;
+  width: 350px;
+  padding: 5px;
+  overflow: hidden;
+}
+#main .grid_item > div {
+  float: right;
+  width: 199px;
+  padding: 10px;
+}
+#main .grid_item h3 {
+  margin: 0 0 10px 0;
+  font-family: "FSAlbert";
+  font-size: 18px;
+}
+#main .grid_item h3 a {
+  color: #8da5b7;
+}
+#main .grid_item h3 a:hover {
+  color: #444;
+  text-decoration: none;
+}
+#main .grid_item h3 a:active {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+#main .grid_item p {
+  color: #444;
+}
+#main .grid_item img {
+  float: left;
+  height: 128px;
+  width: 128px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+#main .grid_item:hover img {
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+  -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
 }
 #main .item form {
   margin: 0;
