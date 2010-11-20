@@ -405,13 +405,13 @@ header nav li form input[type=text]:focus {
   background-position-y: -33px;
 }
 
-table {
+#main table {
   width: 100%;
   margin: 10px 0;
   text-align: center;
   border: 1px solid #a3b6c5;
 }
-table th {
+#main table th {
   padding: 7px 0;
   background: #eee;
   border-bottom: 1px solid #a3b6c5;
@@ -421,21 +421,21 @@ table th {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e3eaf0), color-stop(100%, #d9e4ea));
   background: -moz-linear-gradient(center top, #e3eaf0 0%, #d9e4ea 100%);
 }
-table td {
+#main table td {
   padding: 5px 0;
 }
-table td.b {
+#main table td.b {
   font-weight: bold;
 }
-table tr {
+#main table tr {
   background: #fafafa;
   border-bottom: 1px solid #e8f0f5;
   border-left: 1px solid #a3b6c5;
   border-right: 1px solid #a3b6c5;
 }
-table tr:nth-child(2n+1) {
+#main table tr:nth-child(2n+1) {
   background: #f4f4f4;
 }
-table tr:last-child {
+#main table tr:last-child {
   border-bottom: 1px solid #a3b6c5;
 }

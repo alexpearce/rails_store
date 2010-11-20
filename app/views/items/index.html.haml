@@ -5,7 +5,7 @@
 %div#item_grid
 	- @items.each do |item|
 		%div.grid_item
-			%a{:href => item.image.url(:original)}
+			%a{:href => item.image.url(:original), :title => item.name, :rel => 'items_index' }
 				%img{:src => item.image.url(:thumb), :alt => item.name, :class => 'less-fancy-border'}
 			%div
 				%h3=link_to item.name, item
@@ -13,30 +13,6 @@
 					#{truncate item.description, :length => 150}
 			
 	%div.clearfix
-
-
-
-/
-	%table.index
-		%tr
-			%th Name
-			%th Price
-			%th Stock
-			%th Description
-			%th Image
-			%th{:colspan => '3'} Actions
-
-		- @items.each do |item|
-			%tr
-				%td= item.name
-				%td=ntc item.price
-				%td= item.stock
-				%td= truncate(item.description, :length => 30)
-				%td= item.image_file_name
-				%td= link_to 'Show', item
-				%td= link_to 'Edit', edit_item_path(item)
-				%td= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete
-
 
 %p
 	= link_to 'New Item', new_item_path

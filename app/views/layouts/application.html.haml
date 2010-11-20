@@ -4,9 +4,9 @@
 		%meta{:charset => 'utf-8'}
 	
 		%title
-			= content_for?(:title) ? yield(:title) + ' :: Generic Store' : 'Generic Store'
-		=stylesheet_link_tag 'reset', 'application'
-		=javascript_include_tag 'jquery', 'rails', 'application'
+			= content_for?(:title) ? yield(:title) + ' | ' : ''
+			Generic Store
+		=stylesheet_link_tag 'reset', 'jquery.fancybox', 'application'
 		=csrf_meta_tag
 	%body
 
@@ -49,3 +49,5 @@
 				=yield
 				
 			%div.clearfix
+			
+	=javascript_include_tag 'jquery', 'rails', 'jquery.fancybox', 'application'
