@@ -1,4 +1,4 @@
-class AddStockAndPostageToItems < ActiveRecord::Migration
+class AddPostageToItems < ActiveRecord::Migration
   def self.up
     add_column :items, :postage, :float
   end
