@@ -16,6 +16,9 @@ gem 'rdiscount'
 # attachments
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 
+# JSON
+gem 'json'
+
 group :test, :development do
   gem 'rspec-rails', '~> 2.0.1'
   gem 'cucumber-rails'

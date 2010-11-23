@@ -1,0 +1,25 @@
+<%
+
+@basket = @line_item.basket
+
+if @basket.line_items.count == 0
+	flash[:notice] = 'You have no items in your basket.'
+%>
+window.location = '<%= root_url %>';
+<%
+else
+	item_subtotal = 0
+	subtotal = @basket.subtotal
+	postage = @basket.postage
+	total = subtotal + postage
+%>
+{ "item_subtotal" : "<%=ntc item_subtotal %>",
+	"subtotal" : "<%=ntc subtotal %>",
+	"postage" : "<%=ntc postage %>",
+	"total" : "<%=ntc total %>",
+	"action" : "delete",
+	"flash" : {
+		"notice" : "<%= @line_item.item.name %> removed from basket."
+	}
+}
+<% end %>

@@ -5,6 +5,6 @@ module ApplicationHelper
   end
   
   def ntc(num)
-    number_to_currency(num, :unit => '&pound;')
+    number_to_currency(num, :unit => '&pound;').html_safe
   end
 end

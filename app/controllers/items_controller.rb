@@ -52,8 +52,11 @@ class ItemsController < ApplicationController
 
   def destroy
     @item = Item.find(params[:id])
-    @item.destroy
-    flash[:notice] = 'Item successfully destroyed.'
+    if @item.destroy
+      flash[:notice] = 'Item successfully destroyed.'
+    else
+      flash[:alert] = 'Destroy unsuccessful. Item may be referenced by line items.'
+    end
     
     respond_with(@item)
   end

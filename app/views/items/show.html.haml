@@ -13,3 +13,4 @@
 	%div.clearfix
 
 	= link_to 'Edit', edit_item_path(@item)
+	= link_to 'Destroy', item_path(@item), :confirm => "Delete item '#{@item.name}'?", :method => :delete

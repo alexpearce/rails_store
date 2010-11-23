@@ -126,6 +126,7 @@ DEPENDENCIES
   factory_girl_rails
   haml
   haml-rails
+  json
   mysql2
   paperclip!
   rails (= 3.0.1)

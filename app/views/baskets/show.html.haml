@@ -3,7 +3,7 @@
 %p
 	This your shopping basket. Every time you had an item, it will appear here. If you add the same item
 	more than once, it's quantity will increase.
-%p
+%scss
 	The total displayed is the final amount you will pay.
 
 %table
@@ -22,25 +22,29 @@
 				=li.item.name
 			%td
 				=ntc li.item.price
-			%td
-				=li.quantity
-			%td
+			%td.quantity_form
+				=form_for li, :remote => true do |f|
+					.field
+						= f.select :quantity, 0..9
+				%span.quantity
+					=li.quantity
+			%td.item_subtotal
 				=ntc li.quantity * li.item.price
 	%tr
 		%td{:colspan => 2}
 		%td.b
-			Sub-Total
-		%td
-			=ntc @basket.total
+			Subtotal
+		%td#basket_subtotal
+			=ntc @basket.subtotal
 	%tr
 		%td{:colspan => 2}
 		%td.b
 			Postage
-		%td
-			=ntc 0
+		%td#basket_postage
+			=ntc @basket.postage
 	%tr
 		%td{:colspan => 2}
 		%td.b
 			Total
-		%td
-			=ntc @basket.total
+		%td#basket_total
+			=ntc @basket.subtotal + @basket.postage

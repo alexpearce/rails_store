@@ -1,25 +1,28 @@
 = form_for @item, :html => { :multipart => true } do |f|
-  -if @item.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@item.errors.count, "error")} prohibited this item from being saved:"
-      %ul
-        - @item.errors.full_messages.each do |msg|
-          %li= msg
+	-if @item.errors.any?
+		#error_explanation
+			%h2= "#{pluralize(@item.errors.count, "error")} prohibited this item from being saved:"
+		%ul
+			- @item.errors.full_messages.each do |msg|
+				%li= msg
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :price
-    = f.text_field :price
-  .field
-    = f.label :stock
-    = f.text_field :stock
-  .field
-    = f.label :description
-    = f.text_area :description
-  .field
-    = f.label :image
-    = f.file_field :image
-  .actions
-    = f.submit 'Save'
+	.field
+		= f.label :name
+		= f.text_field :name
+	.field
+		= f.label :price
+		= f.text_field :price
+	.field
+		= f.label :stock
+		= f.text_field :stock
+	.field
+		= f.label :postage
+		= f.text_field :postage
+	.field
+		= f.label :description
+		= f.text_area :description
+	.field
+		= f.label :image
+		= f.file_field :image
+	.actions
+		= f.submit 'Save'

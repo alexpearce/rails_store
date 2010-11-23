@@ -1,0 +1,15 @@
+<%
+
+@basket = @line_item.basket
+item_subtotal = @line_item.quantity * @line_item.item.price
+subtotal = @basket.subtotal
+postage = @basket.postage
+total = subtotal + postage
+
+%>
+{ "item_subtotal" : "<%=ntc item_subtotal %>",
+	"subtotal" : "<%=ntc subtotal %>",
+	"postage" : "<%=ntc postage %>",
+	"total" : "<%=ntc total %>",
+	"method" : "update"
+}

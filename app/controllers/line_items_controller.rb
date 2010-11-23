@@ -1,6 +1,6 @@
 class LineItemsController < ApplicationController
   
-  respond_to :html
+  respond_to :html, :js
 
   def index
     @line_items = LineItem.all
@@ -17,6 +17,7 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @line_item }
+      format.js
     end
   end
 
@@ -53,9 +54,11 @@ class LineItemsController < ApplicationController
       if @line_item.update_attributes(params[:line_item])
         format.html { redirect_to(@line_item, :notice => 'Line item was successfully updated.') }
         format.xml  { head :ok }
+        format.js
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @line_item.errors, :status => :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -67,6 +70,7 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(line_items_url) }
       format.xml  { head :ok }
+      format.js
     end
   end
 end
