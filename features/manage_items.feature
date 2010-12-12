@@ -12,8 +12,9 @@ Feature: Manage Items
 	Scenario: Show Item
 		Given I have items called New Album
 		And I am on the list of items
-		When I follow "Show"
+		When I follow "New Album"
 		Then I should see "New Album"
+		And I should see 
 		
 	Scenario: Create Valid Item
 		Given I have no items
@@ -23,7 +24,6 @@ Feature: Manage Items
 		And I fill in "Price" with "5.99"
 		And I fill in "Stock" with "35"
 		And I fill in "Description" with "Some text here."
-		And I fill in "Image" with "image.jpg"
 		And I press "Save"
 		Then I should see "New item successfully created."
 		And I should see "T-Shirt"
@@ -39,7 +39,7 @@ Feature: Manage Items
 		
 	Scenario: Edit Item
 		Given I have items called New Album
-		And I am on the list of items
+		And I am on the item page for "New Album"
 		When I follow "Edit"
 		And I fill in "Name" with "T-Shirt"
 		And I press "Save"

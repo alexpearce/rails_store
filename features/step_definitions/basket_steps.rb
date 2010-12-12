@@ -13,5 +13,5 @@ Then /^I should have (\d+) line items?$/ do |num|
 end
 
 Then /^the basket total should be "([\d.]+)"/ do |num|
-  Basket.first.total == num
+  Basket.first.subtotal == num
 end

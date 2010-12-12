@@ -4,10 +4,10 @@
 
 %div#item_grid
 	- @items.each do |item|
-		%div.grid_item
-			%a{:href => item.image.url(:original), :title => item.name, :rel => 'items_index' }
-				%img{:src => item.image.url(:thumb), :alt => item.name, :class => 'less-fancy-border'}
-			%div
+		%div.grid_item.media
+			%a{:href => item_path(item), :title => item.name, :rel => 'items_index', :class=> 'img' }
+				%img{:src => item.image.url(:thumb), :alt => item.name, :class => 'prettyImage'}
+			%div.bd
 				%h3=link_to item.name, item
 				:markdown
 					#{truncate item.description, :length => 150}

@@ -36,7 +36,7 @@ Feature: Manage Items
 		And I am on the item page for "New Album"
 		And I press "Add to Basket"
 		And I go to the item page for "T-Shirt"
-		And press "Add to Basket"
+		And I press "Add to Basket"
 		And I follow "Shopping Basket"
 		Then I should see "New Album"
 		And I should see "T-Shirt"

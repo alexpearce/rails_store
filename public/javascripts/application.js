@@ -7,7 +7,7 @@ $.fn.animateHighlight = function(highlightColor, duration) {
 
 $(function () {
 	
-	$('a:has(img)').fancybox();
+	$('.media a.img').fancybox();
 
 	var $quantity_forms = $('.quantity_form');
 	

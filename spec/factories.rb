@@ -3,7 +3,7 @@ Factory.define :item do |f|
   f.price '15.99'
   f.stock '50'
   f.description 'Funky description for the item.'
-  f.image 'image.jpg'
+  f.image ' '
 end
 
 Factory.define :basket do |f|

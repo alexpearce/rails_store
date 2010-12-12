@@ -1,16 +1,33 @@
 = title @item.name
 
-%div.item
-	%a{:href => @item.image.url}
-		%img{:src => @item.image.url(:thumb), :class => 'fancy-border'}
-	:markdown
-		#{@item.description}
-		
-	%p.price
-		=ntc @item.price
-	= button_to 'Add to Basket', line_items_path(:item_id => @item)
+/
+	%div.item
+		%a{:href => @item.image.url}
+			%img{:src => @item.image.url(:thumb), :class => 'fancy-border'}
+		:markdown
+			#{@item.description}
 	
-	%div.clearfix
+		%p.price
+			=ntc @item.price
+	
+		= button_to 'Add to Basket', line_items_path(:item_id => @item) if @item.stock > 0
+		= button_to 'Sold Out', line_items_path(:item_id => @item), :disabled => true if @item.stock == 0
 
-	= link_to 'Edit', edit_item_path(@item)
-	= link_to 'Destroy', item_path(@item), :confirm => "Delete item '#{@item.name}'?", :method => :delete
+		%div.clearfix
+
+		= link_to 'Edit', edit_item_path(@item)
+		= link_to 'Destroy', item_path(@item), :confirm => "Delete item '#{@item.name}'?", :method => :delete
+		
+%div.media
+	%div.img
+		%a{:href => @item.image.url, :class => 'imgggg'}
+			%img{:src => @item.image.url(:thumb), :class => 'fancyBorder'}
+		= button_to 'Add to Basket', line_items_path(:item_id => @item) if @item.stock > 0
+	%div.bd
+		:markdown
+			#{@item.description}
+			
+		%p
+			= link_to 'Edit', edit_item_path(@item)
+			|
+			= link_to 'Destroy', item_path(@item), :confirm => "Delete item '#{@item.name}'?", :method => :delete
