@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   respond_to :html
   
   def index
-    @items = Item.all
+    @items = Item.where(:item_id => nil)
     
     respond_with(@items)
   end

@@ -2,7 +2,11 @@ Store::Application.routes.draw do
   
   resources :baskets
   
-  resources :items
+  resources :items do
+    resources :item_options
+  end
+  
+  
   
   resources :line_items
   

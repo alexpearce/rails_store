@@ -103,7 +103,7 @@ header nav li form input[type=text]:focus {
 }
 #container .media .img {
   float: left;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 #container .media .img img {
   display: block;
@@ -324,6 +324,7 @@ form input[type=text], form input[type=password], form textarea {
   border: 1px solid #d1d1d1;
   background: #f9f9f9;
   font-size: 12px;
+  -webkit-transition: all 0.1s;
 }
 form input[type=text]:hover, form input[type=password]:hover, form textarea:hover {
   border: 1px solid #bbb;

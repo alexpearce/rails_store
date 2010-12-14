@@ -25,10 +25,8 @@
 			%td.quantity_form
 				=form_for li, :remote => true do |f|
 					.field
-						= f.select :quantity, 0..9
-				/
-					%span.quantity
-						=li.quantity
+						= f.select :quantity, 0..9 if li.item.stock > 9
+						= f.select :quantity, 0..li.item.stock if li.item.stock < 9
 			%td.item_subtotal
 				=ntc li.quantity * li.item.price
 	%tr

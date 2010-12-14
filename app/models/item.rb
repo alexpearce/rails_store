@@ -1,6 +1,7 @@
 class Item < ActiveRecord::Base
   has_many :line_items
   has_many :options, :class_name => 'Item', :foreign_key => 'item_id'
+  belongs_to :super, :class_name => 'Item'
   
   before_destroy :ensure_not_referenced_by_line_item
   
