@@ -16,6 +16,9 @@ gem 'rdiscount'
 # attachments
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 
+# acts as tree
+gem 'acts_as_tree', :git => 'git://github.com/parasew/acts_as_tree.git'
+
 # JSON
 gem 'json'
 

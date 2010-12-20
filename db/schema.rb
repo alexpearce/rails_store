@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101214153241) do
+ActiveRecord::Schema.define(:version => 20101219152325) do
 
   create_table "baskets", :force => true do |t|
     t.datetime "created_at"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20101214153241) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.float    "postage"
-    t.integer  "item_id"
+    t.integer  "parent_id"
   end
 
   create_table "line_items", :force => true do |t|
