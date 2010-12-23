@@ -1,5 +1,7 @@
 Store::Application.routes.draw do
   
+  devise_for :admins
+
   resources :baskets do
     resources :line_items
   end
