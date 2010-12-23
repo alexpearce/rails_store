@@ -20,19 +20,20 @@
 			
 		%div.media.hilight
 			%div.img
-				= link_to 'Add Option', new_item_path(:parent_id => @item)
-				|
-				= link_to 'Edit', edit_item_path(@item)
-				|
-				= link_to 'Destroy', item_path(@item), :confirm => "Delete item '#{@item.name}'?", :method => :delete
+				- if admin_signed_in?
+					= link_to 'Add Option', new_item_path(:parent_id => @item)
+					|
+					= link_to 'Edit', edit_item_path(@item)
+					|
+					= link_to 'Destroy', item_path(@item), :confirm => "Delete item '#{@item.name}'?", :method => :delete
 			%div.bd.price
-				=ntc @item.price
+				= ntc @item.price
 				
 		= form_for [@basket, @line_item], :html => {:class => 'right'} do |f|
 			.field
 				- if @item.children.empty?
 					= f.hidden_field :item_id
-				-else
+				- else
 					= f.collection_select :item_id, @item.children, :id, :name
 			.actions
 				= f.submit 'Add to Basket' if @item.stock > 0
