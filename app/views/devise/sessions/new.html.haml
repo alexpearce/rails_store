@@ -1,8 +1,8 @@
 = title 'Sign In'
 = form_for resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'admin'} do |f|
   %div.field
-    = f.label :login
-    = f.text_field :login
+    = f.label :username
+    = f.text_field :username
   %div.field
     = f.label :password
     = f.password_field :password

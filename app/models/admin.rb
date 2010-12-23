@@ -1,10 +1,9 @@
 class Admin < ActiveRecord::Base
-  devise :database_authenticatable, :recoverable, :trackable, :timeoutable, :lockable
+  devise :database_authenticatable, :recoverable, :trackable, :timeoutable, :lockable, :validatable
 
   # Virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'
-  attr_accessor :login
-  attr_accessible :email, :password, :password_confirmation, :login
+  attr_accessible :email, :username, :password, :password_confirmation
   
   protected
 

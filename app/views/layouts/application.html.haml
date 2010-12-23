@@ -9,48 +9,60 @@
 		=stylesheet_link_tag 'reset', 'jquery.fancybox', 'application'
 		=csrf_meta_tag
 	%body
+	
+		%div.wrap
 
-		%header
-			%h1 Generic Store
+			%header
+				%h1 Generic Store
 			
-			%nav
-				%ul
-					%li
-						%a{:href => root_path}
-							Home
-					%li
-						%a{:href => '#'}
-							Offers
-					%li
-						%a{:href => '#'}
-							DJ Sets
-					%li
-						%a{:href => '#'}
-							About Us
-					%li
-						%a{:href => '#'}
-							Contact
-					%li
-						%a{:href => new_admin_session_path}
-							Login
-					%li.search
-						%form
-							%input{:type => :text}
+				%nav
+					%ul
+						%li
+							%a{:href => root_path}
+								Home
+						%li
+							%a{:href => '#'}
+								Offers
+						%li
+							%a{:href => '#'}
+								DJ Sets
+						%li
+							%a{:href => '#'}
+								About Us
+						%li
+							%a{:href => '#'}
+								Contact
+						%li
+							%a{:href => new_admin_session_path}
+								Login
+						%li.search
+							%form
+								%input{:type => :text}
 
-			%div.clearfix
+				%div.clearfix
 
-		%div#container
+			%div#container
 		
-			=render('layouts/sidebar')
+				=render('layouts/sidebar')
 		
-			%div#main
+				%div#main
 			
-				- flash.each do |key, msg|
-					%div{:id => key}
-						=msg
+					- flash.each do |key, msg|
+						%div{:id => key}
+							=msg
 			
-				=yield
+					=yield
 				
-			%div.clearfix
+				%div.clearfix
+				%div.push
+		%footer
+			%span
+				Alex Pearce &copy;
+				= Time.now.year
+			%span.right
+				- if admin_signed_in?
+					= link_to 'Logout', destroy_admin_session_path
+				- else
+					= link_to 'Login',  new_admin_session_path
 			
 	=javascript_include_tag 'jquery', 'rails', 'jquery.fancybox', 'jquery.color', 'application'

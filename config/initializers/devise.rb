@@ -9,7 +9,7 @@ Devise.setup do |config|
   # config.mailer = "Devise::Mailer"
   
   # allow logins with username or email
-  config.authentication_keys = [:login]
+  config.authentication_keys = [:username]
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and

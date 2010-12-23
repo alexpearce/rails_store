@@ -6,13 +6,20 @@ html {
 
 body {
   width: 960px;
-  min-height: 100%;
+  height: 100%;
   margin: 0 auto;
+}
+
+.wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 0 -30px 0;
+  background-color: #fff;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-  background-color: #fff;
 }
 
 header {
@@ -97,10 +104,6 @@ header nav li form input[type=text]:focus {
 }
 #main h3 a:active {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-}
-#main .right {
-  text-align: right;
-  float: right;
 }
 #main .imageShadow {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
@@ -269,45 +272,59 @@ header nav li form input[type=text]:focus {
   padding: 10px;
   border-right: 1px dashed #e8f0f5;
 }
-#main p {
+
+p {
   margin: 0 0 15px 0;
 }
-#main a {
+
+a {
   color: #5996da;
 }
-#main a:hover {
+a:hover {
   text-decoration: underline;
 }
-#main .grid .grid_item {
+
+.grid .grid_item {
   float: left;
   padding: 5px;
 }
-#main .grid .fp_item {
+.grid .fp_item {
   height: 151px;
   width: 350px;
 }
-#main .hilight {
+
+.hilight {
   margin: 5px 0;
   padding: 5px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
-#main .price {
+
+.price {
   text-align: right;
   font-weight: bold;
 }
-#main form {
+
+form {
   margin: 20px 0;
 }
-#main #error_explanation {
+
+#error_explanation {
   padding: 10px;
   margin: 10px 20px;
 }
-#main #error_explanation h2 {
+
+#error_explanation h2 {
   font-size: 14px;
 }
-#main #error_explanation h2, #main #error_explanation h3 {
+
+#error_explanation h2, #error_explanation h3 {
   margin: 0;
+}
+
+.right {
+  text-align: right;
+  float: right;
 }
 
 form label, form input[type=button], form input[type=submit], form button {
@@ -495,4 +512,14 @@ form.admin input[type=submit] {
 }
 #main table tr:last-child {
   border-bottom: 1px solid #a3b6c5;
+}
+
+.push {
+  height: 30px;
+}
+
+footer {
+  height: 16px;
+  padding: 6px 10px 7px 10px;
+  border-top: 1px solid #eaeaea;
 }
