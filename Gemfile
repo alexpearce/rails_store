@@ -22,6 +22,9 @@ gem 'acts_as_tree', :git => 'git://github.com/parasew/acts_as_tree.git'
 # JSON
 gem 'json'
 
+# authentication
+gem 'devise'
+
 group :test, :development do
   gem 'rspec-rails', '~> 2.0.1'
   gem 'cucumber-rails'
