@@ -2,18 +2,40 @@
 		
 %div.media
 	%div.img
-		%a{:href => @item.image.url}
-			%img{:src => @item.image.url(:thumb), :class => 'fancyBorder'}
-		= button_to 'Add to Basket', line_items_path(:item_id => @item) if @item.stock > 0
-		= button_to 'Sold Out', line_items_path(:item_id => @item), :disabled => true if @item.stock == 0
+		%a{:href => @item.image.url, :title => @item.name}
+			%img{:src => @item.image.url(:thumb), :class => 'fancyBorder', :alt => @item.name}
+		- unless @item.children.empty?
+			%h2 Options
+			%div.grid
+				- @item.children.each do |c|
+					%div.grid_item
+						%a{:href => c.image.url, :title => c.name, :rel => 'option'}
+							%img{:src => c.image.url(:option), :class => 'thumbShadow', :alt => c.name}
+			%div.clearfix
+					
+
 	%div.bd
 		:markdown
 			#{@item.description}
 			
-		%p.price
-			=ntc @item.price
-			
-		%p
-			= link_to 'Edit', edit_item_path(@item)
-			|
-			= link_to 'Destroy', item_path(@item), :confirm => "Delete item '#{@item.name}'?", :method => :delete
+		%div.media.hilight
+			%div.img
+				= link_to 'Add Option', new_item_path(:parent_id => @item)
+				|
+				= link_to 'Edit', edit_item_path(@item)
+				|
+				= link_to 'Destroy', item_path(@item), :confirm => "Delete item '#{@item.name}'?", :method => :delete
+			%div.bd.price
+				=ntc @item.price
+				
+		= form_for [@basket, @line_item], :html => {:class => 'right'} do |f|
+			.field
+				- if @item.children.empty?
+					= f.hidden_field :item_id
+				-else
+					= f.collection_select :item_id, @item.children, :id, :name
+			.actions
+				= f.submit 'Add to Basket' if @item.stock > 0
+				= f.submit 'Sold Out', :disabled => 'disabled' if @item.stock == 0
+		
+		%div.clearfix

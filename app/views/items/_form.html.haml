@@ -1,10 +1,12 @@
-= form_for @item, :html => { :multipart => true, :class => 'admin' } do |f|
-	-if @item.errors.any?
+= form_for item, :html => { :multipart => true, :class => 'admin' } do |f|
+	-if item.errors.any?
 		#error_explanation
-			%h2= "#{pluralize(@item.errors.count, "error")} prohibited this item from being saved:"
+			%h2= "#{pluralize(item.errors.count, "error")} prohibited this item from being saved:"
 		%ul
-			- @item.errors.full_messages.each do |msg|
+			- item.errors.full_messages.each do |msg|
 				%li= msg
+				
+	= f.hidden_field :parent_id
 	
 	.field
 		= f.label :name

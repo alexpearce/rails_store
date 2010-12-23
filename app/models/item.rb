@@ -5,6 +5,8 @@ class Item < ActiveRecord::Base
   
   before_destroy :ensure_not_referenced_by_line_item
   
+  acts_as_tree
+  
   validates_presence_of :name, :price, :stock, :description, :image
   validates_uniqueness_of :name
   validates_numericality_of :price
@@ -12,11 +14,20 @@ class Item < ActiveRecord::Base
   
   # paperclip
   has_attached_file :image,
-                    :styles => { :thumb => '128x128#', :icon => '16x16#' },
-                    :url => "/:class/:attachment/:id/:basename_:style.:extension"
+                    :styles => { :thumb => '128x128#', :option => '32x32#', :icon => '16x16#' },
+                    :url => "/:class/:attachment/:id/:basename_:style.:extension",
+                    :default_url => "/:class/:attachment/missing_:style.png"
   
   def image_path
     '/images/' + self.image
+  end
+  
+  def parent_with_option
+    if self.parent
+      "#{self.parent.name} (#{self.name})"
+    else
+      self.name
+    end
   end
   
   private

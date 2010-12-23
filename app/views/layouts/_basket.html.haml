@@ -8,11 +8,20 @@
 		- else
 			- for li in @basket.line_items
 				%li
-					=link_to li.item.name, li.item
-					%span
-						x#{li.quantity}
-						=ntc li.item.price
-					%img{:src => li.item.image.url(:icon)}
+					%div.media
+						%div.img.right
+							%a{:href => li.item.image.url, :title => li.item.name, :rel => 'cart-gallery'}
+								%img{:src => li.item.image.url(:icon), :alt => li.item.name}
+						%div.bd
+							- if li.item.parent
+								= link_to li.item.parent.name, li.item
+							- else
+								=link_to li.item.name, li.item
+							%span
+								= "(#{li.item.name})" if li.item.parent
+								%br
+								x#{li.quantity}
+								=ntc li.item.price
 			%li.total
 				Subtotal:
 				=ntc @basket.subtotal

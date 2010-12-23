@@ -2,12 +2,12 @@
 
 %p Browse our, quite frankly, delicious catalog of stuff.
 
-%div#item_grid
+%div.grid
 	- @items.each do |item|
-		%div.grid_item.media
+		%div.grid_item.media.fp_item
 			%a{:href => item_path(item), :title => item.name, :rel => 'items_index', :class=> 'img' }
-				%img{:src => item.image.url(:thumb), :alt => item.name, :class => 'prettyImage'}
-			%div.bd
+				%img{:src => item.image.url(:thumb), :alt => item.name, :class => 'imageShadow'}
+			%div.bd.pad
 				%h3=link_to item.name, item
 				:markdown
 					#{truncate item.description, :length => 150}

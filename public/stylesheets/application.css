@@ -75,40 +75,34 @@ header nav li form input[type=text]:focus {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
-#container h1 {
-  margin: 0 0 20px 0;
+#main h1, #main h2, #main h3 {
   font-family: "FSAlbert";
-  font-size: 32px;
   color: #8da5b7;
 }
-#container h3 {
+#main h1 {
+  margin: 0 0 20px 0;
+  font-size: 32px;
+}
+#main h2 {
+  margin: 10px 0 10px 0;
+  font-size: 24px;
+}
+#main h3 {
   margin: 0 0 10px 0;
-  font-family: "FSAlbert";
   font-size: 18px;
 }
-#container h3 a {
-  color: #8da5b7;
-}
-#container h3 a:hover {
+#main h3 a:hover {
   color: #444;
   text-decoration: none;
 }
-#container h3 a:active {
+#main h3 a:active {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
-#container .media, #container .media .bd {
-  overflow: hidden;
-  _overflow: visible;
-  zoom: 1;
+#main .right {
+  text-align: right;
+  float: right;
 }
-#container .media .img {
-  float: left;
-  margin-right: 20px;
-}
-#container .media .img img {
-  display: block;
-}
-#container .prettyImage {
+#main .imageShadow {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
   -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
@@ -119,18 +113,49 @@ header nav li form input[type=text]:focus {
   border-radius: 2px;
   -webkit-transition: all 0.2s;
 }
-#container .prettyImage:hover {
+#main .imageShadow:hover {
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
   -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
 }
-#container .fancyBorder {
+#main .fancyBorder {
   -webkit-border-image: url("../images/border-image-blue.png") 6 7 7 6;
   -moz-border-image: url("../images/border-image-blue.png") 6 7 7 6;
   -o-border-image: url("../images/border-image-blue.png") 6 7 7 6;
   border-image: url("../images/border-image-blue.png") 6 7 7 6;
   border-width: 6px 7px 7px 6px;
+}
+#main .thumbShadow {
+  margin: 3px;
+  border: 2px solid #ddd;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+#main .thumbShadow:hover {
+  border: 2px solid #ccc;
+}
+
+.media, .media .bd {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+}
+.media .bd.pad {
+  padding: 10px 0 0 0;
+}
+.media .img {
+  float: left;
+  margin-right: 20px;
+}
+.media .img.right {
+  float: right;
+  margin: 0 0 0 5px;
+}
+.media .img img {
+  display: block;
 }
 
 #notice, #error, #alert {
@@ -253,17 +278,21 @@ header nav li form input[type=text]:focus {
 #main a:hover {
   text-decoration: underline;
 }
-#main #item_grid {
-  margin: 10px 0;
-}
-#main .grid_item {
+#main .grid .grid_item {
   float: left;
-  height: 151px;
-  width: 350px;
   padding: 5px;
 }
-#main p.price {
-  margin: 0 5px 0 0;
+#main .grid .fp_item {
+  height: 151px;
+  width: 350px;
+}
+#main .hilight {
+  margin: 5px 0;
+  padding: 5px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+#main .price {
   text-align: right;
   font-weight: bold;
 }

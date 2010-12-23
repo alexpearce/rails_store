@@ -10,19 +10,30 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-
-    respond_with(@item)
+    @line_item = LineItem.new(:item_id => @item.id)
+    redirect_to item_path(@item.parent), :flash => flash if @item.parent
+    respond_with(@item) unless @item.parent
   end
 
   def new
-    @item = Item.new
+    if params[:parent_id]
+      @parent = Item.find(params[:parent_id])
+      @item = @parent.children.new(
+        :price => @parent.price,
+        :stock => @parent.stock,
+        :postage => @parent.postage
+      )
+    else
+      @item = Item.new
+    end
 
     respond_with(@item)
   end
 
   def edit
     @item = Item.find(params[:id])
-    
+    @children = @item.children
+        
     respond_with(@item)
   end
 

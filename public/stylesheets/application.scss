@@ -126,19 +126,24 @@ header {
 	}
 }
 
-#container {
+#main {
+	h1, h2, h3 {
+		font-family: $fancy-font;
+		color: $blue;
+	}
 	h1 {
 		margin: 0 0 20px 0;
-		font-family: $fancy-font;
 		font-size: 32px;
-		color: $blue;
+	}
+	h2 {
+		margin: 10px 0 10px 0;
+		font-size: 24px;
 	}
 	h3 {
 		margin: 0 0 10px 0;
-		font-family: $fancy-font;
 		font-size: 18px;
 		a {
-			color: $blue;
+			//color: $blue;
 			&:hover {
 				color: #444;
 				text-decoration: none;
@@ -148,21 +153,11 @@ header {
 			}
 		}
 	}
-	.media {
-		&, .bd {
-			overflow: hidden;
-			_overflow: visible;
-			zoom: 1;
-		}
-		& .img {
-			float: left;
-			margin-right: 20px;
-			& img {
-				display: block;
-			}
-		}
+	.right {
+		text-align: right;
+		float: right;
 	}
-	.prettyImage {
+	.imageShadow {
 		@include box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.7));
 		@include round(2px);
 		-webkit-transition: all 0.2s;
@@ -172,6 +167,36 @@ header {
 	}
 	.fancyBorder {
 		@include border-img($border-image, 6, 7, 7, 6);
+	}
+	.thumbShadow {
+		margin: 3px;
+		border: 2px solid #ddd;
+		@include round(2px);
+		&:hover {
+			border: 2px solid #ccc;
+		}
+	}
+}
+
+.media {
+	&, .bd {
+		overflow: hidden;
+		_overflow: visible;
+		zoom: 1;
+	}
+	.bd.pad {
+		padding: 10px 0 0 0;
+	}
+	.img {
+		float: left;
+		margin-right: 20px;
+		&.right {
+			float: right;
+			margin: 0 0 0 5px;
+		}
+		img {
+			display: block;
+		}
 	}
 }
 
@@ -292,27 +317,29 @@ header {
 		}
 	}
 	
-	#item_grid {
-		margin: 10px 0;
+	.grid {
+		.grid_item {
+			float: left;
+			padding: 5px;
+		}
+		.fp_item {
+			height: 151px;
+			width: 350px;
+		}
 	}
-	.grid_item {
-		float: left;
-		height: 151px;
-		width: 350px;
+	.hilight {
+		margin: 5px 0;
 		padding: 5px;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
 	}
-	p.price {
-		margin: 0 5px 0 0;
+	.price {
 		text-align: right;
 		font-weight: bold;
 	}
 	
 	form {
 		margin: 20px 0;
-		
-		& > div {
-			
-		}
 	}
 	#error_explanation {
 		padding: 10px;

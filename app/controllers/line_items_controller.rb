@@ -35,10 +35,11 @@ class LineItemsController < ApplicationController
   end
 
   def create
-    item = Item.find(params[:item_id])
-    @line_item = LineItem.where(:basket_id => @basket.id, :item_id => item.id).first
-    @line_item ||= @basket.line_items.build(:item => item)
+    @line_item = @basket.line_items.where(:item_id => params[:line_item][:item_id]).first
+    # if the above doesn't return a line item, create a new one
+    @line_item ||= @basket.line_items.build({:item_id => params[:line_item][:item_id]})
     if @line_item.save
+      # all line items start with zero quantity
       @line_item.increment!(:quantity)
       flash[:notice] = 'Basket updated.'
     else

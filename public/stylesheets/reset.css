@@ -16,7 +16,7 @@ article, aside, figure, footer, header, hgroup, nav, section { display:block; }
 nav ul { list-style:none; }
 blockquote, q { quotes:none; }
 blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
-a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; text-decoration: none; }
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; text-decoration: none; cursor: pointer; }
 ins { background-color:#ff9; color:#000; text-decoration:none; }
 mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
 del { text-decoration: line-through; }

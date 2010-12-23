@@ -7,7 +7,19 @@ $.fn.animateHighlight = function(highlightColor, duration) {
 
 $(function () {
 	
-	$('.media .img a').fancybox();
+	$('.media .img a:has(img)').fancybox();
+	
+	$('data')
+	
+	$('div.button').each(function(idx, el) {
+		$(el).click(function() {
+			var data = $(el).data('target');
+			if (data !== undefined) {
+				var c = ($(el).attr('class') === 'button plus') ? 'button minus' : c = 'button plus';
+				$(el).attr('class', c).siblings(data).slideToggle();
+			}
+		});
+	});
 
 	var $quantity_forms = $('.quantity_form');
 	

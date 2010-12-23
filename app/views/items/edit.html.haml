@@ -1,5 +1,23 @@
-=title "Editing #{@item.name}"
+= title "Editing Option '#{@item.name}'" if @item.parent
+= title "Editing Item '#{@item.name}'" if @item.parent.nil?
 
-= render 'form'
+= render :partial => 'form', :locals => { :item => @item }
 
-= link_to 'Back', @item
+- unless @children.empty?
+	%h2 Options
+	%div.grid
+		- @children.each do |c|
+			%div.grid_item
+				%div.media
+					%div.img
+						%a{:href => c.image.url, :title => c.name, :rel => 'option'}
+							%img{:src => c.image.url(:option), :class => 'thumbShadow', :alt => c.name}
+					%div.bd.pad
+						%p
+							= link_to 'Edit', edit_item_path(c)
+							|
+							= link_to 'Destroy', item_path(c), :confirm => "Delete option '#{c.name}' for item '#{@item.name}'?", :method => :delete
+	%div.clearfix
+	
+%p
+	= link_to "Back to #{@item.parent.name}", edit_item_path(@item.parent) if @item.parent

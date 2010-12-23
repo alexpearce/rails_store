@@ -19,11 +19,11 @@
 	-for li in @basket.line_items
 		%tr
 			%td
-				=li.item.name
+				=li.item.parent_with_option
 			%td
 				=ntc li.item.price
 			%td.quantity_form
-				=form_for li, :remote => true do |f|
+				=form_for [@basket, li], :remote => true do |f|
 					.field
 						= f.select :quantity, 0..9 if li.item.stock > 9
 						= f.select :quantity, 0..li.item.stock if li.item.stock < 9
