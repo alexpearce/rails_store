@@ -18,6 +18,9 @@
 		:markdown
 			#{@item.description}
 			
+		- @item.categories.each do |c|
+			=c.name
+			
 		%div.media.hilight
 			%div.img
 				- if admin_signed_in?

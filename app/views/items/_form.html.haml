@@ -24,6 +24,9 @@
 		= f.label :description
 		= f.text_area :description
 	.field
+		= f.label :category_id
+		= f.collection_select :category_id, Category.all, :id, :name, {:prompt => 'No Category'}
+	.field
 		= f.label :image
 		= f.file_field :image
 	.field

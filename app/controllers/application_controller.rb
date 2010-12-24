@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   private
   
     def find_or_create_basket
-      @basket = Basket.find(session[:basket_id])
+      @basket = Basket.find(session[:basket_id], :include => :line_items)
     rescue ActiveRecord::RecordNotFound
       @basket = Basket.create
       session[:basket_id] = @basket.id

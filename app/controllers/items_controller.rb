@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
+    @item = Item.find(params[:id], :include => :categories)
     @line_item = LineItem.new(:item_id => @item.id)
     redirect_to item_path(@item.parent), :flash => flash if @item.parent
     respond_with @item unless @item.parent
