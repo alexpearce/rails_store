@@ -19,7 +19,9 @@ class Item < ActiveRecord::Base
                     #:default_url => "/:class/:attachment/missing_:style.png",
                     :storage => :s3,
                     :s3_credentials => "#{Rails.root}/config/s3.yml",
-                    :path => "/store/:class/:attachment/:id/:basename_:style.:extension"
+                    :s3_host_alias => 's3.alexpearce.me',
+                    :url => ":s3_alias_url",
+                    :path => "/store/:class/:attachment/:id/:normalized_basename_:style.:extension"
                     
   
   def image_path
