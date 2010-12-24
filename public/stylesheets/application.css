@@ -1,3 +1,8 @@
+/** @group Variables **/
+/** @end Variables **/
+/** @group Mixins **/
+/** @end Mixins **/
+/** @group DOM Root **/
 html {
   background-image: url("../images/texture.png");
   background-color: #f2f2f2;
@@ -23,6 +28,109 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
+/** @end DOM Root
+
+/** @group Copy **/
+p {
+  margin: 0 0 15px 0;
+}
+
+a {
+  color: #5996da;
+}
+
+/** @end Copy **/
+/** @group Image Styles **/
+.imageShadow {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: all 0.2s;
+}
+.imageShadow:hover {
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.fancyBorder {
+  -webkit-border-image: url("../images/border-image-blue.png") 6 7 7 6;
+  -moz-border-image: url("../images/border-image-blue.png") 6 7 7 6;
+  -o-border-image: url("../images/border-image-blue.png") 6 7 7 6;
+  border-image: url("../images/border-image-blue.png") 6 7 7 6;
+  border-width: 6px 7px 7px 6px;
+}
+
+.thumbShadow {
+  margin: 3px;
+  border: 2px solid #ddd;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+.thumbShadow:hover {
+  border: 2px solid #ccc;
+}
+
+/** @end Image Styles **/
+/** @group Grid **/
+.grid .grid_item {
+  float: left;
+  padding: 5px;
+}
+.grid .fp_item {
+  height: 151px;
+  width: 350px;
+}
+
+/** @end Image Styles **/
+/** @group Utility Styles **/
+.hilight {
+  margin: 5px 0;
+  padding: 5px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.price {
+  text-align: right;
+  font-weight: bold;
+}
+
+.right {
+  text-align: right;
+  float: right;
+}
+
+.media, .media .bd {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+}
+.media .bd.pad {
+  padding: 10px 0 0 0;
+}
+.media .img {
+  float: left;
+  margin-right: 20px;
+}
+.media .img.right {
+  float: right;
+  margin: 0 0 0 5px;
+}
+.media .img img {
+  display: block;
+}
+
+/** @end Utility Styles **/
+/** @group Header **/
 header {
   padding: 0 10px;
   background: #8da5b7;
@@ -82,108 +190,8 @@ header nav li form input[type=text]:focus {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
-#main h1, #main h2, #main h3 {
-  font-family: "FSAlbert";
-  color: #8da5b7;
-}
-#main h1 {
-  margin: 0 0 20px 0;
-  font-size: 32px;
-}
-#main h2 {
-  margin: 10px 0 10px 0;
-  font-size: 24px;
-}
-#main h3 {
-  margin: 0 0 10px 0;
-  font-size: 18px;
-}
-#main h3 a:hover {
-  color: #444;
-  text-decoration: none;
-}
-#main h3 a:active {
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-}
-#main .imageShadow {
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  -webkit-transition: all 0.2s;
-}
-#main .imageShadow:hover {
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
-  -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
-}
-#main .fancyBorder {
-  -webkit-border-image: url("../images/border-image-blue.png") 6 7 7 6;
-  -moz-border-image: url("../images/border-image-blue.png") 6 7 7 6;
-  -o-border-image: url("../images/border-image-blue.png") 6 7 7 6;
-  border-image: url("../images/border-image-blue.png") 6 7 7 6;
-  border-width: 6px 7px 7px 6px;
-}
-#main .thumbShadow {
-  margin: 3px;
-  border: 2px solid #ddd;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-}
-#main .thumbShadow:hover {
-  border: 2px solid #ccc;
-}
-
-.media, .media .bd {
-  overflow: hidden;
-  _overflow: visible;
-  zoom: 1;
-}
-.media .bd.pad {
-  padding: 10px 0 0 0;
-}
-.media .img {
-  float: left;
-  margin-right: 20px;
-}
-.media .img.right {
-  float: right;
-  margin: 0 0 0 5px;
-}
-.media .img img {
-  display: block;
-}
-
-#notice, #error, #alert {
-  margin: 0 0 10px 0;
-  padding: 7px 20px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-}
-
-#notice p, #error p, #alert p {
-  margin: 0;
-}
-
-#notice {
-  background: #cfc;
-  border: 1px solid #6c6;
-}
-
-#error, #alert {
-  background-color: #fcc;
-  border: 1px solid #c66;
-}
-
+/** @end Header **/
+/** @group Sidebar **/
 #sidebar {
   float: right;
   width: 200px;
@@ -193,6 +201,7 @@ header nav li form input[type=text]:focus {
   margin: 0 0 10px 0;
 }
 
+/** @group Basket **/
 #shopping-basket {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -261,72 +270,77 @@ header nav li form input[type=text]:focus {
   color: #b0bbc4;
 }
 
-.ie #main .item img {
-  padding: 1px;
-  border: 1px solid #c0c0c0;
-}
-
+/** @end Basket **/
+/** @end Sidebar **/
+/** @group Main Body **/
 #main {
   float: left;
   width: 720px;
   padding: 10px;
   border-right: 1px dashed #e8f0f5;
 }
+#main h1, #main h2, #main h3 {
+  font-family: "FSAlbert";
+  color: #8da5b7;
+}
+#main h1 {
+  margin: 0 0 20px 0;
+  font-size: 32px;
+}
+#main h2 {
+  margin: 10px 0 10px 0;
+  font-size: 24px;
+}
+#main h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+#main h3 a:hover {
+  color: #444;
+  text-decoration: none;
+}
+#main h3 a:active {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
 #main a:hover {
   text-decoration: underline;
 }
 
-p {
-  margin: 0 0 15px 0;
+.ie #main .item img {
+  padding: 1px;
+  border: 1px solid #c0c0c0;
 }
 
-a {
-  color: #5996da;
+/** @group Flash Messages **/
+#notice, #error, #alert {
+  margin: 0 0 10px 0;
+  padding: 7px 20px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
 }
 
-.grid .grid_item {
-  float: left;
-  padding: 5px;
-}
-.grid .fp_item {
-  height: 151px;
-  width: 350px;
-}
-
-.hilight {
-  margin: 5px 0;
-  padding: 5px;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
-
-.price {
-  text-align: right;
-  font-weight: bold;
-}
-
-form {
-  margin: 20px 0;
-}
-
-#error_explanation {
-  padding: 10px;
-  margin: 10px 20px;
-}
-
-#error_explanation h2 {
-  font-size: 14px;
-}
-
-#error_explanation h2, #error_explanation h3 {
+#notice p, #error p, #alert p {
   margin: 0;
 }
 
-.right {
-  text-align: right;
-  float: right;
+#notice {
+  background: #cfc;
+  border: 1px solid #6c6;
 }
 
+#error, #alert {
+  background-color: #fcc;
+  border: 1px solid #c66;
+}
+
+/** @end Flash Messages **/
+/** @end Main Body **/
+/** @group Forms **/
+form {
+  margin: 20px 0;
+}
 form label, form input[type=button], form input[type=submit], form button {
   cursor: pointer;
 }
@@ -440,6 +454,22 @@ form.admin input[type=submit] {
   margin: 5px 0 0 110px;
 }
 
+/** @group Form Errors **/
+#error_explanation {
+  padding: 10px;
+  margin: 10px 20px;
+}
+
+#error_explanation h2 {
+  font-size: 14px;
+}
+
+#error_explanation h2, #error_explanation h3 {
+  margin: 0;
+}
+
+/** @end Form Errors **/
+/** @end Forms **/
 .button {
   width: 33px;
   height: 33px;
@@ -465,6 +495,7 @@ form.admin input[type=submit] {
   background-position-y: -33px;
 }
 
+/** @group Tables **/
 #main table {
   width: 100%;
   margin: 10px 0;
@@ -514,6 +545,8 @@ form.admin input[type=submit] {
   border-bottom: 1px solid #a3b6c5;
 }
 
+/** @end Tables **/
+/** @group Footer **/
 .push {
   height: 30px;
 }
@@ -523,3 +556,5 @@ footer {
   padding: 6px 10px 7px 10px;
   border-top: 1px solid #eaeaea;
 }
+
+/** @group Footer **/

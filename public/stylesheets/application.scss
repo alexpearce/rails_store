@@ -1,71 +1,17 @@
-$blue: #8da5b7;
-$border-image: "../images/border-image-blue.png";
-$anchor-colour: #5996da;
-$fancy-font: "FSAlbert";
-$body-font: 'Helvetica Neue', 'Helvetica', 'Verdana', sans-serif;
-$standard-shadow-colour: rgba(0, 0, 0, 0.25);
+@import 'init';
 
-@mixin standard-shadow($colour) {
-	text-shadow: 0 1px 1px $colour;
-}
-
-@mixin box-shadow($x: 0, $y: 0, $blur: 5px, $colour: $standard-shadow-colour) {
-	-webkit-box-shadow: $x $y $blur $colour;
-	-moz-box-shadow: $x $y $blur $colour;
-	-o-box-shadow: $x $y $blur $colour;
-	box-shadow: $x $y $blur $colour;
-}
-
-@mixin simple-gradient($top-colour, $bottom-colour) {
-	background: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		color-stop(0%, $top-colour),
-		color-stop(100%, $bottom-colour)
-	);
-	background: -moz-linear-gradient(
-		center top,
-		$top-colour 0%,
-		$bottom-colour 100%
-	);
-}
-
-@mixin nice-header($header-size: 18px, $header-weight: 600, $shadow-colour: $standard-shadow-colour) {
-	font-family: $fancy-font;
-	font-size: $header-size;
-	font-weight: $header-weight;
-	@include standard-shadow($shadow-colour);
-}
-
-@mixin round($radius: 3px) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-o-border-radius: $radius;
-	border-radius: $radius;
-}
-
-@mixin border-img($url, $t, $r, $b, $l) {
-	-webkit-border-image: url($url) $t $r $b $l;
-	-moz-border-image: url($url) $t $r $b $l;
-	-o-border-image: url($url) $t $r $b $l;
-	border-image: url($url) $t $r $b $l;
-	border-width: #{$t}px #{$r}px #{$b}px #{$l}px;
-}
-
+/** @group DOM Root **/
 html {
 	background-image: url('../images/texture.png');
 	background-color: #f2f2f2;
 	height: 100%;
 }
-
 body {
 	width: 960px;
 	height: 100%;
 	margin: 0 auto;
 	font-family: $body-font;
 }
-
 .wrap {
 	min-height: 100%;
 	height: auto !important;
@@ -74,7 +20,93 @@ body {
 	background-color: #fff;
 	@include box-shadow();
 }
+/** @end DOM Root
 
+/** @group Copy **/
+p {
+	margin: 0 0 15px 0;
+}
+a {
+	color: $anchor-colour;
+}
+/** @end Copy **/
+
+/** @group Image Styles **/
+.imageShadow {
+	@include box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.7));
+	@include round(2px);
+	-webkit-transition: all 0.2s;
+	&:hover {
+		@include box-shadow(0, 1px, 5px, rgba(0,0,0,0.8));
+	}
+}
+.fancyBorder {
+	@include border-img($border-image, 6, 7, 7, 6);
+}
+.thumbShadow {
+	margin: 3px;
+	border: 2px solid #ddd;
+	@include round(2px);
+	&:hover {
+		border: 2px solid #ccc;
+	}
+}
+/** @end Image Styles **/
+
+/** @group Grid **/
+.grid {
+	.grid_item {
+		float: left;
+		padding: 5px;
+	}
+	.fp_item {
+		height: 151px;
+		width: 350px;
+	}
+}
+/** @end Image Styles **/
+
+/** @group Utility Styles **/
+.hilight {
+	margin: 5px 0;
+	padding: 5px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.price {
+	text-align: right;
+	font-weight: bold;
+}
+
+.right {
+	text-align: right;
+	float: right;
+}
+
+.media {
+	&, .bd {
+		overflow: hidden;
+		_overflow: visible;
+		zoom: 1;
+	}
+	.bd.pad {
+		padding: 10px 0 0 0;
+	}
+	.img {
+		float: left;
+		margin-right: 20px;
+		&.right {
+			float: right;
+			margin: 0 0 0 5px;
+		}
+		img {
+			display: block;
+		}
+	}
+}
+/** @end Utility Styles **/
+
+/** @group Header **/
 header {
 	padding: 0 10px;
 	background: $blue;
@@ -133,96 +165,9 @@ header {
 		}
 	}
 }
+/** @end Header **/
 
-#main {
-	h1, h2, h3 {
-		font-family: $fancy-font;
-		color: $blue;
-	}
-	h1 {
-		margin: 0 0 20px 0;
-		font-size: 32px;
-	}
-	h2 {
-		margin: 10px 0 10px 0;
-		font-size: 24px;
-	}
-	h3 {
-		margin: 0 0 10px 0;
-		font-size: 18px;
-		a {
-			&:hover {
-				color: #444;
-				text-decoration: none;
-			}
-			&:active {
-				text-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-			}
-		}
-	}
-	.imageShadow {
-		@include box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.7));
-		@include round(2px);
-		-webkit-transition: all 0.2s;
-		&:hover {
-			@include box-shadow(0, 1px, 5px, rgba(0,0,0,0.8));
-		}
-	}
-	.fancyBorder {
-		@include border-img($border-image, 6, 7, 7, 6);
-	}
-	.thumbShadow {
-		margin: 3px;
-		border: 2px solid #ddd;
-		@include round(2px);
-		&:hover {
-			border: 2px solid #ccc;
-		}
-	}
-}
-
-.media {
-	&, .bd {
-		overflow: hidden;
-		_overflow: visible;
-		zoom: 1;
-	}
-	.bd.pad {
-		padding: 10px 0 0 0;
-	}
-	.img {
-		float: left;
-		margin-right: 20px;
-		&.right {
-			float: right;
-			margin: 0 0 0 5px;
-		}
-		img {
-			display: block;
-		}
-	}
-}
-
-#notice, #error, #alert {
-	margin: 0 0 10px 0;
-	padding: 7px 20px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	-o-border-radius: 2px;
-	border-radius: 2px;
-}
-#notice p, #error p, #alert p {
-	margin: 0;
-}
-#notice {
-	background: #cfc;
-	border: 1px solid #6c6;
-}
-#error, #alert {
-	background-color: #fcc;
-	border: 1px solid #c66;
-}
-
+/** @group Sidebar **/
 #sidebar {
 	float: right;
 	width: 200px;
@@ -233,6 +178,7 @@ header {
 	}
 }
 
+/** @group Basket **/
 #shopping-basket {
 	@include round(2px);
 	border: 1px solid #a3b6c5;
@@ -295,7 +241,44 @@ header {
 		}
 	}
 }
+/** @end Basket **/
+/** @end Sidebar **/
 
+/** @group Main Body **/
+#main {
+	float: left;
+	width: 720px;
+	padding: 10px;
+	border-right: 1px dashed #e8f0f5;
+	h1, h2, h3 {
+		font-family: $fancy-font;
+		color: $blue;
+	}
+	h1 {
+		margin: 0 0 20px 0;
+		font-size: 32px;
+	}
+	h2 {
+		margin: 10px 0 10px 0;
+		font-size: 24px;
+	}
+	h3 {
+		margin: 0 0 10px 0;
+		font-size: 18px;
+		a {
+			&:hover {
+				color: #444;
+				text-decoration: none;
+			}
+			&:active {
+				text-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+			}
+		}
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
 .ie #main {
 	.item {
 		img {
@@ -304,66 +287,32 @@ header {
 		}
 	}
 }
-
-#main {
-	float: left;
-	width: 720px;
-	padding: 10px;
-	border-right: 1px dashed #e8f0f5;
-	a:hover {
-		text-decoration: underline;
-	}
+/** @group Flash Messages **/
+#notice, #error, #alert {
+	margin: 0 0 10px 0;
+	padding: 7px 20px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
 }
-
-p {
-	margin: 0 0 15px 0;
-}
-a {
-	color: $anchor-colour;
-}
-
-.grid {
-	.grid_item {
-		float: left;
-		padding: 5px;
-	}
-	.fp_item {
-		height: 151px;
-		width: 350px;
-	}
-}
-.hilight {
-	margin: 5px 0;
-	padding: 5px;
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-}
-.price {
-	text-align: right;
-	font-weight: bold;
-}
-
-form {
-	margin: 20px 0;
-}
-#error_explanation {
-	padding: 10px;
-	margin: 10px 20px;
-}
-#error_explanation h2 {
-	font-size: 14px;
-}
-#error_explanation h2, #error_explanation h3 {
+#notice p, #error p, #alert p {
 	margin: 0;
 }
-
-.right {
-	text-align: right;
-	float: right;
+#notice {
+	background: #cfc;
+	border: 1px solid #6c6;
 }
+#error, #alert {
+	background-color: #fcc;
+	border: 1px solid #c66;
+}
+/** @end Flash Messages **/
+/** @end Main Body **/
 
-
+/** @group Forms **/
 form {
+	margin: 20px 0;
 	label, input[type=button], input[type=submit], button {
 		cursor: pointer;
 	}
@@ -457,6 +406,20 @@ form {
 	}
 }
 
+/** @group Form Errors **/
+#error_explanation {
+	padding: 10px;
+	margin: 10px 20px;
+}
+#error_explanation h2 {
+	font-size: 14px;
+}
+#error_explanation h2, #error_explanation h3 {
+	margin: 0;
+}
+/** @end Form Errors **/
+/** @end Forms **/
+
 .button {
 	width: 33px;
 	height: 33px;
@@ -483,6 +446,7 @@ form {
 	}
 }
 
+/** @group Tables **/
 #main table {
 	width: 100%;
 	margin: 10px 0;
@@ -531,8 +495,12 @@ form {
 		}
 	}
 }
+/** @end Tables **/
 
+/** @group Footer **/
 .push {
+	// this is for the sticky footer
+	// http://ryanfait.com/sticky-footer/
 	height: 30px;
 }
 footer {
@@ -540,3 +508,4 @@ footer {
 	padding: 6px 10px 7px 10px;
 	border-top: 1px solid #eaeaea;
 }
+/** @group Footer **/
