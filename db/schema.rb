@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101224150738) do
+ActiveRecord::Schema.define(:version => 20101224170833) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -39,6 +39,12 @@ ActiveRecord::Schema.define(:version => 20101224150738) do
     t.datetime "updated_at"
   end
 
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "items", :force => true do |t|
     t.string   "name"
     t.float    "price"
@@ -51,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20101224150738) do
     t.integer  "image_file_size"
     t.float    "postage"
     t.integer  "parent_id"
+    t.integer  "category_id"
   end
 
   create_table "line_items", :force => true do |t|

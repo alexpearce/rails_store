@@ -2,6 +2,7 @@ class Item < ActiveRecord::Base
   has_many :line_items
   has_many :options, :class_name => 'Item', :foreign_key => 'item_id'
   belongs_to :super, :class_name => 'Item'
+  belongs_to :category
   
   attr_accessor :delete_image
   before_save :image_deletion

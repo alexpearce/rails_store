@@ -1,5 +1,7 @@
 Store::Application.routes.draw do
   
+  resources :categories
+
   devise_for :admins
 
   resources :baskets do
