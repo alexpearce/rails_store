@@ -3,6 +3,9 @@ class Item < ActiveRecord::Base
   has_many :options, :class_name => 'Item', :foreign_key => 'item_id'
   belongs_to :super, :class_name => 'Item'
   
+  attr_accessor :delete_image
+  before_save :image_deletion
+  
   before_destroy :ensure_not_referenced_by_line_item
   
   acts_as_tree
@@ -15,13 +18,12 @@ class Item < ActiveRecord::Base
   # paperclip
   has_attached_file :image,
                     :styles => { :thumb => '128x128#', :option => '32x32#', :icon => '16x16#' },
-                    #:url => "/:class/:attachment/:id/:basename_:style.:extension",
-                    #:default_url => "/:class/:attachment/missing_:style.png",
                     :storage => :s3,
                     :s3_credentials => "#{Rails.root}/config/s3.yml",
                     :s3_host_alias => 's3.alexpearce.me',
                     :url => ":s3_alias_url",
-                    :path => "/store/:class/:attachment/:id/:normalized_basename_:style.:extension"
+                    :path => "/store/:class/:attachment/:id/:normalized_basename_:style.:extension",
+                    :default_url => "/images/items/missing_:style.png"
                     
   
   def image_path
@@ -43,6 +45,10 @@ class Item < ActiveRecord::Base
   end
   
   private
+  
+    def image_deletion
+      self.image = nil if self.delete_image == '1'
+    end
   
     def ensure_not_referenced_by_line_item
       if line_items.count.zero?

@@ -26,5 +26,8 @@
 	.field
 		= f.label :image
 		= f.file_field :image
+	.field
+		= f.label :delete_image, 'Delete Image?'
+		= f.check_box :delete_image
 	.actions
 		= f.submit 'Save'
