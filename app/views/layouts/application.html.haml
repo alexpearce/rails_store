@@ -5,7 +5,7 @@
 	
 		%title
 			= content_for?(:title) ? yield(:title) + ' | ' : ''
-			Generic Store
+			=t :store_name
 		=stylesheet_link_tag 'reset', 'jquery.fancybox', 'application'
 		=csrf_meta_tag
 	%body
@@ -13,7 +13,8 @@
 		%div.wrap
 
 			%header
-				%h1 Generic Store
+				%h1
+					=t :store_name
 			
 				%nav
 					%ul
@@ -43,7 +44,7 @@
 
 			%div#container
 		
-				=render('layouts/sidebar')
+				=render 'layouts/sidebar'
 		
 				%div#main
 			
@@ -57,7 +58,8 @@
 				%div.push
 		%footer
 			%span
-				Alex Pearce &copy;
+				=t :store_owner
+				&copy;
 				= Time.now.year
 			%span.right
 				- if admin_signed_in?
@@ -65,4 +67,4 @@
 				- else
 					= link_to 'Login',  new_admin_session_path
 			
-	=javascript_include_tag 'jquery', 'rails', 'jquery.fancybox', 'jquery.color', 'application'
+		=javascript_include_tag 'jquery', 'rails', 'jquery.fancybox', 'jquery.color', 'application'
