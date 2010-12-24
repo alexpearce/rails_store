@@ -22,12 +22,18 @@ class Item < ActiveRecord::Base
     '/images/' + self.image
   end
   
-  def parent_with_option
+  def self_with_parent
     if self.parent
       "#{self.parent.name} (#{self.name})"
     else
       self.name
     end
+  end
+  
+  def option_select
+    ret = "#{self.name} - #{sprintf("%.2f", price)}"
+    ret.concat ' (Sold Out)' if self.stock == 0
+    return ret
   end
   
   private

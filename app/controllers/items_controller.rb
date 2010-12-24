@@ -57,6 +57,7 @@ class ItemsController < ApplicationController
     if @item.update_attributes(params[:item])
       flash[:notice] = 'Item successfully updated.'
     else
+      @children = @item.children
       flash[:error] = 'Item not successfully updated.'
     end
     

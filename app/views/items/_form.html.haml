@@ -2,9 +2,9 @@
 	-if item.errors.any?
 		#error_explanation
 			%h2= "#{pluralize(item.errors.count, "error")} prohibited this item from being saved:"
-		%ul
-			- item.errors.full_messages.each do |msg|
-				%li= msg
+			%ul
+				- item.errors.full_messages.each do |msg|
+					%li= msg
 				
 	= f.hidden_field :parent_id
 	

@@ -19,7 +19,7 @@
 	-for li in @basket.line_items
 		%tr
 			%td
-				=li.item.parent_with_option
+				=li.item.self_with_parent
 			%td
 				=ntc li.item.price
 			%td.quantity_form

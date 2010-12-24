@@ -34,7 +34,7 @@
 				- if @item.children.empty?
 					= f.hidden_field :item_id
 				- else
-					= f.collection_select :item_id, @item.children, :id, :name
+					= f.collection_select :item_id, @item.children, :id, :option_select, { :disabled => lambda{ |op| op.stock == 0 }, :include_blank => 'Choose an option'}
 			.actions
 				= f.submit 'Add to Basket' if @item.stock > 0
 				= f.submit 'Sold Out', :disabled => 'disabled' if @item.stock == 0

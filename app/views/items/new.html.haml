@@ -3,6 +3,6 @@
 - else
 	= title "Create Option for #{@parent.name}"
 
-= render 'form'
+= render :partial => 'form', :locals => {:item => @item}
 
 = link_to 'Back', items_path
