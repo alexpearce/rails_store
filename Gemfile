@@ -15,6 +15,8 @@ gem 'rdiscount'
 
 # attachments
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
+# uplaoding attachments to S3
+gem 'aws-s3'
 
 # acts as tree
 gem 'acts_as_tree', :git => 'git://github.com/parasew/acts_as_tree.git'

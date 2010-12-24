@@ -15,8 +15,12 @@ class Item < ActiveRecord::Base
   # paperclip
   has_attached_file :image,
                     :styles => { :thumb => '128x128#', :option => '32x32#', :icon => '16x16#' },
-                    :url => "/:class/:attachment/:id/:basename_:style.:extension",
-                    :default_url => "/:class/:attachment/missing_:style.png"
+                    #:url => "/:class/:attachment/:id/:basename_:style.:extension",
+                    #:default_url => "/:class/:attachment/missing_:style.png",
+                    :storage => :s3,
+                    :s3_credentials => "#{Rails.root}/config/s3.yml",
+                    :path => "/store/:class/:attachment/:id/:basename_:style.:extension"
+                    
   
   def image_path
     '/images/' + self.image
