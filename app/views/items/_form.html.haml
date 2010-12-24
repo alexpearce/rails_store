@@ -23,9 +23,16 @@
 	.field
 		= f.label :description
 		= f.text_area :description
-	.field
-		= f.label :category_id
-		= f.collection_select :category_id, Category.all, :id, :name, {:prompt => 'No Category'}
+	.field.twocol
+		.meta
+			= f.label :category_ids, 'Categories'
+		- count = 1
+		.bd
+			- Category.all.each do |c|
+				.field
+					= label_tag "item_category_ids_#{count}", c.name
+					= check_box_tag 'item[category_ids][]', c.id, @item.categories.include?(c), :id => "item_category_ids_#{count}"
+				- count = count + 1
 	.field
 		= f.label :image
 		= f.file_field :image

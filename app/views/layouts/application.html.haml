@@ -10,7 +10,7 @@
 		=csrf_meta_tag
 	%body
 	
-		%div.wrap
+		.wrap
 
 			%header
 				%h1
@@ -40,13 +40,13 @@
 							%form
 								%input{:type => :text}
 
-				%div.clearfix
+				.clearfix
 
-			%div#container
+			#container
 		
 				=render 'layouts/sidebar'
 		
-				%div#main
+				.main
 			
 					- flash.each do |key, msg|
 						%div{:id => key}
@@ -54,8 +54,8 @@
 			
 					=yield
 				
-				%div.clearfix
-				%div.push
+				.clearfix
+				.push
 		%footer
 			%span
 				=t :store_owner

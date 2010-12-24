@@ -4,8 +4,8 @@
 
 %div.grid
 	- @items.each do |item|
-		%div.grid_item.media.fp_item
-			%a{:href => item_path(item), :title => item.name, :rel => 'items_index', :class=> 'img' }
+		%div.grid_item.twocol.fp_item
+			%a{:href => item_path(item), :title => item.name, :rel => 'items_index', :class=> 'meta' }
 				%img{:src => item.image.url(:thumb), :alt => item.name, :class => 'imageShadow'}
 			%div.bd.pad
 				%h3=link_to item.name, item

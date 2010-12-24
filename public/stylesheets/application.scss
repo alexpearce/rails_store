@@ -83,7 +83,7 @@ a {
 	float: right;
 }
 
-.media {
+.twocol {
 	&, .bd {
 		overflow: hidden;
 		_overflow: visible;
@@ -92,7 +92,7 @@ a {
 	.bd.pad {
 		padding: 10px 0 0 0;
 	}
-	.img {
+	.meta {
 		float: left;
 		margin-right: 20px;
 		&.right {
@@ -245,7 +245,7 @@ header {
 /** @end Sidebar **/
 
 /** @group Main Body **/
-#main {
+.main {
 	float: left;
 	width: 720px;
 	padding: 10px;
@@ -279,11 +279,37 @@ header {
 		text-decoration: underline;
 	}
 }
-.ie #main {
+.ie .main {
 	.item {
 		img {
 			padding: 1px;
 			border: 1px solid #c0c0c0;
+		}
+	}
+}
+.categories {
+	margin: 20px 0;
+	a {
+		margin: 0 1px;
+		padding: 6px 9px;
+		border: 1px solid #c8d1dd;
+		@include round(2px);
+		@include box-shadow(0, 1px, 1px, rgba(145, 145, 145, 0.13));
+		color: #132738;
+		text-decoration: none;
+		&.hilighted {
+			border: 1px solid #939da8;
+			background: #a6b3c0;
+			color: #fff;
+			text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+			@include box-shadow(0, 1px, 1px, rgba(145, 145, 145, 0.3));
+			&:hover {
+				border: 1px solid #778391;
+			}
+		}
+		&:hover {
+			text-decoration: none;
+			border: 1px solid darken(#c8d1dd, 10%);
 		}
 	}
 }
@@ -317,11 +343,12 @@ form {
 		cursor: pointer;
 	}
 	label {
-		font-size: 12px;
 		float: left;
-		text-align: right;
 		width: 100px;
 		padding: 8px 10px 0 0;
+		font-size: 12px;
+		text-align: right;
+		display: block;
 	}
 	label.req, .field_with_errors label {
 		font-weight: bold;
@@ -331,11 +358,18 @@ form {
 	}
 	.field {
 		margin: 5px 0;
+		&.twocol {
+			.meta {
+				margin-right: 0;
+			}
+			.field label {
+				width: 75px;
+			}
+		}
 	}
 	input, textarea {
 		@include round(2px);
 		@include box-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.05));
-		
 		&:hover {
 			border: 1px solid #aaa;
 		}
@@ -447,7 +481,7 @@ form {
 }
 
 /** @group Tables **/
-#main table {
+.main table {
 	width: 100%;
 	margin: 10px 0;
 	text-align: center;

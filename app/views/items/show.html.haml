@@ -1,35 +1,37 @@
 = title @item.name
 		
-%div.media
-	%div.img
+.twocol
+	.meta
 		%a{:href => @item.image.url, :title => @item.name}
 			%img{:src => @item.image.url(:thumb), :class => 'fancyBorder', :alt => @item.name}
 		- unless @item.children.empty?
 			%h2 Options
-			%div.grid
+			.grid
 				- @item.children.each do |c|
-					%div.grid_item
+					.grid_item
 						%a{:href => c.image.url, :title => c.name, :rel => 'option'}
 							%img{:src => c.image.url(:option), :class => 'thumbShadow', :alt => c.name}
-			%div.clearfix
+			.clearfix
 					
 
-	%div.bd
+	.bd
 		:markdown
 			#{@item.description}
 			
-		- @item.categories.each do |c|
-			=c.name
+		.categories
+			= link_to 'Categories', categories_path, :class => 'hilighted'
+			- @item.categories.each do |c|
+				= link_to c.name, category_path(c)
 			
-		%div.media.hilight
-			%div.img
+		.twocol.hilight
+			.meta
 				- if admin_signed_in?
 					= link_to 'Add Option', new_item_path(:parent_id => @item)
 					|
 					= link_to 'Edit', edit_item_path(@item)
 					|
 					= link_to 'Destroy', item_path(@item), :confirm => "Delete item '#{@item.name}'?", :method => :delete
-			%div.bd.price
+			.bd.price
 				= ntc @item.price
 				
 		= form_for [@basket, @line_item], :html => {:class => 'right'} do |f|
@@ -42,4 +44,4 @@
 				= f.submit 'Add to Basket' if @item.stock > 0
 				= f.submit 'Sold Out', :disabled => 'disabled' if @item.stock == 0
 		
-		%div.clearfix
+		.clearfix

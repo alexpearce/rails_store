@@ -8,8 +8,8 @@
 		- else
 			- for li in @basket.line_items
 				%li
-					%div.media
-						%div.img.right
+					%div.twocol
+						%div.meta.right
 							%a{:href => li.item.image.url, :title => li.item.name, :rel => 'cart-gallery'}
 								%img{:src => li.item.image.url(:icon), :alt => li.item.name}
 						%div.bd

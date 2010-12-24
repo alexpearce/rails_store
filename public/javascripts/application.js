@@ -7,7 +7,7 @@ $.fn.animateHighlight = function(highlightColor, duration) {
 
 $(function () {
 	
-	$('.media .img a:has(img)').fancybox();
+	$('.twocol .img a:has(img)').fancybox();
 	
 	$('div.button').each(function(idx, el) {
 		$(el).click(function() {

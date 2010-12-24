@@ -109,23 +109,23 @@ a {
   float: right;
 }
 
-.media, .media .bd {
+.twocol, .twocol .bd {
   overflow: hidden;
   _overflow: visible;
   zoom: 1;
 }
-.media .bd.pad {
+.twocol .bd.pad {
   padding: 10px 0 0 0;
 }
-.media .img {
+.twocol .meta {
   float: left;
   margin-right: 20px;
 }
-.media .img.right {
+.twocol .meta.right {
   float: right;
   margin: 0 0 0 5px;
 }
-.media .img img {
+.twocol .meta img {
   display: block;
 }
 
@@ -273,42 +273,78 @@ header nav li form input[type=text]:focus {
 /** @end Basket **/
 /** @end Sidebar **/
 /** @group Main Body **/
-#main {
+.main {
   float: left;
   width: 720px;
   padding: 10px;
   border-right: 1px dashed #e8f0f5;
 }
-#main h1, #main h2, #main h3 {
+.main h1, .main h2, .main h3 {
   font-family: "FSAlbert";
   color: #8da5b7;
 }
-#main h1 {
+.main h1 {
   margin: 0 0 20px 0;
   font-size: 32px;
 }
-#main h2 {
+.main h2 {
   margin: 10px 0 10px 0;
   font-size: 24px;
 }
-#main h3 {
+.main h3 {
   margin: 0 0 10px 0;
   font-size: 18px;
 }
-#main h3 a:hover {
+.main h3 a:hover {
   color: #444;
   text-decoration: none;
 }
-#main h3 a:active {
+.main h3 a:active {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
-#main a:hover {
+.main a:hover {
   text-decoration: underline;
 }
 
-.ie #main .item img {
+.ie .main .item img {
   padding: 1px;
   border: 1px solid #c0c0c0;
+}
+
+.categories {
+  margin: 20px 0;
+}
+.categories a {
+  margin: 0 1px;
+  padding: 6px 9px;
+  border: 1px solid #c8d1dd;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 1px rgba(145, 145, 145, 0.13);
+  -moz-box-shadow: 0 1px 1px rgba(145, 145, 145, 0.13);
+  -o-box-shadow: 0 1px 1px rgba(145, 145, 145, 0.13);
+  box-shadow: 0 1px 1px rgba(145, 145, 145, 0.13);
+  color: #132738;
+  text-decoration: none;
+}
+.categories a.hilighted {
+  border: 1px solid #939da8;
+  background: #a6b3c0;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(145, 145, 145, 0.3);
+  -moz-box-shadow: 0 1px 1px rgba(145, 145, 145, 0.3);
+  -o-box-shadow: 0 1px 1px rgba(145, 145, 145, 0.3);
+  box-shadow: 0 1px 1px rgba(145, 145, 145, 0.3);
+}
+.categories a.hilighted:hover {
+  border: 1px solid #778391;
+}
+.categories a:hover {
+  text-decoration: none;
+  border: 1px solid #a8b7ca;
 }
 
 /** @group Flash Messages **/
@@ -345,11 +381,12 @@ form label, form input[type=button], form input[type=submit], form button {
   cursor: pointer;
 }
 form label {
-  font-size: 12px;
   float: left;
-  text-align: right;
   width: 100px;
   padding: 8px 10px 0 0;
+  font-size: 12px;
+  text-align: right;
+  display: block;
 }
 form label.req, form .field_with_errors label {
   font-weight: bold;
@@ -359,6 +396,12 @@ form .field_with_errors label {
 }
 form .field {
   margin: 5px 0;
+}
+form .field.twocol .meta {
+  margin-right: 0;
+}
+form .field.twocol .field label {
+  width: 75px;
 }
 form input, form textarea {
   -webkit-border-radius: 2px;
@@ -496,13 +539,13 @@ form.admin input[type=submit] {
 }
 
 /** @group Tables **/
-#main table {
+.main table {
   width: 100%;
   margin: 10px 0;
   text-align: center;
   border: 1px solid #a3b6c5;
 }
-#main table th {
+.main table th {
   padding: 7px 0;
   background: #eee;
   border-bottom: 1px solid #a3b6c5;
@@ -512,36 +555,36 @@ form.admin input[type=submit] {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e3eaf0), color-stop(100%, #d9e4ea));
   background: -moz-linear-gradient(center top, #e3eaf0 0%, #d9e4ea 100%);
 }
-#main table td {
+.main table td {
   padding: 5px 0;
   background-color: transparent;
 }
-#main table td.b {
+.main table td.b {
   font-weight: bold;
 }
-#main table td span.quantity {
+.main table td span.quantity {
   border-bottom: 1px dotted #444;
   cursor: pointer;
 }
-#main table td form {
+.main table td form {
   margin: 0;
 }
-#main table td form .field {
+.main table td form .field {
   margin: 0;
 }
-#main table td form select {
+.main table td form select {
   margin: 0;
 }
-#main table tr {
+.main table tr {
   background: #fafafa;
   border-bottom: 1px solid #e8f0f5;
   border-left: 1px solid #a3b6c5;
   border-right: 1px solid #a3b6c5;
 }
-#main table tr:nth-child(2n+1) {
+.main table tr:nth-child(2n+1) {
   background: #f4f4f4;
 }
-#main table tr:last-child {
+.main table tr:last-child {
   border-bottom: 1px solid #a3b6c5;
 }
 

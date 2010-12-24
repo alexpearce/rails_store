@@ -53,7 +53,7 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
-
+    params[:item][:category_ids] ||= []
     if @item.update_attributes(params[:item])
       flash[:notice] = 'Item successfully updated.'
     else
