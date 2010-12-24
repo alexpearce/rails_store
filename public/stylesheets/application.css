@@ -8,6 +8,7 @@ body {
   width: 960px;
   height: 100%;
   margin: 0 auto;
+  font-family: "Helvetica Neue", "Helvetica", "Verdana", sans-serif;
 }
 
 .wrap {
@@ -24,7 +25,6 @@ body {
 
 header {
   padding: 0 10px;
-  font-family: "FSAlbert";
   background: #8da5b7;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   color: #fff;
@@ -37,6 +37,7 @@ header h1 {
   font-weight: 500;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
   border-bottom: 1px solid #7d99ad;
+  font-family: "FSAlbert";
 }
 header nav ul {
   margin: 0;
@@ -49,7 +50,6 @@ header nav li a {
   display: block;
   padding: 10px;
   color: #fff;
-  font-family: 'Helvetica Neue';
   font-size: 16px;
   font-weight: 400;
 }
@@ -272,6 +272,9 @@ header nav li form input[type=text]:focus {
   padding: 10px;
   border-right: 1px dashed #e8f0f5;
 }
+#main a:hover {
+  text-decoration: underline;
+}
 
 p {
   margin: 0 0 15px 0;
@@ -279,9 +282,6 @@ p {
 
 a {
   color: #5996da;
-}
-a:hover {
-  text-decoration: underline;
 }
 
 .grid .grid_item {

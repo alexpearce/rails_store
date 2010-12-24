@@ -2,6 +2,7 @@ $blue: #8da5b7;
 $border-image: "../images/border-image-blue.png";
 $anchor-colour: #5996da;
 $fancy-font: "FSAlbert";
+$body-font: 'Helvetica Neue', 'Helvetica', 'Verdana', sans-serif;
 $standard-shadow-colour: rgba(0, 0, 0, 0.25);
 
 @mixin standard-shadow($colour) {
@@ -62,6 +63,7 @@ body {
 	width: 960px;
 	height: 100%;
 	margin: 0 auto;
+	font-family: $body-font;
 }
 
 .wrap {
@@ -75,7 +77,6 @@ body {
 
 header {
 	padding: 0 10px;
-	font-family: $fancy-font;
 	background: $blue;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 	color: #fff;
@@ -85,6 +86,7 @@ header {
 		padding: 20px 0 10px 0;
 		@include nice-header(72px, 500);
 		border-bottom: 1px solid darken($blue, 5%);
+		font-family: $fancy-font;
 	}
 	
 	nav {
@@ -99,7 +101,6 @@ header {
 				display: block;
 				padding: 10px;
 				color: #fff;
-				font-family: 'Helvetica Neue';
 				font-size: 16px;
 				font-weight: 400;
 				&:hover {
@@ -309,6 +310,9 @@ header {
 	width: 720px;
 	padding: 10px;
 	border-right: 1px dashed #e8f0f5;
+	a:hover {
+		text-decoration: underline;
+	}
 }
 
 p {
@@ -316,9 +320,6 @@ p {
 }
 a {
 	color: $anchor-colour;
-	&:hover {
-		text-decoration: underline;
-	}
 }
 
 .grid {

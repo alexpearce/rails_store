@@ -14,5 +14,6 @@
 			
 	%div.clearfix
 
-%p
-	= link_to 'New Item', new_item_path
+- if admin_signed_in?
+	%p
+		= link_to 'New Item', new_item_path

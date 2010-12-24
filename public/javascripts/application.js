@@ -9,8 +9,6 @@ $(function () {
 	
 	$('.media .img a:has(img)').fancybox();
 	
-	$('data')
-	
 	$('div.button').each(function(idx, el) {
 		$(el).click(function() {
 			var data = $(el).data('target');
