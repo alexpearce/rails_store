@@ -315,7 +315,6 @@ header nav li form input[type=text]:focus {
   margin: 20px 0;
 }
 .categories a {
-  margin: 0 1px;
   padding: 6px 9px;
   border: 1px solid #c8d1dd;
   -webkit-border-radius: 2px;
@@ -598,6 +597,9 @@ footer {
   height: 16px;
   padding: 6px 10px 7px 10px;
   border-top: 1px solid #eaeaea;
+}
+footer a {
+  padding: 6px 10px 7px 10px;
 }
 
 /** @group Footer **/

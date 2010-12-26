@@ -290,7 +290,6 @@ header {
 .categories {
 	margin: 20px 0;
 	a {
-		margin: 0 1px;
 		padding: 6px 9px;
 		border: 1px solid #c8d1dd;
 		@include round(2px);
@@ -541,5 +540,8 @@ footer {
 	height: 16px;
 	padding: 6px 10px 7px 10px;
 	border-top: 1px solid #eaeaea;
+	a {
+		padding: 6px 10px 7px 10px;
+	}
 }
 /** @group Footer **/
