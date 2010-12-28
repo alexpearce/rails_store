@@ -1,0 +1,5 @@
+=title 'Search Results'
+
+%p= "Search results for #{params[:search]}"
+
+= render :partial => 'layouts/items', :locals => {:items => @items}

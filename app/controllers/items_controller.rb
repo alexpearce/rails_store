@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
   def search
     @items = Item.search(params[:search])
     @items.count == 0 ?
-      redirect_to items_path, :notice => 'No items matched your search.' : render :search
+      redirect_to(items_path, :notice => 'No items matched your search.') : render :search
   end
 
   def show
