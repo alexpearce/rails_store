@@ -15,7 +15,7 @@ gem 'rdiscount'
 
 # attachments
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
-# uplaoding attachments to S3
+# uploading attachments to S3
 gem 'aws-s3'
 
 # acts as tree
@@ -26,6 +26,9 @@ gem 'json'
 
 # authentication
 gem 'devise'
+
+# search
+gem 'texticle'
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.0.1'
