@@ -10,6 +10,8 @@ body {
 	width: 960px;
 	height: 100%;
 	margin: 0 auto;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
 	font-family: $body-font;
 }
 .wrap {
@@ -300,7 +302,7 @@ header {
 			border: 1px solid #939da8;
 			background: #a6b3c0;
 			color: #fff;
-			text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+			text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
 			@include box-shadow(0, 1px, 1px, rgba(145, 145, 145, 0.3));
 			&:hover {
 				border: 1px solid #778391;

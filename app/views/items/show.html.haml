@@ -20,7 +20,7 @@
 			
 		.categories
 			= link_to 'Categories', categories_path, :class => 'hilighted'
-			- @item.categories.each do |c|
+			- @item.categories.sort_by(&:name).each do |c|
 				= link_to c.name, category_path(c)
 			
 		.twocol.hilight

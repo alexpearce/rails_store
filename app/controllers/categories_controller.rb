@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
+    @category = Category.find_by_slug(params[:id], :include => :items)
 
     respond_with @category
   end
@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @category = Category.find(params[:id])
+    @category = Category.find_by_slug(params[:id])
   end
 
 
@@ -38,7 +38,7 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    @category = Category.find(params[:id])
+    @category = Category.find_by_slug(params[:id])
 
     respond_to do |format|
       if @category.update_attributes(params[:category])
@@ -50,7 +50,7 @@ class CategoriesController < ApplicationController
   end
   
   def destroy
-    @category = Category.find(params[:id])
+    @category = Category.find_by_slug(params[:id])
     @category.destroy
 
     respond_with @category

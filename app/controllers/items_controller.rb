@@ -13,8 +13,8 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id], :include => :categories)
     @line_item = LineItem.new(:item_id => @item.id)
-    redirect_to item_path(@item.parent), :flash => flash if @item.parent
-    respond_with @item unless @item.parent
+    @item.parent ?
+      redirect_to(item_path(@item.parent), :flash => flash) : respond_with(@item)
   end
 
   def new
@@ -41,12 +41,9 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(params[:item])
-    
-    if @item.save
-      flash[:notice] = 'New item successfully created.'
-    else
-      flash[:notice] = 'New item not successfully created.'
-    end
+    @item.categories.build(params[:item][:category])
+    @item.save ?
+      flash[:notice] = 'New item successfully created.' :  flash[:notice] = 'New item not successfully created.'
     
     respond_with @item
   end
@@ -66,11 +63,8 @@ class ItemsController < ApplicationController
 
   def destroy
     @item = Item.find(params[:id])
-    if @item.destroy
-      flash[:notice] = 'Item successfully destroyed.'
-    else
-      flash[:alert] = 'Destroy unsuccessful. Item may be referenced by line items.'
-    end
+    @item.destroy ?
+      flash[:notice] = 'Item successfully destroyed.' : flash[:alert] = 'Destroy unsuccessful. Item may be referenced by line items.'
     
     respond_with @item
   end
