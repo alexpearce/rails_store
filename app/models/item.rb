@@ -11,6 +11,11 @@ class Item < ActiveRecord::Base
   
   acts_as_tree
   
+  index do
+    name
+    description
+  end
+  
   validates_presence_of :name, :price, :stock, :description, :image
   validates_uniqueness_of :name
   validates_numericality_of :price

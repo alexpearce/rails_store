@@ -9,6 +9,9 @@ Store::Application.routes.draw do
   end
   
   resources :items do
+    collection do
+      post 'search'
+    end
     resources :item_options
   end
   

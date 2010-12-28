@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   
-  before_filter :authenticate_admin!, :except => [:index, :show]
+  before_filter :authenticate_admin!, :except => [:index, :show, :search]
   
   respond_to :html
   
@@ -8,6 +8,12 @@ class ItemsController < ApplicationController
     @items = Item.where(:parent_id => nil)
     
     respond_with @items
+  end
+  
+  def search
+    @items = Item.search(params[:search])
+    flash[:notice] = 'No items matched your search.' if @items.count == 0
+    render :index
   end
 
   def show
