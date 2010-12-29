@@ -1,12 +1,17 @@
+# development:
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: store_development
+#   pool: 5
+#   username: root
+#   password: root
+#   socket: /tmp/mysql.sock
+
 development:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: store_development
-  pool: 5
-  username: root
-  password: root
-  socket: /tmp/mysql.sock
+  adapter: postgresql
+  database: rails_store
+  username: postgres
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

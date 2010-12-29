@@ -4,7 +4,9 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.1'
 
 # mysql driver
-gem 'mysql2'
+# gem 'mysql2'
+# postgresql driver
+gem 'pg'
 
 # Haml markup
 gem 'haml'
