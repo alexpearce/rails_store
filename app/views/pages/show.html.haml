@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @page.name
+%p
+  %b Content:
+  = @page.content
+%p
+  %b Permalink:
+  = @page.permalink
+%p
+  %b Links to:
+  = @page.links_to
+%p
+  %b Order:
+  = @page.order
+%p
+  %b Parent:
+  = @page.parent_id
+
+= link_to 'Edit', edit_page_path(@page)
+\|
+= link_to 'Back', pages_path
