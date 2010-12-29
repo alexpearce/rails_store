@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101229162418) do
+ActiveRecord::Schema.define(:version => 20101229213155) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                              :null => false
@@ -71,6 +71,17 @@ ActiveRecord::Schema.define(:version => 20101229162418) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "quantity",   :default => 0
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "name"
+    t.text     "content"
+    t.string   "permalink"
+    t.string   "links_to"
+    t.integer  "order"
+    t.integer  "parent_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "sessions", :force => true do |t|
