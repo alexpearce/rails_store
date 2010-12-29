@@ -1,0 +1,7 @@
+- page = Page.find_by_links_to(request.path) if page.nil?
+
+- unless page.nil?
+	= title page.name
+	
+	:markdown
+		#{page.content}

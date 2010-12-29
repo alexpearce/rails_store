@@ -1,83 +1,68 @@
 class PagesController < ApplicationController
-  # GET /pages
-  # GET /pages.xml
+  
+  before_filter :authenticate_admin!, :except => [:show]
+  
+  respond_to :html
+  
   def index
     @pages = Page.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @pages }
-    end
+    respond_with @pages
   end
-
-  # GET /pages/1
-  # GET /pages/1.xml
+  
   def show
     @page = Page.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @page }
+    
+    # if the or request.. condition is deleted, the root route breaks
+    # due to a redirect loop
+    unless @page.links_to.blank? or request.path == @page.links_to
+      # preserve flash messages
+      flash.keep
+      redirect_to @page.links_to 
+    else
+      respond_with @page
     end
   end
 
-  # GET /pages/new
-  # GET /pages/new.xml
   def new
     @page = Page.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @page }
-    end
+    respond_with @page
   end
 
-  # GET /pages/1/edit
   def edit
     @page = Page.find(params[:id])
+    
+    respond_with @page
   end
 
-  # POST /pages
-  # POST /pages.xml
   def create
     @page = Page.new(params[:page])
 
-    respond_to do |format|
-      if @page.save
-        format.html { redirect_to(@page, :notice => 'Page was successfully created.') }
-        format.xml  { render :xml => @page, :status => :created, :location => @page }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @page.errors, :status => :unprocessable_entity }
-      end
-    end
+    flash[:notice] = 'Page was successfully created.' if @page.save
+    flash[:error] = 'Page was not created successfully.' unless @page.save
+      
+    respond_with @page
   end
 
-  # PUT /pages/1
-  # PUT /pages/1.xml
   def update
     @page = Page.find(params[:id])
 
-    respond_to do |format|
-      if @page.update_attributes(params[:page])
-        format.html { redirect_to(@page, :notice => 'Page was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @page.errors, :status => :unprocessable_entity }
-      end
+    if @page.update_attributes(params[:page])
+      flash[:notice] = 'Page was successfully updated.'
+    else
+      flash[:error] = 'Page was not successfully updated.'
     end
+    
+    respond_with @page
   end
 
-  # DELETE /pages/1
-  # DELETE /pages/1.xml
   def destroy
     @page = Page.find(params[:id])
     @page.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(pages_url) }
-      format.xml  { head :ok }
-    end
+    flash[:notice] = 'Page successfully destroyed.'
+    
+    respond_with @page
   end
 end
