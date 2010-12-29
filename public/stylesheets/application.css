@@ -308,7 +308,7 @@ header nav li form input[type=text]:focus {
   text-decoration: underline;
 }
 
-.ie .main .item img {
+.no-boxshadow .item img {
   padding: 1px;
   border: 1px solid #c0c0c0;
 }

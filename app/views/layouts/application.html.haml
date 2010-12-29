@@ -7,7 +7,10 @@
 			= content_for?(:title) ? yield(:title) + ' | ' : ''
 			=t :store_name
 		=stylesheet_link_tag 'reset', 'jquery.fancybox', 'application'
+		
 		=csrf_meta_tag
+		
+		= javascript_include_tag 'modernizr'
 	%body
 	
 		.wrap
@@ -64,4 +67,4 @@
 				- else
 					= link_to 'Login',  new_admin_session_path
 			
-		=javascript_include_tag 'jquery', 'rails', 'jquery.fancybox', 'jquery.color', 'application'
+		= javascript_include_tag 'jquery', 'rails', 'jquery.fancybox', 'jquery.color', 'application'
