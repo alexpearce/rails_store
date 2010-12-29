@@ -1,14 +1,12 @@
 Store::Application.routes.draw do
   
-  resources :pages
-
-  resources :categories
-
   devise_for :admins
-
+  
   resources :baskets do
     resources :line_items
   end
+
+  resources :categories
   
   resources :items do
     collection do
@@ -16,6 +14,8 @@ Store::Application.routes.draw do
     end
     resources :item_options
   end
+  
+  resources :pages
   
   root :to => 'items#index'
   
