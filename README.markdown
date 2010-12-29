@@ -1,4 +1,5 @@
-h1. Rails Store
+Rails Store
+===========
 
 This is a simple store built with Ruby on Rails. The main purposes of this store are:
 
