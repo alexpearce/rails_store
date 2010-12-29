@@ -25,8 +25,11 @@ body {
 /** @end DOM Root
 
 /** @group Copy **/
-p {
+ul, p {
 	margin: 0 0 15px 0;
+}
+strong.highlight {
+	color: #ff00aa;
 }
 a {
 	color: $anchor-colour;
@@ -126,6 +129,7 @@ header {
 	nav {
 		ul {
 			margin: 0;
+			padding: 0;
 			border-top: 1px solid lighten($blue, 5%);
 		}
 		li {
@@ -276,6 +280,11 @@ header {
 				text-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 			}
 		}
+	}
+	ul {
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+		padding: 8px 40px;
 	}
 	a:hover {
 		text-decoration: underline;

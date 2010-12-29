@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(:version => 20101229213155) do
     t.string   "links_to"
     t.integer  "order"
     t.integer  "parent_id"
+    t.boolean  "published"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -7,4 +7,8 @@ module ApplicationHelper
   def ntc(num)
     number_to_currency(num, :unit => '&pound;').html_safe
   end
+  
+  def nav_collection
+    Page.where("published = '1'").find_all_by_parent_id(nil)
+  end
 end

@@ -6,6 +6,6 @@
 			%div.bd.pad
 				%h3=link_to item.name, item
 				:markdown
-					#{truncate item.description, :length => 150}
+					#{highlight(truncate(item.description, :length => 150), params[:search])}
 			
 	%div.clearfix

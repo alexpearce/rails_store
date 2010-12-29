@@ -7,6 +7,7 @@ class CreatePages < ActiveRecord::Migration
       t.string :links_to
       t.integer :order
       t.integer :parent_id
+      t.boolean :published
 
       t.timestamps
     end

@@ -8,14 +8,12 @@
     %th Links to
     %th Order
     %th Parent
-    %th
-    %th
-    %th
+    %th{:colspan => 3} Actions
 
   - @pages.each do |page|
     %tr
       %td= page.name
-      %td= page.content
+      %td= truncate page.content
       %td= page.permalink
       %td= page.links_to
       %td= page.order
