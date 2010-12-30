@@ -33,5 +33,8 @@ gem 'devise'
 gem 'texticle'
 
 group :test, :development do
-  
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'webrat'
+  gem 'cucumber'
 end
