@@ -37,4 +37,5 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'webrat'
   gem 'cucumber'
+  gem 'cucumber-rails'
 end
