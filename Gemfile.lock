@@ -64,6 +64,7 @@ GEM
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    factory_girl (1.3.2)
     gherkin (2.3.3)
       json (~> 1.4.6)
     haml (3.0.25)
@@ -139,6 +140,7 @@ DEPENDENCIES
   cucumber
   cucumber-rails
   devise
+  factory_girl
   haml
   haml-rails
   json

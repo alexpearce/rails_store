@@ -38,4 +38,5 @@ group :test, :development do
   gem 'webrat'
   gem 'cucumber'
   gem 'cucumber-rails'
+  gem 'factory_girl'
 end
