@@ -33,9 +33,5 @@ gem 'devise'
 gem 'texticle'
 
 group :test, :development do
-  gem 'rspec-rails', '~> 2.0.1'
-  gem 'cucumber-rails'
-  gem 'webrat'
-  gem 'factory_girl_rails'
-  gem 'autotest'
+  
 end
