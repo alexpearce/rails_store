@@ -1,3 +1,4 @@
+# coding: utf-8
 class Item < ActiveRecord::Base
   has_many :line_items
   has_many :options, :class_name => 'Item', :foreign_key => 'item_id'
@@ -45,7 +46,7 @@ class Item < ActiveRecord::Base
   end
   
   def option_select
-    ret = "#{self.name} - #{sprintf("%.2f", price)}"
+    ret = "#{self.name} - £#{sprintf("%.2f", self.price)}"
     ret.concat ' (Sold Out)' if self.stock == 0
     return ret
   end
