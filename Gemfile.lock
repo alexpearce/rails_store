@@ -56,6 +56,8 @@ GEM
       gherkin (~> 2.3.2)
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
+    cucumber-rails (0.3.2)
+      cucumber (>= 0.8.0)
     devise (1.1.5)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 1.0.2)
@@ -135,6 +137,7 @@ DEPENDENCIES
   acts_as_tree!
   aws-s3
   cucumber
+  cucumber-rails
   devise
   haml
   haml-rails
