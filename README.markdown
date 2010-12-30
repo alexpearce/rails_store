@@ -12,3 +12,5 @@ The content other than items is pages, which are Markdown formatted. Eventually,
 store.
 
 I started making tests for this, but it's not my strong point. Hopefully this will change.
+
+You should be able to push this to Heroku with no problems.
