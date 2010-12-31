@@ -599,3 +599,584 @@ REQUESTING PAGE: GET http://example.org/items/52 with {} and HTTP headers {"HTTP
 REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
 REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
 REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/53 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["13"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/54 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/55 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["15"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/56 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/57 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["17"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/58 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/59 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["19"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/60 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/62 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["21"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/63 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/64 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["23"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/65 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/67 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["25"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/68 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/69 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["27"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/70 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/72 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["29"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/73 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/75 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["31"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/76 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/78 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["33"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/79 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/81 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["35"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/82 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/83 with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/84 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["37"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/85 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/86 with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /items/86 with {} and HTTP headers {"HTTP_REFERER"=>"/items/86"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/87 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["39"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/88 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/89 with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/90 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["41"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/91 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/92 with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: DELETE /items/92 with {} and HTTP headers {"HTTP_REFERER"=>"/items/92"}
+REQUESTING PAGE: GET http://example.org/items with {} and HTTP headers {"HTTP_REFERER"=>"/items/92"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/93 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["43"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/94 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/95 with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: DELETE /items/95 with {} and HTTP headers {"HTTP_REFERER"=>"/items/95"}
+REQUESTING PAGE: GET http://example.org/items with {} and HTTP headers {"HTTP_REFERER"=>"/items/95"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/96 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["45"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/97 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/99 with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: DELETE /items/99 with {} and HTTP headers {"HTTP_REFERER"=>"/items/99"}
+REQUESTING PAGE: GET http://example.org/items with {} and HTTP headers {"HTTP_REFERER"=>"/items/99"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/100 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["47"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/101 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/102/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items/102 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "item"=>{"parent_id"=>"", "name"=>"Awesome T-Shirt", "price"=>"15.99", "stock"=>"50", "postage"=>"", "description"=>"Funky description for the item.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/102/edit"}
+REQUESTING PAGE: GET http://example.org/items/102 with {} and HTTP headers {"HTTP_REFERER"=>"/items/102"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/103 with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: DELETE /items/103 with {} and HTTP headers {"HTTP_REFERER"=>"/items/103"}
+REQUESTING PAGE: GET http://example.org/items with {} and HTTP headers {"HTTP_REFERER"=>"/items/103"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/104 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["49"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/105 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/106/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items/106 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "item"=>{"parent_id"=>"", "name"=>"Awesome T-Shirt", "price"=>"15.99", "stock"=>"50", "postage"=>"", "description"=>"Funky description for the item.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/106/edit"}
+REQUESTING PAGE: GET http://example.org/items/106 with {} and HTTP headers {"HTTP_REFERER"=>"/items/106"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/107 with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: DELETE /items/107 with {} and HTTP headers {"HTTP_REFERER"=>"/items/107"}
+REQUESTING PAGE: GET http://example.org/items with {} and HTTP headers {"HTTP_REFERER"=>"/items/107"}
+REQUESTING PAGE: GET /items with {} and HTTP headers {}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET http://example.org/admins/sign_in with {} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"", "price"=>"", "stock"=>"", "postage"=>"", "description"=>"", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/108 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/new with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /items with {"utf8"=>"\xE2\x9C\x93", "item"=>{"parent_id"=>"", "name"=>"T-Shirt", "price"=>"5", "stock"=>"10", "postage"=>"", "description"=>"Some text.", "category_ids"=>["51"], "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/new"}
+REQUESTING PAGE: GET http://example.org/items/109 with {} and HTTP headers {"HTTP_REFERER"=>"/items"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/110 with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET /items/110/edit with {} and HTTP headers {"HTTP_REFERER"=>"/items/110"}
+REQUESTING PAGE: POST /items/110 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "item"=>{"parent_id"=>"", "name"=>"Awesome T-Shirt", "price"=>"15.99", "stock"=>"50", "postage"=>"", "description"=>"Funky description for the item.", "image"=>"", "delete_image"=>"0"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/items/110/edit"}
+REQUESTING PAGE: GET http://example.org/items/110 with {} and HTTP headers {"HTTP_REFERER"=>"/items/110"}
+REQUESTING PAGE: GET /admins/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /admins/sign_in with {"utf8"=>"\xE2\x9C\x93", "admin"=>{"username"=>"admin", "password"=>"admin123"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/admins/sign_in"}
+REQUESTING PAGE: GET /items/111 with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: DELETE /items/111 with {} and HTTP headers {"HTTP_REFERER"=>"/items/111"}
+REQUESTING PAGE: GET http://example.org/items with {} and HTTP headers {"HTTP_REFERER"=>"/items/111"}

@@ -56,3 +56,23 @@ Feature: Manage Items
 		And I should see "Some text."
 		And I should see "Clothes"
 		And I should have 1 item
+		
+	Scenario: Edit Item
+		Given an admin exists
+		And I am signed in as an admin
+		And I have 1 item called "T-Shirt"
+		When I go to the item page for "T-Shirt"
+		And I follow "Edit"
+		And I fill in "Name" with "Awesome T-Shirt"
+		And I press "Save"
+		Then I should see "Item successfully updated"
+		And I should see "Awesome T-Shirt"
+		
+	Scenario: Delete existing item
+		Given an admin exists
+		And I am signed in as an admin
+		And I have 1 item called "T-Shirt"
+		When I go to the item page for "T-Shirt"
+		And I follow "Destroy"
+		Then I should see "Item successfully destroyed"
+		And I should have 0 items

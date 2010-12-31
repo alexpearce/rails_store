@@ -5,10 +5,6 @@ Factory.define :item do |f|
   f.description 'Funky description for the item.'
 end
 
-Factory.define(:category_with_item, :parent => :category) do |f|
-  f.item_id = 1
-end
-
 Factory.define :basket do |f|
 end
 

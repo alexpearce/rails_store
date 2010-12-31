@@ -54,3 +54,34 @@ if defined?(ActiveRecord::Base)
   rescue LoadError => ignore_if_database_cleaner_not_present
   end
 end
+
+require "English"
+
+require "webrat/core_extensions/blank"
+require "webrat/core/elements/element"
+
+# below makes the Destroy links work
+# https://github.com/brynary/webrat/pull/41
+module Webrat
+  class Link < Element #:nodoc:
+
+    def http_method
+      if @element["data-method"] && %w(get post put delete).include?(@element["data-method"])
+       @element["data-method"].to_sym
+      elsif !onclick.blank? && onclick.include?("f.submit()") || @element["data-method"]
+        http_method_from_js_form
+      else
+        :get
+      end
+    end
+
+    def http_method_from_js_form
+      if !onclick.blank? && onclick.include?("m.setAttribute('name', '_method')")
+        http_method_from_fake_method_param
+      else
+        :post
+      end
+    end
+
+  end
+end

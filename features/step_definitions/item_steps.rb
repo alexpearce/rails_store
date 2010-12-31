@@ -1,4 +1,4 @@
-Given /^I have items called (.+)$/ do |items|
+Given /^I have \d+? items? called (.+)$/ do |items|
   items.split(', ').each do |item|
     Factory(:item, :name => item)
   end
