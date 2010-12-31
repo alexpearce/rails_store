@@ -17,6 +17,9 @@ module NavigationHelpers
     when /the login page/
       new_admin_session_path
       
+    when /the first item page/
+      item_path(Item.first)
+      
     when /the item page for (.+)/
       item_path(Item.find_by_name($1))
       

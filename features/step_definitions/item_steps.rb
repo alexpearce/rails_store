@@ -4,6 +4,12 @@ Given /^I have \d+? items? called (.+)$/ do |items|
   end
 end
 
+Given /^I have (\d+) items? with a stock of (\d+)$/ do |num, stock|
+  (1..num.to_i).each do |i|
+    Factory(:item, :stock => stock)
+  end
+end
+
 Given /^I have 0 items$/ do
   Item.delete_all
 end
