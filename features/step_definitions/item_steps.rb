@@ -4,7 +4,7 @@ Given /^I have items called (.+)$/ do |items|
   end
 end
 
-Given /^I have no items$/ do
+Given /^I have 0 items$/ do
   Item.delete_all
 end
 

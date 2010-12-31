@@ -17,14 +17,12 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test: &test
-  adapter: mysql2
+  adapter: postgresql
+  database: rails_store_test
+  host: localhost
+  username: postgres
+  min_messages: warning
   encoding: utf8
-  reconnect: false
-  database: store_test
-  pool: 5
-  username: root
-  password: root
-  socket: /tmp/mysql.sock
 
 production:
   adapter: mysql2

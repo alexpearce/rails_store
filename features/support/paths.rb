@@ -14,6 +14,9 @@ module NavigationHelpers
     when /the list of items/
       items_path
       
+    when /the login page/
+      new_admin_session_path
+      
     when /the item page for "(.+)"/
       i = Item.find_by_name($1)
       item_path(i.id)

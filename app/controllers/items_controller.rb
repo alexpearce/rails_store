@@ -47,7 +47,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(params[:item])
-    @item.categories.build(params[:item][:category])
+    @item.categories.build(params[:item][:category]) if params[:item][:category]
     @item.save ?
       flash[:notice] = 'New item successfully created.' :  flash[:notice] = 'New item not successfully created.'
     
