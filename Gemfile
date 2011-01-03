@@ -38,4 +38,5 @@ group :test, :development do
   gem 'webrat'
   gem 'factory_girl_rails'
   gem 'autotest'
+  gem 'launchy'
 end

@@ -87,3 +87,16 @@ Feature: Manage Items
 		And I follow "Destroy"
 		Then I should see "Item successfully destroyed"
 		And I should have 0 items
+		
+	Scenario: Add option to existing item
+		Given an admin exists
+		And I am signed in as an admin
+		And I have 1 item called "T-Shirt"
+		And I am on the item page for "T-Shirt"
+		When I follow "Add Option"
+		And fill in "Name" with "Super Thing"
+		And fill in "Description" with "Textual description of option."
+		And I press "Save"
+		Then I should see "New item successfully created"
+		And I should see "T-Shirt"
+		And "T-Shirt" should have 1 option

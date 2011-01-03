@@ -3,8 +3,13 @@ Feature: Manage Items
 	As a user
 	I want to be able to view and purchase items
 	
+	@focus
 	Scenario: Item index on home page
-		Given I have 3 items called "T-Shirt", "Poster", "CD"
+		Given the following item records
+		| name    |
+		| T-Shirt |
+		| Poster  |
+		| CD      |
 		When I am on the home page
 		Then I should see "T-Shirt"
 		And I should see "Poster"
@@ -16,7 +21,7 @@ Feature: Manage Items
 		Then I should see a button with a value of "Sold Out"
 		And I should see a disabled button
 	
-	Scenario: Add to basket button on items with gt zero stock
+	Scenario: Add to basket button on items with greater than zero stock
 		Given I have 1 item with a stock of 10
 		When I am on the first item page
 		Then I should see a button with a value of "Add to Basket"

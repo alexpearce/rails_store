@@ -1,5 +1,7 @@
 class CategoriesController < ApplicationController
   
+  before_filter :authenticate_admin!, :except => [:index, :show]
+  
   respond_to :html
   
   def index
