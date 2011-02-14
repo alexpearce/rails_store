@@ -146,12 +146,12 @@ header {
 }
 header h1 {
   padding: 20px 0 10px 0;
-  font-family: "FSAlbert";
+  font-family: "Maven Pro";
   font-size: 72px;
   font-weight: 500;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
   border-bottom: 1px solid #7d99ad;
-  font-family: "FSAlbert";
+  font-family: "Maven Pro";
 }
 header nav ul {
   margin: 0;
@@ -287,7 +287,7 @@ header nav li form input[type=text]:focus {
   border-right: 1px dashed #e8f0f5;
 }
 .main h1, .main h2, .main h3 {
-  font-family: "FSAlbert";
+  font-family: "Maven Pro";
   color: #8da5b7;
 }
 .main h1 {

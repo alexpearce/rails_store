@@ -1,8 +1,8 @@
-*.rbc
-*.sassc
-public/stylesheets/.sass-cache
-capybara-*.html
-.rspec
+/*.rbc
+/*.sassc
+/public/stylesheets/.sass-cache/**
+/capybara-*.html
+/.rspec
 /.bundle
 /vendor/bundle
 /log/*
@@ -11,6 +11,7 @@ capybara-*.html
 /public/system/*
 /coverage/
 /spec/tmp/*
-**.orig
-rerun.txt
+/**.orig
+/rerun.txt
 /public/items
+/webrat.log
