@@ -264,6 +264,7 @@ header {
 	h1 {
 		margin: 0 0 20px 0;
 		font-size: 32px;
+		text-shadow: 0 1px 0px rgba(0, 0, 0, 0.5);
 	}
 	h2 {
 		margin: 10px 0 10px 0;
@@ -398,7 +399,7 @@ form {
 	}
 	input[type=text], input[type=password], textarea {
 		padding: 5px;
-		border: 1px solid #d1d1d1;
+    border: 1px solid #d1d1d1;
 		background: #f9f9f9;
 		font-size: 12px;
 		-webkit-transition: all 0.1s;
