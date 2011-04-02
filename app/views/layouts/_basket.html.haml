@@ -1,6 +1,6 @@
 %div#shopping-basket
 	%h2
-		=link_to 'Shopping Basket', basket_path(@basket)
+		=link_to t(:basket_title, :scope => 'views.basket'), basket_path(@basket)
 	%ul
 		- if @basket.line_items.count.zero?
 			%li
