@@ -28,6 +28,7 @@
 						- if admin_signed_in?
 							%li
 								=link_to '[Pages]', pages_path
+					/
 						%li.search
 							= form_tag search_items_path, :method => 'post' do
 								= text_field_tag :search, params[:search]
@@ -44,15 +45,15 @@
 			
 					=yield
 
-		%footer
-			%span
-				=t :store_owner, :scope => 'views.application'
-				&copy;
-				= Time.now.year
-			%span.right
-				- if admin_signed_in?
-					= link_to 'Logout', destroy_admin_session_path
-				- else
-					= link_to 'Login',  new_admin_session_path
+			%footer
+				%span
+					=t :store_owner, :scope => 'views.application'
+					&copy;
+					= Time.now.year
+				%span.right
+					- if admin_signed_in?
+						= link_to 'Logout', destroy_admin_session_path
+					- else
+						= link_to 'Login',  new_admin_session_path
 			
 		= javascript_include_tag 'jquery', 'rails', 'jquery.fancybox', 'jquery.color', 'application'
