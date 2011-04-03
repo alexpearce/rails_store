@@ -6,7 +6,8 @@
 		%title
 			=content_for?(:title) ? yield(:title) + ' | ' : ''
 			=t :store_name, :scope => 'views.application'
-		= stylesheet_link_tag 'reset', 'jquery.fancybox', 'application'
+
+		= stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection'
 		
 		= csrf_meta_tag
 		
