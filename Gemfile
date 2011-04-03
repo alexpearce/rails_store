@@ -12,6 +12,8 @@ gem 'pg'
 gem 'haml'
 # Haml generators
 gem 'haml-rails'
+# CSS framework
+gem 'compass'
 
 # markdown
 gem 'rdiscount'
