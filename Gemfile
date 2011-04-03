@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 # rails
-gem 'rails', '3.0.1'
+gem 'rails', '3.0.5'
 
 # mysql driver
 # gem 'mysql2'
@@ -12,6 +12,7 @@ gem 'pg'
 gem 'haml'
 # Haml generators
 gem 'haml-rails'
+
 # markdown
 gem 'rdiscount'
 
