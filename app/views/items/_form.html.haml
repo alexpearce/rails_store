@@ -23,11 +23,11 @@
 	.field
 		= f.label :description
 		= f.text_area :description
-	.field.twocol
+	.field.media
 		.meta
 			= f.label :category_ids, 'Categories'
 		- count = 1
-		.bd
+		.body
 			- Category.all.each do |c|
 				.field
 					= label_tag "item_category_ids_#{count}", c.name

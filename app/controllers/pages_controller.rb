@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   end
   
   def show
-    @page = Page.find(params[:id])
+    @page = Page.find_by_permalink(params[:id])
     
     # if the or request.. condition is deleted, the root route breaks
     # due to a redirect loop
@@ -31,7 +31,7 @@ class PagesController < ApplicationController
   end
 
   def edit
-    @page = Page.find(params[:id])
+    @page = Page.find_by_permalink(params[:id])
     
     respond_with @page
   end
@@ -46,7 +46,7 @@ class PagesController < ApplicationController
   end
 
   def update
-    @page = Page.find(params[:id])
+    @page = Page.find_by_permalink(params[:id])
 
     if @page.update_attributes(params[:page])
       flash[:notice] = 'Page was successfully updated.'
@@ -58,7 +58,7 @@ class PagesController < ApplicationController
   end
 
   def destroy
-    @page = Page.find(params[:id])
+    @page = Page.find_by_permalink(params[:id])
     @page.destroy
 
     flash[:notice] = 'Page successfully destroyed.'

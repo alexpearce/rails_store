@@ -14,28 +14,31 @@
 	.body
 		:markdown
 			#{@item.description}
-			
-		.categories
-			= link_to 'Categories', categories_path
-			%ul
-				- @item.categories.sort_by(&:name).each do |c|
-					%li= link_to c.name, category_path(c), :class => 'tag'
-				
-		- if admin_signed_in?
-			= link_to 'Add Option', new_item_path(:parent_id => @item)
-			|
-			= link_to 'Edit', edit_item_path(@item)
-			|
-			= link_to 'Destroy', item_path(@item), :confirm => "Delete item '#{@item.name}'?", :method => :delete
+		
+		- unless @item.categories.count == 0
+			.categories
+				%h3= link_to 'Categories', categories_path, :class => 'title'
+				%ul
+					- @item.categories.sort_by(&:name).each do |c|
+						%li= link_to c.name, category_path(c), :class => 'tag'
+		
+		.item-meta
+			- if admin_signed_in?
+				= link_to 'Add Option', new_item_path(:parent_id => @item)
+				|
+				= link_to 'Edit', edit_item_path(@item)
+				|
+				= link_to 'Destroy', item_path(@item), :confirm => "Delete item '#{@item.name}'?", :method => :delete
 
-		= ntc @item.price
-				
-		= form_for [@basket, @line_item], :html => {:class => 'right'} do |f|
-			.field
-				- if @item.children.empty?
-					= f.hidden_field :item_id
-				- else
-					= f.collection_select :item_id, @item.children, :id, :option_select, { :disabled => lambda{ |op| op.stock == 0 }, :include_blank => 'Choose an option'}
-			.actions
-				= f.submit 'Add to Basket' if @item.stock > 0
-				= f.submit 'Sold Out', :disabled => 'disabled' if @item.stock == 0
+			%span.price= ntc @item.price
+		
+		.add-to-basket
+			= form_for [@basket, @line_item], :html => {:class => 'right'} do |f|
+				.field
+					- if @item.children.empty?
+						= f.hidden_field :item_id
+					- else
+						= f.collection_select :item_id, @item.children, :id, :option_select, { :disabled => lambda{ |op| op.stock == 0 }, :include_blank => 'Choose an option'}
+				.actions
+					= f.submit 'Add to Basket' if @item.stock > 0
+					= f.submit 'Sold Out', :disabled => 'disabled' if @item.stock == 0

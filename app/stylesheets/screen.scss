@@ -66,6 +66,12 @@ body {
 h1 {
   margin: 0 0 20px 0;
   font-family: "Uni Sans Book", "Helvetica Neue", Helvetica, Ariel, sans-serif;
+  color: #222;
+}
+h3 {
+  margin: 0 0 10px 0;
+  color: #222;
+  font-size: 16px;
 }
 p, span, a {
   line-height: 1.2em;
@@ -76,6 +82,10 @@ p {
 a {
   color: #b03231;
   text-decoration: none;
+  @include transition(all, 0.15s);
+  &:hover {
+    color: #601b1b;
+  }
 }
 /** END TYPOGRAPHY **/
 /** END LAYOUT **/
@@ -95,6 +105,11 @@ header {
     font-size: 56px;
     a {
       color: #fff;
+      @include transition(all, 0.3s);
+      &:hover {
+        color: #fff;
+        opacity: 0.8;
+      }
     }
   }
 }
@@ -102,9 +117,15 @@ header {
 /** SITE NAVIGATION **/
 nav {
   float: right;
+  ul {
+   @include clearfix; 
+  }
   li {
     float: left;
-    margin: 20px 7px;
+    margin: 25px 7px;
+    &:last-child {
+      margin: 25px 0 25px 7px;
+    }
   }
   a {
     padding: 3px 9px 4px 9px;
@@ -112,6 +133,10 @@ nav {
     font-weight: bold;
     color: #fff;
     @include text-shadow(rgba(0, 0, 0, 0.7), 0, 1px, 2px);
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
     &.current {
       border: 1px solid #1c1c1c;
       @include linear-gradient(color-stops(#282a31, #1f2026));
@@ -134,24 +159,65 @@ nav {
 .main {
   padding: 0 10px 0 0;
   border-right: 1px dashed #eee;
-  a {
-    @include hover-link;
-  }
 }
 .item-image {
   margin: 5px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   @include border-radius(3px);
   @include box-shadow(rgba(0, 0, 0, 0.3), 0, 1px, 3px);
+  @include transition(all, 0.3s);
+  &:hover {
+    @include box-shadow(rgba(0, 0, 0, 0.5), 0, 1px, 3px);
+  }
 }
 /** CATEGORY TAGS **/
 .categories {
-  margin: 10px 0;
-}
-.tag {
-  
+  h3 a {
+    color: #222;
+  }
+  ul {
+    padding: 10px 0;
+    @include clearfix;
+  }
+  li {
+    float: left;
+    margin: 0 5px;
+    &:first-child {
+      margin: 0 5px 0 0;
+    }
+    a {
+      padding: 6px 9px;
+      border: 1px solid #dea23c;
+      font-size: 12px;
+      font-weight: bold;
+      color: #996633;
+      @include text-shadow(rgba(255, 255, 255, 0.4), 0, 1px, 0);
+      @include linear-gradient(color-stops(#feda71, #febc4a));
+      @include border-radius(2px);
+      @include box-shadow(rgba(145, 145, 145, 0.13), 0, 1px, 1px);
+    }
+  }
 }
 /** END CATEGORY TAGS **/
+
+/** ITEM META **/
+.item-meta {
+  margin: 10px 0;
+  padding: 5px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  @include clearfix;
+}
+.item-meta .price {
+  float: right;
+}
+/** END ITEM META **/
+.add-to-basket {
+  float: right;
+  input {
+    float: right;
+  }
+}
 /** END CONTENT **/
 
 /** FLASH MESSAGES **/
@@ -220,7 +286,8 @@ nav {
 		list-style-type: none;
 		font-size: 13px;
 		&.total {
-		  background: #fafafa;
+		  border: 1px solid #fff;
+		  background: url('../../images/dots.gif') repeat;
 			text-align: right;
 		}
 		&:last-child {
@@ -323,14 +390,14 @@ form {
 		@include box-shadow(rgba(0, 0, 0, 0.1), 0, 1px, 2px);
 		text-shadow: 0 1px 1px #fff;
 		&:hover {
-			@include box-shadow(rgba(0, 0, 0, 0.2), 0, 1px, 2px);
+			@include box-shadow(rgba(0, 0, 0, 0.15), 0, 1px, 2px);
 		}
 		&:active {
 			background: #d5d5d5;
 			border: 1px solid #888;
 		}
 		&[disabled="disabled"] {
-			color: #ddd;
+			color: #999;
 			@include box-shadow(rgba(0, 0, 0, 0), 0, 0, 0);
 			cursor: default;
 			&:hover {
@@ -367,19 +434,19 @@ form {
 	width: 100%;
 	margin: 10px 0;
 	text-align: center;
-	border: 1px solid #a3b6c5;
+	border: 1px solid #ad3e3e;
 	th {
 		padding: 7px 0;
-		background: #e3eaf0;
-		border-bottom: 1px solid #a3b6c5;
-		color: #2c3945;
+		background: #bd4747;
+		border-bottom: 1px solid #ad3e3e;
+		color: #fff;
 		font-weight: bold;
-		text-shadow: 0 1px 0 #fff;
-		//@include linear-gradient(color-stops(#e3eaf0, #d9e4ea));
+		text-align: center;
 	}
 	td {
 		padding: 5px 0;
 		background-color: transparent;
+		text-align: center;
 		&.b {
 			font-weight: bold;
 		}
@@ -423,11 +490,16 @@ footer {
   height: 30px;
   padding: 20px 0 0 0;
   font-size: 13px;
+  color: #999;
+  @include text-shadow(rgba(0, 0, 0, 0.4), 0, 1px, 1px);
   @include box-shadow(rgba(0, 0, 0, 0.3), 0, 2px, 3px, 0, inset);
   .right {
     float: right;
-    a {
-      @include hover-link;
+  }
+  a {
+    color: #999;
+    &:hover {
+      color: #d04c49;
     }
   }
 }

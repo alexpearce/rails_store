@@ -3,4 +3,8 @@ class Page < ActiveRecord::Base
   belongs_to :super, :class_name => 'Item'
   
   acts_as_tree
+  
+  def to_param
+    permalink
+  end
 end
