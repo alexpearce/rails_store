@@ -36,13 +36,14 @@
 
 			.content.ninesixty
 	
-				.main.grid_9
+				.grid_9
+					.main
 	
-					- flash.each do |key, msg|
-						%div{:id => key}
-							=msg
+						- flash.each do |key, msg|
+							%div{:id => key}
+								=msg
 	
-					=yield
+						=yield
 				
 				%div.sidebar.grid_3
 					=render 'layouts/sidebar'

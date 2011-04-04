@@ -16,9 +16,10 @@
 			#{@item.description}
 			
 		.categories
-			= link_to 'Categories', categories_path, :class => 'hilighted'
-			- @item.categories.sort_by(&:name).each do |c|
-				= link_to c.name, category_path(c)
+			= link_to 'Categories', categories_path
+			%ul
+				- @item.categories.sort_by(&:name).each do |c|
+					%li= link_to c.name, category_path(c), :class => 'tag'
 				
 		- if admin_signed_in?
 			= link_to 'Add Option', new_item_path(:parent_id => @item)

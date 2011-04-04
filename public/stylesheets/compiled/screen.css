@@ -183,30 +183,31 @@ h1 {
 }
 
 /* line 70, ../../../app/stylesheets/screen.scss */
+p, span, a {
+  line-height: 1.2em;
+}
+
+/* line 73, ../../../app/stylesheets/screen.scss */
 p {
   margin: 0 0 20px 0;
 }
 
-/* line 73, ../../../app/stylesheets/screen.scss */
+/* line 76, ../../../app/stylesheets/screen.scss */
 a {
   color: #b03231;
   text-decoration: none;
 }
-/* line 4, ../../../.gems/ruby/1.9.1/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_hover-link.scss */
-a:hover {
-  text-decoration: underline;
-}
 
 /** END TYPOGRAPHY **/
 /** END LAYOUT **/
-/* line 80, ../../../app/stylesheets/screen.scss */
+/* line 83, ../../../app/stylesheets/screen.scss */
 header, footer {
   background: url("../../images/black-noise.gif") repeat;
   color: #fff;
 }
 
 /** HEADER **/
-/* line 86, ../../../app/stylesheets/screen.scss */
+/* line 89, ../../../app/stylesheets/screen.scss */
 header {
   padding: 20px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 -2px 3px 0 inset;
@@ -214,28 +215,28 @@ header {
   -o-box-shadow: rgba(0, 0, 0, 0.3) 0 -2px 3px 0 inset;
   box-shadow: rgba(0, 0, 0, 0.3) 0 -2px 3px 0 inset;
 }
-/* line 89, ../../../app/stylesheets/screen.scss */
+/* line 92, ../../../app/stylesheets/screen.scss */
 header h1 {
   float: left;
   margin: 0;
   font-size: 56px;
 }
-/* line 93, ../../../app/stylesheets/screen.scss */
+/* line 96, ../../../app/stylesheets/screen.scss */
 header h1 a {
   color: #fff;
 }
 
 /** SITE NAVIGATION **/
-/* line 100, ../../../app/stylesheets/screen.scss */
+/* line 103, ../../../app/stylesheets/screen.scss */
 nav {
   float: right;
 }
-/* line 102, ../../../app/stylesheets/screen.scss */
+/* line 105, ../../../app/stylesheets/screen.scss */
 nav li {
   float: left;
   margin: 20px 7px;
 }
-/* line 106, ../../../app/stylesheets/screen.scss */
+/* line 109, ../../../app/stylesheets/screen.scss */
 nav a {
   padding: 3px 9px 4px 9px;
   font-size: 13px;
@@ -243,7 +244,7 @@ nav a {
   color: #fff;
   text-shadow: rgba(0, 0, 0, 0.7) 0 1px 2px;
 }
-/* line 112, ../../../app/stylesheets/screen.scss */
+/* line 115, ../../../app/stylesheets/screen.scss */
 nav a.current {
   border: 1px solid #1c1c1c;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #282a31), color-stop(100%, #1f2026));
@@ -264,20 +265,34 @@ nav a.current {
 /** END SITE NAVIGATION **/
 /** END HEADER **/
 /** CONTENT **/
-/* line 124, ../../../app/stylesheets/screen.scss */
+/* line 127, ../../../app/stylesheets/screen.scss */
 .content {
   padding: 20px 0;
 }
-/* line 126, ../../../app/stylesheets/screen.scss */
+/* line 129, ../../../app/stylesheets/screen.scss */
 .content h1 {
   font-family: 'Uni Sans Book';
   font-size: 48px;
 }
 
-/* line 131, ../../../app/stylesheets/screen.scss */
+/* line 134, ../../../app/stylesheets/screen.scss */
+.main {
+  padding: 0 10px 0 0;
+  border-right: 1px dashed #eee;
+}
+/* line 137, ../../../app/stylesheets/screen.scss */
+.main a {
+  text-decoration: none;
+}
+/* line 4, ../../../.gems/ruby/1.9.1/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_hover-link.scss */
+.main a:hover {
+  text-decoration: underline;
+}
+
+/* line 141, ../../../app/stylesheets/screen.scss */
 .item-image {
   margin: 5px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -290,11 +305,18 @@ nav a.current {
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px 0;
 }
 
+/** CATEGORY TAGS **/
+/* line 148, ../../../app/stylesheets/screen.scss */
+.categories {
+  margin: 10px 0;
+}
+
+/** END CATEGORY TAGS **/
 /** END CONTENT **/
 /** FLASH MESSAGES **/
-/* line 140, ../../../app/stylesheets/screen.scss */
+/* line 158, ../../../app/stylesheets/screen.scss */
 #notice, #error, #alert {
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   padding: 7px 20px;
   -moz-box-shadow: rgba(0, 0, 0, 0.05) 0 1px 2px 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0 1px 2px 0;
@@ -308,24 +330,24 @@ nav a.current {
   border-radius: 2px;
 }
 
-/* line 146, ../../../app/stylesheets/screen.scss */
+/* line 164, ../../../app/stylesheets/screen.scss */
 #notice p, #error p, #alert p {
   margin: 0;
 }
 
-/* line 149, ../../../app/stylesheets/screen.scss */
+/* line 167, ../../../app/stylesheets/screen.scss */
 #notice {
   background: #e5fee2;
   border: 1px solid #9fd690;
 }
 
-/* line 153, ../../../app/stylesheets/screen.scss */
+/* line 171, ../../../app/stylesheets/screen.scss */
 #error {
   background: #fee5e2;
   border: 1px solid #d69090;
 }
 
-/* line 157, ../../../app/stylesheets/screen.scss */
+/* line 175, ../../../app/stylesheets/screen.scss */
 #alert {
   background: #fefbe2;
   border: 1px solid #e4d45d;
@@ -333,7 +355,7 @@ nav a.current {
 
 /** END FLASH MESSAGES **/
 /** SHOPPING BASKET **/
-/* line 164, ../../../app/stylesheets/screen.scss */
+/* line 182, ../../../app/stylesheets/screen.scss */
 #shopping-basket {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -343,7 +365,7 @@ nav a.current {
   border-radius: 2px;
   border: 1px solid #a53b3b;
 }
-/* line 168, ../../../app/stylesheets/screen.scss */
+/* line 186, ../../../app/stylesheets/screen.scss */
 #shopping-basket h2 {
   position: relative;
   z-index: 0;
@@ -360,7 +382,7 @@ nav a.current {
   background-image: -moz-linear-gradient(top, #f6654d 0%, #b03231 100%);
   background-image: linear-gradient(top, #f6654d 0%, #b03231 100%);
 }
-/* line 178, ../../../app/stylesheets/screen.scss */
+/* line 196, ../../../app/stylesheets/screen.scss */
 #shopping-basket h2:after {
   position: absolute;
   z-index: -1;
@@ -371,63 +393,64 @@ nav a.current {
   height: 1px;
   border-top: 1px solid #fa8859;
 }
-/* line 188, ../../../app/stylesheets/screen.scss */
+/* line 206, ../../../app/stylesheets/screen.scss */
 #shopping-basket h2 a {
   color: #510a0a;
 }
-/* line 190, ../../../app/stylesheets/screen.scss */
+/* line 208, ../../../app/stylesheets/screen.scss */
 #shopping-basket h2 a:hover {
   color: #400807;
 }
-/* line 196, ../../../app/stylesheets/screen.scss */
+/* line 214, ../../../app/stylesheets/screen.scss */
 #shopping-basket ul {
   margin: 0;
 }
-/* line 199, ../../../app/stylesheets/screen.scss */
+/* line 217, ../../../app/stylesheets/screen.scss */
 #shopping-basket li {
   padding: 10px 20px 10px 20px;
   border-bottom: 1px solid #eee;
   list-style-type: none;
   font-size: 13px;
 }
-/* line 204, ../../../app/stylesheets/screen.scss */
+/* line 222, ../../../app/stylesheets/screen.scss */
 #shopping-basket li.total {
+  background: #fafafa;
   text-align: right;
 }
-/* line 207, ../../../app/stylesheets/screen.scss */
+/* line 226, ../../../app/stylesheets/screen.scss */
 #shopping-basket li:last-child {
   border-bottom: none;
 }
-/* line 210, ../../../app/stylesheets/screen.scss */
+/* line 229, ../../../app/stylesheets/screen.scss */
 #shopping-basket li img {
   float: right;
   padding: 1px;
   border: 1px solid #c4b0b0;
 }
-/* line 215, ../../../app/stylesheets/screen.scss */
+/* line 234, ../../../app/stylesheets/screen.scss */
 #shopping-basket li a {
   color: #813a3a;
 }
-/* line 217, ../../../app/stylesheets/screen.scss */
+/* line 236, ../../../app/stylesheets/screen.scss */
 #shopping-basket li a:hover {
   border-bottom: 1px solid #c4b0b0;
 }
-/* line 221, ../../../app/stylesheets/screen.scss */
+/* line 240, ../../../app/stylesheets/screen.scss */
 #shopping-basket li span {
   color: #c4b0b0;
 }
 
 /** END SHOPPINGB BASKET **/
 /** FORMS **/
-/* line 229, ../../../app/stylesheets/screen.scss */
+/* line 248, ../../../app/stylesheets/screen.scss */
 form {
   margin: 20px 0;
 }
-/* line 231, ../../../app/stylesheets/screen.scss */
+/* line 250, ../../../app/stylesheets/screen.scss */
 form label, form input[type=button], form input[type=submit], form button {
   cursor: pointer;
 }
-/* line 234, ../../../app/stylesheets/screen.scss */
+/* line 253, ../../../app/stylesheets/screen.scss */
 form label {
   float: left;
   width: 100px;
@@ -436,27 +459,27 @@ form label {
   text-align: right;
   display: block;
 }
-/* line 242, ../../../app/stylesheets/screen.scss */
+/* line 261, ../../../app/stylesheets/screen.scss */
 form label.req, form .field_with_errors label {
   font-weight: bold;
 }
-/* line 245, ../../../app/stylesheets/screen.scss */
+/* line 264, ../../../app/stylesheets/screen.scss */
 form .field_with_errors label {
   color: #f44;
 }
-/* line 248, ../../../app/stylesheets/screen.scss */
+/* line 267, ../../../app/stylesheets/screen.scss */
 form .field {
   margin: 5px 0;
 }
-/* line 251, ../../../app/stylesheets/screen.scss */
+/* line 270, ../../../app/stylesheets/screen.scss */
 form .field.twocol .meta {
   margin-right: 0;
 }
-/* line 254, ../../../app/stylesheets/screen.scss */
+/* line 273, ../../../app/stylesheets/screen.scss */
 form .field.twocol .field label {
   width: 75px;
 }
-/* line 259, ../../../app/stylesheets/screen.scss */
+/* line 278, ../../../app/stylesheets/screen.scss */
 form input, form textarea {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -469,19 +492,19 @@ form input, form textarea {
   -o-box-shadow: rgba(0, 0, 0, 0.05) 0 1px 1px 0;
   box-shadow: rgba(0, 0, 0, 0.05) 0 1px 1px 0;
 }
-/* line 262, ../../../app/stylesheets/screen.scss */
+/* line 281, ../../../app/stylesheets/screen.scss */
 form input:hover, form textarea:hover {
   border: 1px solid #aaa;
 }
-/* line 265, ../../../app/stylesheets/screen.scss */
+/* line 284, ../../../app/stylesheets/screen.scss */
 form input:focus, form textarea:focus {
   border: 1px solid #888;
 }
-/* line 269, ../../../app/stylesheets/screen.scss */
+/* line 288, ../../../app/stylesheets/screen.scss */
 form input[type=file]:hover {
   border: none;
 }
-/* line 272, ../../../app/stylesheets/screen.scss */
+/* line 291, ../../../app/stylesheets/screen.scss */
 form input[type=text], form input[type=password], form textarea {
   padding: 5px;
   border: 1px solid #d1d1d1;
@@ -496,11 +519,11 @@ form input[type=text], form input[type=password], form textarea {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 278, ../../../app/stylesheets/screen.scss */
+/* line 297, ../../../app/stylesheets/screen.scss */
 form input[type=text]:hover, form input[type=password]:hover, form textarea:hover {
   border: 1px solid #bbb;
 }
-/* line 281, ../../../app/stylesheets/screen.scss */
+/* line 300, ../../../app/stylesheets/screen.scss */
 form input[type=text]:focus, form input[type=password]:focus, form textarea:focus {
   outline: none;
   -moz-box-shadow: #fbac86 0 0 1px 0;
@@ -509,20 +532,20 @@ form input[type=text]:focus, form input[type=password]:focus, form textarea:focu
   box-shadow: #fbac86 0 0 1px 0;
   border: 1px solid #fbac86;
 }
-/* line 288, ../../../app/stylesheets/screen.scss */
+/* line 307, ../../../app/stylesheets/screen.scss */
 form input[type=text], form input[type=password] {
   width: 200px;
 }
-/* line 291, ../../../app/stylesheets/screen.scss */
+/* line 310, ../../../app/stylesheets/screen.scss */
 form textarea {
   width: 430px;
   height: 180px;
 }
-/* line 295, ../../../app/stylesheets/screen.scss */
+/* line 314, ../../../app/stylesheets/screen.scss */
 form input[type=checkbox], form input[type=radio], form select {
   margin: 8px 0;
 }
-/* line 298, ../../../app/stylesheets/screen.scss */
+/* line 317, ../../../app/stylesheets/screen.scss */
 form input[type=submit] {
   border: 1px solid #d1d1d1;
   padding: 4px 20px;
@@ -537,19 +560,19 @@ form input[type=submit] {
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px 0;
   text-shadow: 0 1px 1px #fff;
 }
-/* line 306, ../../../app/stylesheets/screen.scss */
+/* line 325, ../../../app/stylesheets/screen.scss */
 form input[type=submit]:hover {
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0;
   -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0;
 }
-/* line 309, ../../../app/stylesheets/screen.scss */
+/* line 328, ../../../app/stylesheets/screen.scss */
 form input[type=submit]:active {
   background: #d5d5d5;
   border: 1px solid #888;
 }
-/* line 313, ../../../app/stylesheets/screen.scss */
+/* line 332, ../../../app/stylesheets/screen.scss */
 form input[type=submit][disabled="disabled"] {
   color: #ddd;
   -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
@@ -558,14 +581,14 @@ form input[type=submit][disabled="disabled"] {
   box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
   cursor: default;
 }
-/* line 317, ../../../app/stylesheets/screen.scss */
+/* line 336, ../../../app/stylesheets/screen.scss */
 form input[type=submit][disabled="disabled"]:hover {
   -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
   -o-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
   box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
 }
-/* line 320, ../../../app/stylesheets/screen.scss */
+/* line 339, ../../../app/stylesheets/screen.scss */
 form input[type=submit][disabled="disabled"]:active {
   background: #e9e9e9;
   border: 1px solid #d1d1d1;
@@ -573,39 +596,99 @@ form input[type=submit][disabled="disabled"]:active {
   background-image: -moz-linear-gradient(top, #ffffff 0%, #eaeaea 100%);
   background-image: linear-gradient(top, #ffffff 0%, #eaeaea 100%);
 }
-/* line 327, ../../../app/stylesheets/screen.scss */
+/* line 346, ../../../app/stylesheets/screen.scss */
 form.admin input[type=submit] {
   margin: 5px 0 0 110px;
 }
 
 /** FORM ERRORS **/
-/* line 333, ../../../app/stylesheets/screen.scss */
+/* line 352, ../../../app/stylesheets/screen.scss */
 #error_explanation {
   padding: 10px;
   margin: 10px 20px;
 }
 
-/* line 337, ../../../app/stylesheets/screen.scss */
+/* line 356, ../../../app/stylesheets/screen.scss */
 #error_explanation h2 {
   font-size: 14px;
 }
 
-/* line 340, ../../../app/stylesheets/screen.scss */
+/* line 359, ../../../app/stylesheets/screen.scss */
 #error_explanation h2, #error_explanation h3 {
   margin: 0;
 }
 
 /** END FORM ERRORS **/
 /** END FORMS **/
+/** TABLES **/
+/* line 366, ../../../app/stylesheets/screen.scss */
+.main table {
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+  border: 1px solid #a3b6c5;
+}
+/* line 371, ../../../app/stylesheets/screen.scss */
+.main table th {
+  padding: 7px 0;
+  background: #e3eaf0;
+  border-bottom: 1px solid #a3b6c5;
+  color: #2c3945;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #fff;
+}
+/* line 380, ../../../app/stylesheets/screen.scss */
+.main table td {
+  padding: 5px 0;
+  background-color: transparent;
+}
+/* line 383, ../../../app/stylesheets/screen.scss */
+.main table td.b {
+  font-weight: bold;
+}
+/* line 387, ../../../app/stylesheets/screen.scss */
+.main table td span.quantity {
+  border-bottom: 1px dotted #444;
+  cursor: pointer;
+}
+/* line 391, ../../../app/stylesheets/screen.scss */
+.main table td form {
+  margin: 0;
+}
+/* line 393, ../../../app/stylesheets/screen.scss */
+.main table td form .field {
+  margin: 0;
+}
+/* line 396, ../../../app/stylesheets/screen.scss */
+.main table td form select {
+  margin: 0;
+}
+/* line 401, ../../../app/stylesheets/screen.scss */
+.main table tr {
+  background: #fafafa;
+  border-bottom: 1px solid #e8f0f5;
+  border-left: 1px solid #a3b6c5;
+  border-right: 1px solid #a3b6c5;
+}
+/* line 406, ../../../app/stylesheets/screen.scss */
+.main table tr:nth-child(2n+1) {
+  background: #f4f4f4;
+}
+/* line 409, ../../../app/stylesheets/screen.scss */
+.main table tr:last-child {
+  border-bottom: 1px solid #a3b6c5;
+}
+
+/** END TABLES **/
 /** FOOTER **/
 /** STICKY FOOTER**/
-/* line 349, ../../../app/stylesheets/screen.scss */
+/* line 418, ../../../app/stylesheets/screen.scss */
 .push {
   height: 50px;
 }
 
 /** END STICKY FOOTER**/
-/* line 353, ../../../app/stylesheets/screen.scss */
+/* line 422, ../../../app/stylesheets/screen.scss */
 footer {
   height: 30px;
   padding: 20px 0 0 0;
@@ -614,6 +697,18 @@ footer {
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 3px 0 inset;
   -o-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 3px 0 inset;
   box-shadow: rgba(0, 0, 0, 0.3) 0 2px 3px 0 inset;
+}
+/* line 427, ../../../app/stylesheets/screen.scss */
+footer .right {
+  float: right;
+}
+/* line 429, ../../../app/stylesheets/screen.scss */
+footer .right a {
+  text-decoration: none;
+}
+/* line 4, ../../../.gems/ruby/1.9.1/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_hover-link.scss */
+footer .right a:hover {
+  text-decoration: underline;
 }
 
 /** END FOOTER **/

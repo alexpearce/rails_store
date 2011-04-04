@@ -67,12 +67,15 @@ h1 {
   margin: 0 0 20px 0;
   font-family: "Uni Sans Book", "Helvetica Neue", Helvetica, Ariel, sans-serif;
 }
+p, span, a {
+  line-height: 1.2em;
+}
 p {
   margin: 0 0 20px 0;
 }
 a {
   color: #b03231;
-  @include hover-link;
+  text-decoration: none;
 }
 /** END TYPOGRAPHY **/
 /** END LAYOUT **/
@@ -128,17 +131,32 @@ nav {
     font-size: 48px;
   }
 }
+.main {
+  padding: 0 10px 0 0;
+  border-right: 1px dashed #eee;
+  a {
+    @include hover-link;
+  }
+}
 .item-image {
   margin: 5px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   @include border-radius(3px);
   @include box-shadow(rgba(0, 0, 0, 0.3), 0, 1px, 3px);
 }
+/** CATEGORY TAGS **/
+.categories {
+  margin: 10px 0;
+}
+.tag {
+  
+}
+/** END CATEGORY TAGS **/
 /** END CONTENT **/
 
 /** FLASH MESSAGES **/
 #notice, #error, #alert {
-	margin: 0 0 10px 0;
+	margin: 0 0 20px 0;
 	padding: 7px 20px;
 	@include box-shadow(rgba(0, 0, 0, 0.05), 0, 1px, 2px);
 	@include border-radius(2px);
@@ -202,6 +220,7 @@ nav {
 		list-style-type: none;
 		font-size: 13px;
 		&.total {
+		  background: #fafafa;
 			text-align: right;
 		}
 		&:last-child {
@@ -343,6 +362,56 @@ form {
 /** END FORM ERRORS **/
 /** END FORMS **/
 
+/** TABLES **/
+.main table {
+	width: 100%;
+	margin: 10px 0;
+	text-align: center;
+	border: 1px solid #a3b6c5;
+	th {
+		padding: 7px 0;
+		background: #e3eaf0;
+		border-bottom: 1px solid #a3b6c5;
+		color: #2c3945;
+		font-weight: bold;
+		text-shadow: 0 1px 0 #fff;
+		//@include linear-gradient(color-stops(#e3eaf0, #d9e4ea));
+	}
+	td {
+		padding: 5px 0;
+		background-color: transparent;
+		&.b {
+			font-weight: bold;
+		}
+		
+		span.quantity {
+			border-bottom: 1px dotted #444;
+			cursor: pointer;
+		}		
+		form {
+			margin: 0;
+			.field {
+				margin: 0
+			}
+			select {
+				margin: 0;
+			}
+		}
+	}
+	tr {
+		background: #fafafa;
+		border-bottom: 1px solid #e8f0f5;
+		border-left: 1px solid #a3b6c5;
+		border-right: 1px solid #a3b6c5;
+		&:nth-child(2n+1) {
+			background: #f4f4f4;
+		}
+		&:last-child {
+			border-bottom: 1px solid #a3b6c5;
+		}
+	}
+}
+/** END TABLES **/
 
 /** FOOTER **/
 /** STICKY FOOTER**/
@@ -355,5 +424,11 @@ footer {
   padding: 20px 0 0 0;
   font-size: 13px;
   @include box-shadow(rgba(0, 0, 0, 0.3), 0, 2px, 3px, 0, inset);
+  .right {
+    float: right;
+    a {
+      @include hover-link;
+    }
+  }
 }
 /** END FOOTER **/
