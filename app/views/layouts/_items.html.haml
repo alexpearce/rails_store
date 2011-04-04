@@ -1,11 +1,9 @@
-%div.grid
-	- items.each do |item|
-		%div.grid_item.twocol.fp_item
-			%a{:href => item_path(item), :title => item.name, :rel => 'items_index', :class=> 'meta' }
-				%img{:src => item.image.url(:thumb), :alt => item.name, :class => 'imageShadow'}
-			%div.bd.pad
-				%h3=link_to item.name, item
-				:markdown
-					#{highlight(truncate(item.description, :length => 150), params[:search])}
-			
-	%div.clearfix
+- items.each do |item|
+	%div
+		%a{ :href => item_path(item), :title => item.name, :rel => 'items_index'}
+		%img{ :src => item.image.url(:thumb), :alt => item.name }
+		%div
+			%h3=link_to item.name, item
+			%span.price=ntc item.price
+			-#:markdown
+				-##{highlight(truncate(item.description, :length => 150), params[:search])}

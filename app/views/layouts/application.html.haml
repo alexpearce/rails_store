@@ -18,7 +18,8 @@
 			%header
 				.ninesixty
 					%h1
-						=t :store_name, :scope => 'views.application'
+						%a{:href => root_path, :title => 'Home'}
+							=t :store_name, :scope => 'views.application'
 		
 					%nav
 						%ul
@@ -33,17 +34,18 @@
 								= form_tag search_items_path, :method => 'post' do
 									= text_field_tag :search, params[:search]
 
-			.content
-				.ninesixty
-					=render 'layouts/sidebar'
+			.content.ninesixty
 	
-					.main
-		
-						- flash.each do |key, msg|
-							%div{:id => key}
-								=msg
-		
-						=yield
+				.main.grid_9
+	
+					- flash.each do |key, msg|
+						%div{:id => key}
+							=msg
+	
+					=yield
+				
+				%div.sidebar.grid_3
+					=render 'layouts/sidebar'
 		
 			.push
 		
@@ -59,5 +61,5 @@
 					- else
 						= link_to 'Login',  new_admin_session_path
 		
-		/= javascript_include_tag 'jquery', 'rails', 'jquery.fancybox', 'jquery.color', 'application'
-		= javascript_include_tag 'jquery', 'rails', 'application'
+		-#= javascript_include_tag 'jquery', 'rails', 'jquery.fancybox', 'jquery.color', 'application'
+		= javascript_include_tag 'jquery', 'rails', 'jquery.fancybox', 'application'

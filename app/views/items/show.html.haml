@@ -1,20 +1,17 @@
 = title @item.name
 		
-.twocol
+.media
 	.meta
 		%a{:href => @item.image.url, :title => @item.name}
-			%img{:src => @item.image.url(:thumb), :class => 'fancyBorder', :alt => @item.name}
+			%img{:src => @item.image.url(:thumb), :alt => @item.name, :class => 'item-image'}
 		- unless @item.children.empty?
 			%h2 Options
-			.grid
-				- @item.children.each do |c|
-					.grid_item
-						%a{:href => c.image.url, :title => c.name, :rel => 'option'}
-							%img{:src => c.image.url(:option), :class => 'thumbShadow', :alt => c.name}
-			.clearfix
+			- @item.children.each do |c|
+				%a{:href => c.image.url, :title => c.name, :rel => 'option'}
+					%img{:src => c.image.url(:option), :alt => c.name}
 					
 
-	.bd
+	.body
 		:markdown
 			#{@item.description}
 			
@@ -22,17 +19,15 @@
 			= link_to 'Categories', categories_path, :class => 'hilighted'
 			- @item.categories.sort_by(&:name).each do |c|
 				= link_to c.name, category_path(c)
-			
-		.twocol.hilight
-			.meta
-				- if admin_signed_in?
-					= link_to 'Add Option', new_item_path(:parent_id => @item)
-					|
-					= link_to 'Edit', edit_item_path(@item)
-					|
-					= link_to 'Destroy', item_path(@item), :confirm => "Delete item '#{@item.name}'?", :method => :delete
-			.bd.price
-				= ntc @item.price
+				
+		- if admin_signed_in?
+			= link_to 'Add Option', new_item_path(:parent_id => @item)
+			|
+			= link_to 'Edit', edit_item_path(@item)
+			|
+			= link_to 'Destroy', item_path(@item), :confirm => "Delete item '#{@item.name}'?", :method => :delete
+
+		= ntc @item.price
 				
 		= form_for [@basket, @line_item], :html => {:class => 'right'} do |f|
 			.field
@@ -43,5 +38,3 @@
 			.actions
 				= f.submit 'Add to Basket' if @item.stock > 0
 				= f.submit 'Sold Out', :disabled => 'disabled' if @item.stock == 0
-		
-		.clearfix

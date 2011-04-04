@@ -2,13 +2,7 @@
 @import "compass/utilities";
 @import "compass/css3";
 
-body {
-  -webkit-text-stroke: 1px transparent;
-  -webkit-font-smoothing: antialiased;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-}
-
+/** LAYOUT **/
 html, body {
   height: 100%;
 }
@@ -21,27 +15,88 @@ html, body {
 }
 
 .ninesixty {
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
-  padding: 0 10px;
+  @include clearfix;
 }
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6,
+.grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.grid_1 { width: 60px; }
+.grid_2 { width: 140px; }
+.grid_3 { width: 220px; }
+.grid_4 { width: 300px; }
+.grid_5 { width: 380px; }
+.grid_6 { width: 460px; }
+.grid_7 { width: 540px; }
+.grid_8 { width: 620px; }
+.grid_9 { width: 700px; }
+.grid_10 { width: 780px; }
+.grid_11 { width: 860px; }
+.grid_12 { width: 940px; }
+
+.media {
+	&, .body {
+		overflow: hidden;
+		_overflow: visible;
+		zoom: 1;
+	}
+	.meta {
+		float: left;
+		margin-right: 20px;
+		img {
+			display: block;
+		}
+	}
+}
+
+/** TYPOGRAPHY **/
+body {
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #444;
+  -webkit-text-stroke: 1px transparent;
+  -webkit-font-smoothing: antialiased;
+}
+h1 {
+  margin: 0 0 20px 0;
+  font-family: "Uni Sans Book", "Helvetica Neue", Helvetica, Ariel, sans-serif;
+}
+p {
+  margin: 0 0 20px 0;
+}
+a {
+  color: #b03231;
+  @include hover-link;
+}
+/** END TYPOGRAPHY **/
+/** END LAYOUT **/
 
 header, footer {
   background: url('../../images/black-noise.gif') repeat;
   color: #fff;
 }
 
+/** HEADER **/
 header {
   padding: 20px 0;
   @include box-shadow(rgba(0, 0, 0, 0.3), 0, -2px, 3px, 0, inset);
-  @include clearfix;
   h1 {
     float: left;
-    font-family: 'Uni Sans Book';
+    margin: 0;
     font-size: 56px;
+    a {
+      color: #fff;
+    }
   }
 }
 
+/** SITE NAVIGATION **/
 nav {
   float: right;
   li {
@@ -53,30 +108,252 @@ nav {
     font-size: 13px;
     font-weight: bold;
     color: #fff;
-    @include hover-link;
     @include text-shadow(rgba(0, 0, 0, 0.7), 0, 1px, 2px);
     &.current {
       border: 1px solid #1c1c1c;
       @include linear-gradient(color-stops(#282a31, #1f2026));
       @include border-radius(3px);
-      @include box-shadow(rgba(255, 255, 255, 0.05), 1px, 1px, 1px, 0px, inset);
+      @include box-shadow(rgba(255, 255, 255, 0.05), 1px, 1px, 1px, 0, inset);
     }
   }
 }
+/** END SITE NAVIGATION **/
+/** END HEADER **/
 
+/** CONTENT **/
 .content {
+  padding: 20px 0;
   h1 {
     font-family: 'Uni Sans Book';
     font-size: 48px;
   }
 }
+.item-image {
+  margin: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  @include border-radius(3px);
+  @include box-shadow(rgba(0, 0, 0, 0.3), 0, 1px, 3px);
+}
+/** END CONTENT **/
 
+/** FLASH MESSAGES **/
+#notice, #error, #alert {
+	margin: 0 0 10px 0;
+	padding: 7px 20px;
+	@include box-shadow(rgba(0, 0, 0, 0.05), 0, 1px, 2px);
+	@include border-radius(2px);
+}
+#notice p, #error p, #alert p {
+	margin: 0;
+}
+#notice {
+	background: #e5fee2;
+  border: 1px solid #9fd690;
+}
+#error {
+	background: #fee5e2;
+	border: 1px solid #d69090;
+}
+#alert {
+  background: #fefbe2;
+  border: 1px solid #e4d45d;
+}
+/** END FLASH MESSAGES **/
+
+/** SHOPPING BASKET **/
+#shopping-basket {
+	@include border-radius(2px);
+	border: 1px solid #a53b3b;
+	
+	h2 {
+		position: relative;
+		z-index: 0;
+		padding: 9px 15px 11px 15px;
+		border-bottom: 1px solid #802525;
+		font-size: 13px;
+		font-weight: bold;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+		@include box-shadow(rgba(193, 208, 219, 0.5), 0, 2px, 3px);
+		@include linear-gradient(color-stops(#f6654d, #b03231));
+		&:after {
+	    position: absolute;
+	    z-index: -1;
+	    content: '';
+	    top: 0;
+			left: 0;
+	    width: 100%;
+	    height: 1px;
+	    border-top: 1px solid #fa8859;
+	  }
+		a {
+			color: #510a0a;
+			&:hover {
+				color: #400807;
+			}
+		}
+	}
+	
+	ul {
+		margin: 0
+	}
+	li {
+		padding: 10px 20px 10px 20px;
+		border-bottom: 1px solid #eee;
+		list-style-type: none;
+		font-size: 13px;
+		&.total {
+			text-align: right;
+		}
+		&:last-child {
+			border-bottom: none;
+		}
+		img {
+			float: right;
+			padding: 1px;
+			border: 1px solid #c4b0b0;
+		}
+		a {
+			color: #813a3a;			
+			&:hover {
+				border-bottom: 1px solid #c4b0b0;
+			}
+		}
+		span {
+			color: #c4b0b0;
+		}
+	}
+}
+/** END SHOPPINGB BASKET **/
+
+/** FORMS **/
+form {
+	margin: 20px 0;
+	label, input[type=button], input[type=submit], button {
+		cursor: pointer;
+	}
+	label {
+		float: left;
+		width: 100px;
+		padding: 8px 10px 0 0;
+		font-size: 14px;
+		text-align: right;
+		display: block;
+	}
+	label.req, .field_with_errors label {
+		font-weight: bold;
+	}
+	.field_with_errors label {
+		color: #f44;
+	}
+	.field {
+		margin: 5px 0;
+		&.twocol {
+			.meta {
+				margin-right: 0;
+			}
+			.field label {
+				width: 75px;
+			}
+		}
+	}
+	input, textarea {
+		@include border-radius(2px);
+		@include box-shadow(rgba(0, 0, 0, 0.05), 0, 1px, 1px);
+		&:hover {
+			border: 1px solid #aaa;
+		}
+		&:focus {
+			border: 1px solid #888;
+		}
+	}
+	input[type=file]:hover {
+		border: none;
+	}
+	input[type=text], input[type=password], textarea {
+		padding: 5px;
+    border: 1px solid #d1d1d1;
+		background: #f9f9f9;
+		font-size: 12px;
+		@include transition(all, 0.2s);
+		&:hover {
+			border: 1px solid #bbb;
+		}
+		&:focus {
+			// stops default focus highlight
+			outline:none;
+			@include box-shadow(#fbac86, 0, 0, 1px);
+			border: 1px solid #fbac86;
+		}
+	}
+	input[type=text], input[type=password] {
+		width: 200px;
+	}
+	textarea {
+		width: 430px;
+		height: 180px;
+	}
+	input[type=checkbox], input[type=radio], select {
+		margin: 8px 0;
+	}
+	input[type=submit] {
+		border: 1px solid #d1d1d1;
+		padding: 4px 20px;
+		color: #555960;
+		background: #e9e9e9;
+		@include linear-gradient(color-stops(#ffffff, #eaeaea));
+		@include box-shadow(rgba(0, 0, 0, 0.1), 0, 1px, 2px);
+		text-shadow: 0 1px 1px #fff;
+		&:hover {
+			@include box-shadow(rgba(0, 0, 0, 0.2), 0, 1px, 2px);
+		}
+		&:active {
+			background: #d5d5d5;
+			border: 1px solid #888;
+		}
+		&[disabled="disabled"] {
+			color: #ddd;
+			@include box-shadow(rgba(0, 0, 0, 0), 0, 0, 0);
+			cursor: default;
+			&:hover {
+				@include box-shadow(rgba(0, 0, 0, 0), 0, 0, 0)
+			}
+			&:active {
+				background: #e9e9e9;
+				border: 1px solid #d1d1d1;
+				@include linear-gradient(color-stops(#ffffff, #eaeaea));
+			}
+		}
+	}
+	&.admin input[type=submit] {
+		margin: 5px 0 0 110px;
+	}
+}
+
+/** FORM ERRORS **/
+#error_explanation {
+	padding: 10px;
+	margin: 10px 20px;
+}
+#error_explanation h2 {
+	font-size: 14px;
+}
+#error_explanation h2, #error_explanation h3 {
+	margin: 0;
+}
+/** END FORM ERRORS **/
+/** END FORMS **/
+
+
+/** FOOTER **/
+/** STICKY FOOTER**/
 .push {
   height: 50px;
 }
+/** END STICKY FOOTER**/
 footer {
   height: 30px;
   padding: 20px 0 0 0;
-  font-size: 12px;
+  font-size: 13px;
   @include box-shadow(rgba(0, 0, 0, 0.3), 0, 2px, 3px, 0, inset);
 }
+/** END FOOTER **/
