@@ -3,3 +3,24 @@
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
+ 
+/* HTML5 reset */
+section, article, aside, header, footer, nav, dialog, figure { display:block; }
+
+nav ul li a.current {
+  display: block;
+  position: relative;
+  top: -3px;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#282a31', endColorstr='#1f2026'); /* IE6 & IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#282a31', endColorstr='#1f2026')"; /* IE8 */
+}
+
+#shopping-basket h2 {
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f6654d', endColorstr='#b03231'); /* IE6 & IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f6654d', endColorstr='#b03231')"; /* IE8 */
+}
+
+.item-image {
+  border: 1px solid #666;
+  padding: 3px;
+}

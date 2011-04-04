@@ -3,3 +3,33 @@
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
+/* HTML5 reset */
+/* line 8, ../../../app/stylesheets/ie.scss */
+section, article, aside, header, footer, nav, dialog, figure {
+  display: block;
+}
+
+/* line 10, ../../../app/stylesheets/ie.scss */
+nav ul li a.current {
+  display: block;
+  position: relative;
+  top: -3px;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#282a31', endColorstr='#1f2026');
+  /* IE6 & IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#282a31', endColorstr='#1f2026')";
+  /* IE8 */
+}
+
+/* line 18, ../../../app/stylesheets/ie.scss */
+#shopping-basket h2 {
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f6654d', endColorstr='#b03231');
+  /* IE6 & IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f6654d', endColorstr='#b03231')";
+  /* IE8 */
+}
+
+/* line 23, ../../../app/stylesheets/ie.scss */
+.item-image {
+  border: 1px solid #666;
+  padding: 3px;
+}
