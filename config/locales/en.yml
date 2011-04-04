@@ -4,7 +4,7 @@
 en:
   views:
     application:
-      store_name: "Rails Store"
+      store_name: "Rails Shop"
       store_owner: "Alex Pearce"
     basket:
       basket_title: "Shopping Basket"

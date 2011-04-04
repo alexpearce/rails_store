@@ -13,39 +13,42 @@
 		
 		= javascript_include_tag 'modernizr'
 	%body
-	
 		.wrap
-
+		
 			%header
-				%h1
-					=t :store_name, :scope => 'views.application'
-			
-				%nav
-					%ul
-						=render :partial => 'layouts/navigation',
-							:collection => nav_collection,
-							:as => :page
-						- if admin_signed_in?
-							%li
-								=link_to '[Pages]', pages_path
-					/
-						%li.search
-							= form_tag search_items_path, :method => 'post' do
-								= text_field_tag :search, params[:search]
-
-			#container
+				.ninesixty
+					%h1
+						=t :store_name, :scope => 'views.application'
 		
-				=render 'layouts/sidebar'
-		
-				.main
-			
-					- flash.each do |key, msg|
-						%div{:id => key}
-							=msg
-			
-					=yield
+					%nav
+						%ul
+							=render :partial => 'layouts/navigation',
+								:collection => nav_collection,
+								:as => :page
+							- if admin_signed_in?
+								%li
+									=link_to '[Pages]', pages_path
+						/
+							%li.search
+								= form_tag search_items_path, :method => 'post' do
+									= text_field_tag :search, params[:search]
 
-			%footer
+			.content
+				.ninesixty
+					=render 'layouts/sidebar'
+	
+					.main
+		
+						- flash.each do |key, msg|
+							%div{:id => key}
+								=msg
+		
+						=yield
+		
+			.push
+		
+		%footer
+			.ninesixty
 				%span
 					=t :store_owner, :scope => 'views.application'
 					&copy;
@@ -55,5 +58,6 @@
 						= link_to 'Logout', destroy_admin_session_path
 					- else
 						= link_to 'Login',  new_admin_session_path
-			
-		= javascript_include_tag 'jquery', 'rails', 'jquery.fancybox', 'jquery.color', 'application'
+		
+		/= javascript_include_tag 'jquery', 'rails', 'jquery.fancybox', 'jquery.color', 'application'
+		= javascript_include_tag 'jquery', 'rails', 'application'

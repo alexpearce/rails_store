@@ -1,3 +1,82 @@
 @import "compass/reset";
+@import "compass/utilities";
+@import "compass/css3";
 
+body {
+  -webkit-text-stroke: 1px transparent;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
 
+html, body {
+  height: 100%;
+}
+
+.wrap {  
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin-bottom: -50px;
+}
+
+.ninesixty {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+header, footer {
+  background: url('../../images/black-noise.gif') repeat;
+  color: #fff;
+}
+
+header {
+  padding: 20px 0;
+  @include box-shadow(rgba(0, 0, 0, 0.3), 0, -2px, 3px, 0, inset);
+  @include clearfix;
+  h1 {
+    float: left;
+    font-family: 'Uni Sans Book';
+    font-size: 56px;
+  }
+}
+
+nav {
+  float: right;
+  li {
+    float: left;
+    margin: 20px 7px;
+  }
+  a {
+    padding: 3px 9px 4px 9px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    @include hover-link;
+    @include text-shadow(rgba(0, 0, 0, 0.7), 0, 1px, 2px);
+    &.current {
+      border: 1px solid #1c1c1c;
+      @include linear-gradient(color-stops(#282a31, #1f2026));
+      @include border-radius(3px);
+      @include box-shadow(rgba(255, 255, 255, 0.05), 1px, 1px, 1px, 0px, inset);
+    }
+  }
+}
+
+.content {
+  h1 {
+    font-family: 'Uni Sans Book';
+    font-size: 48px;
+  }
+}
+
+.push {
+  height: 50px;
+}
+footer {
+  height: 30px;
+  padding: 20px 0 0 0;
+  font-size: 12px;
+  @include box-shadow(rgba(0, 0, 0, 0.3), 0, 2px, 3px, 0, inset);
+}

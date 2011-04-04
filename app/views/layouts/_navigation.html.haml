@@ -3,7 +3,7 @@
 		- unless page.links_to?
 			= link_to h(page.name), :controller => '/pages', :action => 'show', :id => page.permalink
 		- else
-			= link_to h(page.name), page.links_to
+			= link_to h(page.name), page.links_to, :class => 'current'
 
 		- unless page.children.empty?
 			%ul
