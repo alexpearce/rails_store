@@ -225,6 +225,7 @@ nav {
   li {
     float: left;
     margin: 0 5px;
+    list-style-type: none;
     &:first-child {
       margin: 0 5px 0 0;
     }
@@ -233,8 +234,8 @@ nav {
       border: 1px solid #dea23c;
       font-size: 12px;
       font-weight: bold;
-      color: #996633;
-      @include text-shadow(rgba(255, 255, 255, 0.4), 0, 1px, 0);
+      color: #604020;
+      @include text-shadow(rgba(255, 255, 255, 0.5), 0, 1px, 0);
       @include linear-gradient(color-stops(#feda71, #febc4a));
       @include border-radius(2px);
       @include box-shadow(rgba(145, 145, 145, 0.13), 0, 1px, 1px);
@@ -326,6 +327,7 @@ nav {
 		margin: 0
 	}
 	li {
+	  margin: 0;
 		padding: 10px 20px 10px 20px;
 		border-bottom: 1px solid #eee;
 		list-style-type: none;
