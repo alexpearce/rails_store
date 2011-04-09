@@ -107,6 +107,9 @@ a {
     color: #601b1b;
   }
 }
+.small {
+	font-size: 10px;
+}
 /** END TYPOGRAPHY **/
 ul {
   margin: 10px 0;
@@ -213,6 +216,32 @@ nav {
     @include box-shadow(rgba(0, 0, 0, 0.5), 0, 1px, 3px);
   }
 }
+
+/** HOME CONTAINER **/
+.home-container {
+	@include clearfix;
+	& > div {
+		float: left;
+		margin: 10px;
+		padding: 10px 10px;
+		border: 1px solid #eee;
+		text-align: center;
+		img {
+			margin: 0 20px;
+			padding: 5px;
+			@include box-shadow(rgba(0, 0, 0, 0.2), 0, 1px, 2px);
+			@include transition(all, 1s);
+			&:hover {
+				background: #f5f5f5;
+			}
+		}
+		p {
+			text-align: center;
+		}
+	}
+}
+/** HOME CONTAINER **/
+
 /** CATEGORY TAGS **/
 .categories {
   h3 a {

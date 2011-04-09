@@ -17,6 +17,6 @@ Store::Application.routes.draw do
   
   resources :pages
   
-  root :to => 'categories#index'
+  root :to => 'items#recent'
   
 end
