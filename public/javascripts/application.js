@@ -1,5 +1,5 @@
 $.fn.animateHighlight = function(highlightColor, duration) {
-    var highlightBg = highlightColor || "#DDDDFF";
+    var highlightBg = highlightColor || "#fef6e6";
     var animateMs = duration || 1500;
 		originalBg = this.parent().css("backgroundColor");
     this.stop().css("background-color", highlightBg).animate({backgroundColor: originalBg}, animateMs);

@@ -1,4 +1,4 @@
-- if @item.parent_id.nil?
+- if @parent.nil?
 	= title 'Create New Item'
 - else
 	= title "Create Option for #{@parent.name}"
