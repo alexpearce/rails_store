@@ -25,7 +25,7 @@
 		
 					%nav
 						%ul
-							=render :partial => 'layouts/navigation',
+							= render :partial => 'layouts/navigation',
 								:collection => nav_collection,
 								:as => :page
 							- if admin_signed_in?

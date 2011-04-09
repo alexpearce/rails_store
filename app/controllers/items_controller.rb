@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   respond_to :html
   
   def recent
-    @items = Item.find(:all, :order => 'id desc', :limit => 6)
+    @items = Item.where(:parent_id => nil).find(:all, :order => 'id desc', :limit => 6)
     
     respond_with @items
   end

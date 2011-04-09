@@ -1,9 +1,19 @@
-- items.each do |item|
-	%div
-		%a{ :href => item_path(item), :title => item.name, :rel => 'items_index'}
-		%img{ :src => item.image.url(:thumb), :alt => item.name }
-		%div
-			%h3=link_to item.name, item
-			%span.price=ntc item.price
-			-#:markdown
-				-##{highlight(truncate(item.description, :length => 150), params[:search])}
+%div
+	%a{:href => item_path(item)}
+		%img{:src => item.image(:thumb)}
+		%p= item.name
+	- if admin_signed_in?
+		%span.small
+			= link_to 'Edit', edit_item_path(item)
+			|
+			= link_to 'Destroy', item_path(item), :confirm => "Delete item '#{item.name}'?", :method => :delete
+/ - items.each do |item|
+/ 	%div
+/ 		%a{ :href => item_path(item), :title => item.name, :rel => 'items_index'}
+/ 		%img{ :src => item.image.url(:thumb), :alt => item.name }
+/ 		%div
+/ 			%h3=link_to item.name, item
+/ 			%span.price=ntc item.price
+/ 			
+/ 			-#:markdown
+/ 				-##{highlight(truncate(item.description, :length => 150), params[:search])}

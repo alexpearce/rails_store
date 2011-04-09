@@ -40,6 +40,9 @@ html, body {
 .grid_12 { width: 940px; }
 
 .media {
+	.body p:first-child {
+		margin: 5px 0 20px 0;
+	}
 	&, .body {
 		overflow: hidden;
 		_overflow: visible;
@@ -218,7 +221,7 @@ nav {
 }
 
 /** HOME CONTAINER **/
-.home-container {
+.items-container {
 	@include clearfix;
 	& > div {
 		float: left;

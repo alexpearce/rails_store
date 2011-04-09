@@ -1,6 +1,9 @@
 = render :partial => 'layouts/page'
 
-= render :partial => 'layouts/items', :locals => {:items => @items}
+.items-container
+	= render :partial => 'layouts/items',
+		:collection => @items,
+		:as => :item
 
 - if admin_signed_in?
 	%p
