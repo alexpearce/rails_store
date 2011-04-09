@@ -43,12 +43,12 @@
 	
 						- flash.each do |key, msg|
 							%div{:id => key}
-								=msg
-	
-						=yield
+								= msg
+						
+						= yield
 				
 				%div.sidebar.grid_3
-					=render 'layouts/sidebar'
+					= render 'layouts/sidebar'
 		
 			.push
 		

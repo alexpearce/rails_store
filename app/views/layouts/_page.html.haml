@@ -5,3 +5,8 @@
 	
 	:markdown
 		#{@page.content}
+		
+	- if @page.sidebar
+		- content_for :sidebar do
+			:markdown
+				#{@page.sidebar}

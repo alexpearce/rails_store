@@ -1,6 +1,9 @@
--unless controller.controller_name == 'baskets'
-	=render('layouts/basket')
--else
+- if content_for? :sidebar
+	= yield :sidebar
+
+- unless controller.controller_name == 'baskets'
+	= render('layouts/basket')
+- else
 	%h1
 		Help
 	%p
