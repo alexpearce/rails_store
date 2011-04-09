@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   
-  before_filter :authenticate_admin!, :except => [:index, :show, :search]
+  before_filter :authenticate_admin!, :except => [:index, :show, :search, :recent]
   
   respond_to :html
   
