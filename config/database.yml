@@ -7,7 +7,7 @@
 #   username: root
 #   password: root
 #   socket: /tmp/mysql.sock
-
+# git test
 development:
   adapter: postgresql
   database: rails_store
