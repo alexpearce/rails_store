@@ -1,5 +1,10 @@
+$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
+require "rvm/capistrano"                  # Load RVM's capistrano plugin.
+set :rvm_ruby_string, '1.9.2@store'        # Or whatever env you want it to run in.
+set :rvm_type, :user
+
 set :application, "store"
-set :deploy_to,  "/home/www/alexpearce.me/public/#{application}"
+set :deploy_to,  "/home/alex/www/alexpearce.me/public/#{application}"
 
 server "46.137.47.196", :app, :web, :db, :primary => true
 
@@ -9,8 +14,8 @@ set :scm, 'git' # scm utility name
 set :branch, 'capistrano' # remote branch
 set :deploy_via, :copy # If you have public like github.com then use :remote_cache
 
-set :user, 'root'
-set :admin_runner, 'root'
+set :user, 'alex'
+set :admin_runner, 'alex'
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
