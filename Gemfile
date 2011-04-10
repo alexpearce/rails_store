@@ -35,6 +35,9 @@ gem 'devise'
 # search
 gem 'texticle'
 
+# deployment
+gem 'capistrano'
+
 group :test, :development do
   gem 'rspec-rails', '~> 2.3.0'
   gem 'cucumber-rails'
