@@ -1,22 +1,25 @@
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
+set :application, "store"
+set :deploy_to,  "/home/www/alexpearce.me/public/#{application}"
 
-set :scm, :subversion
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+server "46.137.47.196", :app, :web, :db, :primary => true
 
-role :web, "your web-server here"                          # Your HTTP server, Apache/etc
-role :app, "your app-server here"                          # This may be the same as your `Web` server
-role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
+default_run_options[:ptr] = true # Ensure password prompt is prompt true
+set :repository, 'git@46.137.47.196:store.git' # your private/public url and user
+set :scm, 'git' # scm utility name
+set :branch, 'capistrano' # remote branch
+set :deploy_via, :copy # If you have public like github.com then use :remote_cache
+
+set :user, 'root'
+set :admin_runner, 'root'
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
 # these http://github.com/rails/irs_process_scripts
 
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
+namespace :deploy do
+  task :start do ; end
+  task :stop do ; end
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+end
