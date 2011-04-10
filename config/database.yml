@@ -25,14 +25,12 @@ test: &test
   encoding: utf8
 
 production:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
-  reconnect: false
-  database: store_production
+  database: store
   pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  username: store
+  password: store98079fgh
 
 cucumber:
   <<: *test
