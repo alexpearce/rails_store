@@ -1,6 +1,7 @@
 =title "Items in #{@category.name}"
 
-= render :partial => 'layouts/items', :locals => {:items => @category.items}
+.items-container
+	= render :partial => 'layouts/items', :collection => @category.items.top_level, :as => :item
 
 = link_to 'Edit', edit_category_path(@category)
 |

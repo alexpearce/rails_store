@@ -5,22 +5,37 @@ class Item < ActiveRecord::Base
   belongs_to :super, :class_name => 'Item'
   has_and_belongs_to_many :categories
   
+  # allow image deletion on forms
   attr_accessor :delete_image
   before_save :image_deletion
   
+  # if some one has an item in their basket, don't destroy it
   before_destroy :ensure_not_referenced_by_line_item
   
+  # has children
   acts_as_tree
   
+  # search
   index do
     name
     description
   end
   
+  # validation
   validates_presence_of :name, :price, :stock, :description
   validates_uniqueness_of :name
   validates_numericality_of :price
   validates_numericality_of :stock, :integer => true
+  
+  # scope to find only 'top level' items, i.e. no options
+  scope :top_level, lambda {
+    where(:parent_id => nil)
+  }
+  
+  # recent items
+  scope :recent, lambda { |number|
+    order('id desc').limit(number)
+  }
   
   # paperclip
   has_attached_file :image,

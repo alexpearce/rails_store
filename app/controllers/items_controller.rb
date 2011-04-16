@@ -5,13 +5,13 @@ class ItemsController < ApplicationController
   respond_to :html
   
   def recent
-    @items = Item.where(:parent_id => nil).find(:all, :order => 'id desc', :limit => 6)
+    @items = Item.top_level.recent(6)
     
     respond_with @items
   end
   
   def index
-    @items = Item.where(:parent_id => nil)
+    @items = Item.top_level
     
     respond_with @items
   end
