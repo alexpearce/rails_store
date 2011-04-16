@@ -1,13 +1,17 @@
-- unless page.published == false
-	%li
-		- clss = ''
-		- unless page.links_to?
-			- clss = 'current' if request.path == "/pages/#{page.permalink}"
-			= link_to h(page.name), { :controller => '/pages', :action => 'show', :id => page.permalink }, :class => clss
-		- else
-			- clss = 'current' if request.path == page.links_to
-			= link_to h(page.name), page.links_to, :class => clss
+- clss = ''
 
-		- unless page.children.empty?
-			%ul
-				= render :partial => 'layouts/menubar', :collection => page.children, :as => :page
+= render :partial => 'layouts/page_navigation', :collection => nav_collection, :as => :page
+
+- unless @basket.line_items.count.zero?
+	%li
+		- clss = 'current' if controller.controller_name == 'baskets'
+		= link_to 'Basket', basket_path(@basket), :class => clss
+		
+
+- if admin_signed_in?
+	%li
+		=link_to '[Pages]', pages_path
+/
+	%li.search
+		= form_tag search_items_path, :method => 'post' do
+			= text_field_tag :search, params[:search]

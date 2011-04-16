@@ -1,0 +1,13 @@
+-# clss = ''
+- unless page.published == false
+	%li
+		- unless page.links_to?
+			- clss = 'current' if request.path == "/pages/#{page.permalink}"
+			= link_to h(page.name), { :controller => '/pages', :action => 'show', :id => page.permalink }, :class => clss
+		- else
+			- clss = 'current' if request.path == page.links_to
+			= link_to h(page.name), page.links_to, :class => clss
+
+		- unless page.children.empty?
+			%ul
+				= render :partial => 'layouts/menubar', :collection => page.children, :as => :page
