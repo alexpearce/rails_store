@@ -28,6 +28,10 @@
 							= render :partial => 'layouts/navigation',
 								:collection => nav_collection,
 								:as => :page
+							- unless @basket.line_items.count.zero?
+								%li
+									%a{:href => basket_path(@basket), :title => 'View your basket'} Basket
+									
 							- if admin_signed_in?
 								%li
 									=link_to '[Pages]', pages_path
