@@ -13,7 +13,7 @@ server "46.137.47.196", :app, :web, :db, :primary => true
 default_run_options[:ptr] = true # Ensure password prompt is prompt true
 set :repository, 'git@46.137.47.196:store.git' # your private/public url and user
 set :scm, 'git' # scm utility name
-set :branch, 'capistrano' # remote branch
+set :branch, 'redesign' # remote branch
 set :deploy_via, :copy # If you have public like github.com then use :remote_cache
 
 set :user, 'alex'
