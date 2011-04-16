@@ -241,6 +241,9 @@ nav {
 		p {
 			text-align: center;
 		}
+		a {
+			@include text-shadow(rgba(0, 0, 0, 0.15), 0, 1px, 1px);
+		}
 	}
 }
 /** HOME CONTAINER **/
