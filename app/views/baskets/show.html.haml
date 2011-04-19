@@ -47,3 +47,6 @@
 			Total
 		%td#basket_total
 			=ntc @basket.subtotal + @basket.postage
+			
+%form
+	%input{:type => 'submit', :id => 'checkout-with-paypal', :name => 'checkout-with-paypal', :value => 'Checkout with PayPal'}

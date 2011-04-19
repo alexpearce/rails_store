@@ -509,6 +509,19 @@ form {
 	margin: 0;
 }
 /** END FORM ERRORS **/
+
+/** PAYPAL BUTTON **/
+#checkout-with-paypal {
+	width: 245px;
+	height: 47px;
+	margin: 0 0 0 220px;
+	background: url('../../images/button-paypal.png');
+	border: none;
+	text-align: center;
+	text-indent: -9999em;
+	@include box-shadow('none');
+}
+/** END PAYPAL BUTTON **/
 /** END FORMS **/
 
 /** TABLES **/
@@ -519,7 +532,8 @@ form {
 	border: 1px solid #ad3e3e;
 	th {
 		padding: 7px 0;
-		background: #bd4747;
+		//background: #bd4747;
+		background: #d44040;
 		border-bottom: 1px solid #ad3e3e;
 		color: #fff;
 		font-weight: bold;
