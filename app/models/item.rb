@@ -48,10 +48,20 @@ class Item < ActiveRecord::Base
                     :default_url => "/images/items/missing_:style.png"
                     
   
+  def create_new_option
+    self.children.new(
+      :price => self.price,
+      :stock => self.stock,
+      :postage => self.postage
+    )
+  end
+  
+  # generate the image path
   def image_path
     '/images/' + self.image
   end
   
+  # return a string showing the parent item and the option name in parens
   def self_with_parent
     if self.parent
       "#{self.parent.name} (#{self.name})"
@@ -60,6 +70,7 @@ class Item < ActiveRecord::Base
     end
   end
   
+  # return string for the dropdown on the item page
   def option_select
     ret = "#{self.name} - £#{sprintf("%.2f", self.price)}"
     ret.concat ' (Sold Out)' if self.stock == 0

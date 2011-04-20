@@ -32,11 +32,7 @@ class ItemsController < ApplicationController
   def new
     if params[:parent_id]
       @parent = Item.find(params[:parent_id])
-      @item = @parent.children.new(
-        :price => @parent.price,
-        :stock => @parent.stock,
-        :postage => @parent.postage
-      )
+      @item = @parent.create_new_option
     else
       @item = Item.new
     end
