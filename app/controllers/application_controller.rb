@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
   
   private
   
+    # we use the basket on every pagel; it's either in the sidebar
+    # or we're in the baskets controller, so we find it here
     def find_or_create_basket
       @basket = Basket.find(session[:basket_id], :include => :line_items)
     rescue ActiveRecord::RecordNotFound
