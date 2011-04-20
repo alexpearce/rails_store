@@ -15,7 +15,7 @@ class PagesController < ApplicationController
     
     # if the or request.. condition is deleted, the root route breaks
     # due to a redirect loop
-    unless @page.links_to.blank? or request.path == @page.links_to
+    unless @page.links_to? or request.path == @page.links_to
       # preserve flash messages
       flash.keep
       redirect_to @page.links_to 

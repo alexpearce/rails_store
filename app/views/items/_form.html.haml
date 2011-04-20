@@ -30,7 +30,7 @@
 			- Category.all.each_with_index do |c, idx|
 				.field
 					= label_tag "item_category_ids_#{idx}", c.name
-					= check_box_tag 'item[category_ids][]', c.id, @item.categories.include?(c), :id => "item_category_ids_#{idx}"
+					= check_box_tag 'item[category_ids][]', c.id, item.categories.include?(c), :id => "item_category_ids_#{idx}"
 	.field
 		= f.label :image
 		= f.file_field :image

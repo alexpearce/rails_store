@@ -1,12 +1,12 @@
-- @page = Page.find_by_links_to(request.path) if @page.nil?
+- page = Page.find_by_links_to(request.path) if page.nil?
 
-- unless @page.nil?
-	= title @page.name
+- unless page.nil?
+	= title page.name
 	
 	:markdown
-		#{@page.content}
+		#{page.content}
 		
-	- if @page.sidebar
+	- if page.sidebar
 		- content_for :sidebar do
 			:markdown
-				#{@page.sidebar}
+				#{page.sidebar}

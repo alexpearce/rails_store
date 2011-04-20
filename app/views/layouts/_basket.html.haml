@@ -1,12 +1,12 @@
 %div#shopping-basket
 	%h2
-		=link_to t(:basket_title, :scope => 'views.basket'), basket_path(@basket)
+		= link_to t(:basket_title, :scope => 'views.basket'), basket_path(basket)
 	%ul
-		- if @basket.line_items.count.zero?
+		- if basket.line_items.count.zero?
 			%li.empty
 				You have no items in your basket.
 		- else
-			- for li in @basket.line_items
+			- for li in basket.line_items
 				%li
 					%div
 						%a{:href => li.item.image.url, :title => li.item.name, :rel => 'cart-gallery'}
@@ -21,4 +21,4 @@
 							=ntc li.item.price
 			%li.total
 				Subtotal:
-				=ntc @basket.subtotal
+				=ntc basket.subtotal

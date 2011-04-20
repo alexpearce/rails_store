@@ -2,10 +2,10 @@
 
 = render :partial => 'layouts/page_navigation', :collection => nav_collection, :as => :page
 
-- unless @basket.line_items.count.zero?
+- unless basket.line_items.count.zero?
 	%li
 		- clss = 'current' if controller.controller_name == 'baskets'
-		= link_to 'Basket', basket_path(@basket), :class => clss
+		= link_to 'Basket', basket_path(basket), :class => clss
 		
 
 - if admin_signed_in?
