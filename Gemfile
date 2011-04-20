@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 # rails
-gem 'rails', '3.0.5'
+gem 'rails', '3.0.7'
 
 # mysql driver
 # gem 'mysql2'
