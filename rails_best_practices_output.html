@@ -1,0 +1,589 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta charset='UTF-8' />
+    <title>Output of rails_best_practices</title>
+    <style type='text/css'>
+      /*<![CDATA[*/
+        body {
+          color: #333;
+          background: #eee;
+          padding: 0 20px;
+        }
+        h1 {
+          color: ##4E4E4E;
+        }
+        table {
+          background: white;
+          border: 1px solid #666;
+          border-collapse: collapse;
+          margin: 20px 0;
+          font-size: 14px;
+        }
+        table th, table td {
+          padding: 4px;
+          border: 1px solid #D0D0D0;
+        }
+        table th {
+          background-color: #DFC;
+          color: #337022;
+        }
+        table td.filename {
+          color: #ED1556;
+        }
+        table tr:hover {
+          background-color: #FFFFC0;
+        }
+      /*]]>*/
+    </style>
+  </head>
+  <body>
+    <h1>rails_best_practices output</h1>
+    <h2>
+      Please go to
+      <a href='http://rails-bestpractices.com' target='_blank'>http://rails-bestpractices.com</a>
+      to see more useful Rails Best Practices.
+    </h2>
+    <h2>
+      Found 59 errors.
+    </h2>
+    <table>
+      <tr>
+        <th>Filename</th>
+        <th>Line Number</th>
+        <th>Error Message</th>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/application_controller.rb
+        </td>
+        <td class='line-number'>11</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/1-move-finder-to-named_scope' target='_blank'>move finder to named_scope</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/items_controller.rb
+        </td>
+        <td class='line-number'>26</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/1-move-finder-to-named_scope' target='_blank'>move finder to named_scope</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/items_controller.rb
+        </td>
+        <td class='line-number'>32</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/7-move-model-logic-into-the-model' target='_blank'>move model logic into model (@parent use_count > 4)</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/line_items_controller.rb
+        </td>
+        <td class='line-number'>31</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/7-move-model-logic-into-the-model' target='_blank'>move model logic into model (@basket use_count > 4)</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/line_items/destroy.js.erb
+        </td>
+        <td class='line-number'>16</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/15-the-law-of-demeter' target='_blank'>law of demeter</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/line_items/update.js.erb
+        </td>
+        <td class='line-number'>4</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/15-the-law-of-demeter' target='_blank'>law of demeter</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>49</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (categories_items => [category_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>49</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (categories_items => [item_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>54</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (items => [image_content_type])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>54</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (items => [parent_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>68</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (line_items => [item_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>68</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (line_items => [basket_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/schema.rb
+        </td>
+        <td class='line-number'>76</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/21-always-add-db-index' target='_blank'>always add db index (pages => [parent_id])</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/categories_controller.rb
+        </td>
+        <td class='line-number'>25,42,54</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/22-use-before_filter' target='_blank'>use before_filter for edit,update,destroy</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/items_controller.rb
+        </td>
+        <td class='line-number'>47,63,76</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/22-use-before_filter' target='_blank'>use before_filter for edit,update,destroy</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/line_items_controller.rb
+        </td>
+        <td class='line-number'>13,25,50,64</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/22-use-before_filter' target='_blank'>use before_filter for show,edit,update,destroy</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/pages_controller.rb
+        </td>
+        <td class='line-number'>13,33,48,60</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/22-use-before_filter' target='_blank'>use before_filter for show,edit,update,destroy</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/items/_form.html.haml
+        </td>
+        <td class='line-number'>31</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/24-move-code-into-controller' target='_blank'>move code into controller</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/categories/_form.html.haml
+        </td>
+        <td class='line-number'>1</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/categories/_form.html.haml
+        </td>
+        <td class='line-number'>2</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/categories/_form.html.haml
+        </td>
+        <td class='line-number'>4</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/categories/_form.html.haml
+        </td>
+        <td class='line-number'>6</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/items/_form.html.haml
+        </td>
+        <td class='line-number'>34</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/layouts/_basket.html.haml
+        </td>
+        <td class='line-number'>3</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/layouts/_basket.html.haml
+        </td>
+        <td class='line-number'>5</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/layouts/_basket.html.haml
+        </td>
+        <td class='line-number'>9</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/layouts/_basket.html.haml
+        </td>
+        <td class='line-number'>24</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/layouts/_navigation.html.haml
+        </td>
+        <td class='line-number'>5</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/layouts/_navigation.html.haml
+        </td>
+        <td class='line-number'>8</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/layouts/_page.html.haml
+        </td>
+        <td class='line-number'>1</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/layouts/_page.html.haml
+        </td>
+        <td class='line-number'>3</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/layouts/_page.html.haml
+        </td>
+        <td class='line-number'>4</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/layouts/_page.html.haml
+        </td>
+        <td class='line-number'>7</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/layouts/_page.html.haml
+        </td>
+        <td class='line-number'>9</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/layouts/_page.html.haml
+        </td>
+        <td class='line-number'>12</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/pages/_form.html.haml
+        </td>
+        <td class='line-number'>1</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/pages/_form.html.haml
+        </td>
+        <td class='line-number'>2</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/pages/_form.html.haml
+        </td>
+        <td class='line-number'>4</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/pages/_form.html.haml
+        </td>
+        <td class='line-number'>6</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable' target='_blank'>replace instance variable with local variable</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/pages_controller.rb
+        </td>
+        <td class='line-number'>18</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/56-use-query-attribute' target='_blank'>use query attribute (@page.links_to?)</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/models/admin.rb
+        </td>
+        <td class='line-number'>7</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/models/page.rb
+        </td>
+        <td class='line-number'>4</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/models/line_item.rb
+        </td>
+        <td class='line-number'>4</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/models/item.rb
+        </td>
+        <td class='line-number'>7</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/models/category.rb
+        </td>
+        <td class='line-number'>3</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/models/basket.rb
+        </td>
+        <td class='line-number'>3</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/application_controller.rb
+        </td>
+        <td class='line-number'>3</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/baskets_controller.rb
+        </td>
+        <td class='line-number'>3</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/categories_controller.rb
+        </td>
+        <td class='line-number'>2</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/items_controller.rb
+        </td>
+        <td class='line-number'>2</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/line_items_controller.rb
+        </td>
+        <td class='line-number'>2</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/controllers/pages_controller.rb
+        </td>
+        <td class='line-number'>2</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/helpers/application_helper.rb
+        </td>
+        <td class='line-number'>6</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./app/views/items/search.html.haml
+        </td>
+        <td class='line-number'>4</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./config/environments/development.rb
+        </td>
+        <td class='line-number'>25</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./config/environments/production.rb
+        </td>
+        <td class='line-number'>49</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./config/initializers/devise.rb
+        </td>
+        <td class='line-number'>10</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./config/routes.rb
+        </td>
+        <td class='line-number'>2</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+      <tr>
+        <td class='filename'>
+          ./db/migrate/20101223202925_devise_create_admins.rb
+        </td>
+        <td class='line-number'>4</td>
+        <td class='message'>
+          <a href='http://rails-bestpractices.com/posts/60-remove-trailing-whitespace' target='_blank'>remove trailing whitespace</a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
