@@ -19,14 +19,16 @@ class Basket < ActiveRecord::Base
   
   # returns a URL which points to the PayPal Web Payments Standard
   # gateway. Builds the baskets and 
-  def paypal_url(return_url)
+  def paypal_url(return_url, notify_url)
     values = {  
       :business => 'paypal_1303466866_biz@alexpearce.me',
       :cmd => '_cart',
       :upload => 1,
       :return => return_url,
       # invoice number is the basket ID
-      :invoice => id
+      :invoice => id,
+      # URL IPNs get sent to
+      :notify_url => notify_url
     }
     
     # add each line item to the cart, using the self_with_parent method

@@ -48,4 +48,4 @@
 		%td#basket_total
 			=ntc @basket.subtotal + @basket.postage
 			
-%a{:href => @basket.paypal_url(root_url), :id => 'checkout-with-paypal', :title => 'Checkout using PayPal'} Click me!
+%a{:href => @basket.paypal_url(root_url, payment_notifications_url), :id => 'checkout-with-paypal', :title => 'Checkout using PayPal'} Click me!
