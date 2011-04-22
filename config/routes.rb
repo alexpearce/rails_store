@@ -17,6 +17,8 @@ Store::Application.routes.draw do
   
   resources :pages
   
+  resources :payment_notifications, :only => [:create]
+  
   root :to => 'items#recent'
   
 end
