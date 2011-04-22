@@ -853,6 +853,7 @@ form.admin input[type=submit] {
 /** PAYPAL BUTTON **/
 /* line 514, ../../../app/stylesheets/screen.scss */
 #checkout-with-paypal {
+  display: block;
   width: 245px;
   height: 47px;
   margin: 0 0 0 220px;
@@ -869,14 +870,14 @@ form.admin input[type=submit] {
 /** END PAYPAL BUTTON **/
 /** END FORMS **/
 /** TABLES **/
-/* line 528, ../../../app/stylesheets/screen.scss */
+/* line 529, ../../../app/stylesheets/screen.scss */
 .main table {
   width: 100%;
   margin: 10px 0;
   text-align: center;
   border: 1px solid #ad3e3e;
 }
-/* line 533, ../../../app/stylesheets/screen.scss */
+/* line 534, ../../../app/stylesheets/screen.scss */
 .main table th {
   padding: 7px 0;
   background: #d44040;
@@ -885,45 +886,45 @@ form.admin input[type=submit] {
   font-weight: bold;
   text-align: center;
 }
-/* line 542, ../../../app/stylesheets/screen.scss */
+/* line 543, ../../../app/stylesheets/screen.scss */
 .main table td {
   padding: 5px 0;
   background-color: transparent;
   text-align: center;
 }
-/* line 546, ../../../app/stylesheets/screen.scss */
+/* line 547, ../../../app/stylesheets/screen.scss */
 .main table td.b {
   font-weight: bold;
 }
-/* line 550, ../../../app/stylesheets/screen.scss */
+/* line 551, ../../../app/stylesheets/screen.scss */
 .main table td span.quantity {
   border-bottom: 1px dotted #444;
   cursor: pointer;
 }
-/* line 554, ../../../app/stylesheets/screen.scss */
+/* line 555, ../../../app/stylesheets/screen.scss */
 .main table td form {
   margin: 0;
 }
-/* line 556, ../../../app/stylesheets/screen.scss */
+/* line 557, ../../../app/stylesheets/screen.scss */
 .main table td form .field {
   margin: 0;
 }
-/* line 559, ../../../app/stylesheets/screen.scss */
+/* line 560, ../../../app/stylesheets/screen.scss */
 .main table td form select {
   margin: 0;
 }
-/* line 564, ../../../app/stylesheets/screen.scss */
+/* line 565, ../../../app/stylesheets/screen.scss */
 .main table tr {
   background: #fafafa;
   border-bottom: 1px solid #e8f0f5;
   border-left: 1px solid #a3b6c5;
   border-right: 1px solid #a3b6c5;
 }
-/* line 569, ../../../app/stylesheets/screen.scss */
+/* line 570, ../../../app/stylesheets/screen.scss */
 .main table tr:nth-child(2n+1) {
   background: #f4f4f4;
 }
-/* line 572, ../../../app/stylesheets/screen.scss */
+/* line 573, ../../../app/stylesheets/screen.scss */
 .main table tr:last-child {
   border-bottom: 1px solid #a3b6c5;
 }
@@ -931,13 +932,13 @@ form.admin input[type=submit] {
 /** END TABLES **/
 /** FOOTER **/
 /** STICKY FOOTER**/
-/* line 581, ../../../app/stylesheets/screen.scss */
+/* line 582, ../../../app/stylesheets/screen.scss */
 .push {
   height: 50px;
 }
 
 /** END STICKY FOOTER**/
-/* line 585, ../../../app/stylesheets/screen.scss */
+/* line 586, ../../../app/stylesheets/screen.scss */
 footer {
   height: 32px;
   padding: 18px 0 0 0;
@@ -949,15 +950,15 @@ footer {
   -o-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 3px 0 inset;
   box-shadow: rgba(0, 0, 0, 0.3) 0 2px 3px 0 inset;
 }
-/* line 592, ../../../app/stylesheets/screen.scss */
+/* line 593, ../../../app/stylesheets/screen.scss */
 footer .right {
   float: right;
 }
-/* line 595, ../../../app/stylesheets/screen.scss */
+/* line 596, ../../../app/stylesheets/screen.scss */
 footer a {
   color: #999;
 }
-/* line 597, ../../../app/stylesheets/screen.scss */
+/* line 598, ../../../app/stylesheets/screen.scss */
 footer a:hover {
   color: #d04c49;
 }
