@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110422110721) do
+ActiveRecord::Schema.define(:version => 20110422114533) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                              :null => false
@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(:version => 20110422110721) do
     t.integer  "basket_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "params"
   end
 
   create_table "sessions", :force => true do |t|
