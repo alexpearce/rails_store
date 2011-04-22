@@ -5,7 +5,7 @@ class Admin < ActiveRecord::Base
   # This is in addition to a real persisted field like 'username'
   attr_accessible :email, :username, :password, :password_confirmation
   
-  protected
+  private
 
     def self.find_for_database_authentication(conditions)
       value = conditions[authentication_keys.first]
