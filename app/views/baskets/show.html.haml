@@ -16,14 +16,14 @@
 			Quantity
 		%th
 			Sub-Total
-	-for li in @basket.line_items
+	-for li in current_basket.line_items
 		%tr
 			%td
-				=li.item.self_with_parent
+				= li.item.self_with_parent
 			%td
 				=ntc li.item.price
 			%td.quantity_form
-				=form_for [@basket, li], :remote => true do |f|
+				= form_for [current_basket, li], :remote => true do |f|
 					.field
 						= f.select :quantity, 0..9 if li.item.stock > 9
 						= f.select :quantity, 0..li.item.stock if li.item.stock < 9
@@ -34,18 +34,18 @@
 		%td.b
 			Subtotal
 		%td#basket_subtotal
-			=ntc @basket.subtotal
+			=ntc current_basket.subtotal
 	%tr
 		%td{:colspan => 2}
 		%td.b
 			Postage
 		%td#basket_postage
-			=ntc @basket.postage
+			=ntc current_basket.postage
 	%tr
 		%td{:colspan => 2}
 		%td.b
 			Total
 		%td#basket_total
-			=ntc @basket.subtotal + @basket.postage
+			=ntc(current_basket.subtotal + current_basket.postage)
 			
-%a{:href => @basket.paypal_url(root_url, payment_notifications_url), :id => 'checkout-with-paypal', :title => 'Checkout using PayPal'} Click me!
+%a{:href => current_basket.paypal_url(root_url, payment_notifications_url), :id => 'checkout-with-paypal', :title => 'Checkout using PayPal'} Click me!

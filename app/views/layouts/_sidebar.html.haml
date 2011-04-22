@@ -2,7 +2,7 @@
 	= yield :sidebar
 
 - unless controller.controller_name == 'baskets'
-	= render 'layouts/basket', :basket => @basket
+	= render 'layouts/basket', :basket => current_basket
 - else
 	%h1
 		Help

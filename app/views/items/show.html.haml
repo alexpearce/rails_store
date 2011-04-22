@@ -33,7 +33,7 @@
 			%span.price= ntc @item.price
 		
 		.add-to-basket
-			= form_for [@basket, @line_item], :html => {:class => 'right'} do |f|
+			= form_for [current_basket, @line_item], :html => {:class => 'right'} do |f|
 				.field
 					- if @item.children.empty?
 						= f.hidden_field :item_id

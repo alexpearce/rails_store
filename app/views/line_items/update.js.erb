@@ -1,9 +1,9 @@
 <%
 
-@basket = @line_item.basket
+basket = @line_item.basket
 item_subtotal = @line_item.quantity * @line_item.item.price
-subtotal = @basket.subtotal
-postage = @basket.postage
+subtotal = basket.subtotal
+postage = basket.postage
 total = subtotal + postage
 
 %>
