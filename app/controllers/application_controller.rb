@@ -7,13 +7,20 @@ class ApplicationController < ActionController::Base
   
   private
   
-    # we use the basket on every pagel; it's either in the sidebar
+    # we use the basket on every page; it's either in the sidebar
     # or we're in the baskets controller, so we find it here
+    # TODO refactor this so that it returns the current basket
+    # (or creates a new one) only on request rather than every page load
     def find_or_create_basket
-      @basket = Basket.find(session[:basket_id], :include => :line_items)
-    rescue ActiveRecord::RecordNotFound
-      @basket = Basket.create
-      session[:basket_id] = @basket.id
+      if session[:basket_id]
+        @basket = Basket.find(session[:basket_id], :include => :line_items)
+        session[:basket_id] = nil if @basket.purchased_at
+      end
+      
+      unless session[:basket_id]
+        @basket = Basket.create!
+        session[:basket_id] = @basket.id
+      end
     end
     
     def persist_location
