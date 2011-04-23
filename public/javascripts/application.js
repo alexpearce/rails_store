@@ -79,7 +79,7 @@ var controllers = {
   }, /* end basket controller */
   items: {
     ready: function() {
-      
+      $('a:has(img)').fancybox();
     }
   }, /* end items */
   pages: {
@@ -106,7 +106,5 @@ var utilities = {
 $(function () {
   
   controllers.application.ready();
-	
-	//$('a:has(img)').fancybox();
 			
 });
