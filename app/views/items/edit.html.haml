@@ -5,19 +5,13 @@
 
 - unless @children.empty?
 	%h2 Options
-	%div.grid
-		- @children.each do |c|
-			%div.grid_item
-				%div.twocol
-					%div.meta
-						%a{:href => c.image.url, :title => c.name, :rel => 'option'}
-							%img{:src => c.image.url(:option), :class => 'thumbShadow', :alt => c.name}
-					%div.bd.pad
-						%p
-							= link_to 'Edit', edit_item_path(c)
-							|
-							= link_to 'Destroy', item_path(c), :confirm => "Delete option '#{c.name}' for item '#{@item.name}'?", :method => :delete
-	%div.clearfix
+	- @children.each do |c|
+		%a{:href => c.image.url, :title => c.name, :rel => 'option'}
+			%img{:src => c.image.url(:option), :class => 'thumbShadow', :alt => c.name}
+		%p
+			= link_to 'Edit', edit_item_path(c)
+			|
+			= link_to 'Destroy', item_path(c), :confirm => "Delete option '#{c.name}' for item '#{@item.name}'?", :method => :delete
 	
 %p
 	= link_to "Back to #{@item.parent.name}", edit_item_path(@item.parent) if @item.parent

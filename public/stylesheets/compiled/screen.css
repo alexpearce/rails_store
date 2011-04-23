@@ -732,10 +732,14 @@ form input:focus, form textarea:focus {
   border: 1px solid #888;
 }
 /* line 437, ../../../app/stylesheets/screen.scss */
-form input[type=file]:hover {
+form input[type=file] {
   border: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
 }
-/* line 440, ../../../app/stylesheets/screen.scss */
+/* line 441, ../../../app/stylesheets/screen.scss */
 form input[type=text], form input[type=password], form textarea {
   padding: 5px;
   border: 1px solid #d1d1d1;
@@ -750,33 +754,33 @@ form input[type=text], form input[type=password], form textarea {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 446, ../../../app/stylesheets/screen.scss */
+/* line 447, ../../../app/stylesheets/screen.scss */
 form input[type=text]:hover, form input[type=password]:hover, form textarea:hover {
   border: 1px solid #bbb;
 }
-/* line 449, ../../../app/stylesheets/screen.scss */
+/* line 450, ../../../app/stylesheets/screen.scss */
 form input[type=text]:focus, form input[type=password]:focus, form textarea:focus {
   outline: none;
-  -moz-box-shadow: #fbac86 0 0 1px 0;
-  -webkit-box-shadow: #fbac86 0 0 1px 0;
-  -o-box-shadow: #fbac86 0 0 1px 0;
-  box-shadow: #fbac86 0 0 1px 0;
-  border: 1px solid #fbac86;
+  border: 1px solid #fa8859;
+  -moz-box-shadow: #fa8859 0 0 1px 0;
+  -webkit-box-shadow: #fa8859 0 0 1px 0;
+  -o-box-shadow: #fa8859 0 0 1px 0;
+  box-shadow: #fa8859 0 0 1px 0;
 }
-/* line 456, ../../../app/stylesheets/screen.scss */
+/* line 459, ../../../app/stylesheets/screen.scss */
 form input[type=text], form input[type=password] {
   width: 200px;
 }
-/* line 459, ../../../app/stylesheets/screen.scss */
+/* line 462, ../../../app/stylesheets/screen.scss */
 form textarea {
   width: 430px;
   height: 180px;
 }
-/* line 463, ../../../app/stylesheets/screen.scss */
+/* line 466, ../../../app/stylesheets/screen.scss */
 form input[type=checkbox], form input[type=radio], form select {
   margin: 8px 0;
 }
-/* line 466, ../../../app/stylesheets/screen.scss */
+/* line 469, ../../../app/stylesheets/screen.scss */
 form input[type=submit] {
   border: 1px solid #d1d1d1;
   padding: 4px 20px;
@@ -791,19 +795,19 @@ form input[type=submit] {
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px 0;
   text-shadow: 0 1px 1px #fff;
 }
-/* line 474, ../../../app/stylesheets/screen.scss */
+/* line 477, ../../../app/stylesheets/screen.scss */
 form input[type=submit]:hover {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 2px 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 2px 0;
   -o-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 2px 0;
   box-shadow: rgba(0, 0, 0, 0.15) 0 1px 2px 0;
 }
-/* line 477, ../../../app/stylesheets/screen.scss */
+/* line 480, ../../../app/stylesheets/screen.scss */
 form input[type=submit]:active {
   background: #d5d5d5;
   border: 1px solid #888;
 }
-/* line 481, ../../../app/stylesheets/screen.scss */
+/* line 484, ../../../app/stylesheets/screen.scss */
 form input[type=submit][disabled="disabled"] {
   color: #999;
   -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
@@ -812,14 +816,14 @@ form input[type=submit][disabled="disabled"] {
   box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
   cursor: default;
 }
-/* line 485, ../../../app/stylesheets/screen.scss */
+/* line 488, ../../../app/stylesheets/screen.scss */
 form input[type=submit][disabled="disabled"]:hover {
   -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
   -o-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
   box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
 }
-/* line 488, ../../../app/stylesheets/screen.scss */
+/* line 491, ../../../app/stylesheets/screen.scss */
 form input[type=submit][disabled="disabled"]:active {
   background: #e9e9e9;
   border: 1px solid #d1d1d1;
@@ -827,31 +831,31 @@ form input[type=submit][disabled="disabled"]:active {
   background-image: -moz-linear-gradient(top, #ffffff 0%, #eaeaea 100%);
   background-image: linear-gradient(top, #ffffff 0%, #eaeaea 100%);
 }
-/* line 495, ../../../app/stylesheets/screen.scss */
+/* line 498, ../../../app/stylesheets/screen.scss */
 form.admin input[type=submit] {
   margin: 5px 0 0 110px;
 }
 
 /** FORM ERRORS **/
-/* line 501, ../../../app/stylesheets/screen.scss */
+/* line 504, ../../../app/stylesheets/screen.scss */
 #error_explanation {
   padding: 10px;
   margin: 10px 20px;
 }
 
-/* line 505, ../../../app/stylesheets/screen.scss */
+/* line 508, ../../../app/stylesheets/screen.scss */
 #error_explanation h2 {
   font-size: 14px;
 }
 
-/* line 508, ../../../app/stylesheets/screen.scss */
+/* line 511, ../../../app/stylesheets/screen.scss */
 #error_explanation h2, #error_explanation h3 {
   margin: 0;
 }
 
 /** END FORM ERRORS **/
 /** PAYPAL BUTTON **/
-/* line 514, ../../../app/stylesheets/screen.scss */
+/* line 517, ../../../app/stylesheets/screen.scss */
 #checkout-with-paypal {
   display: block;
   width: 245px;
@@ -870,14 +874,14 @@ form.admin input[type=submit] {
 /** END PAYPAL BUTTON **/
 /** END FORMS **/
 /** TABLES **/
-/* line 529, ../../../app/stylesheets/screen.scss */
+/* line 532, ../../../app/stylesheets/screen.scss */
 .main table {
   width: 100%;
   margin: 10px 0;
   text-align: center;
   border: 1px solid #ad3e3e;
 }
-/* line 534, ../../../app/stylesheets/screen.scss */
+/* line 537, ../../../app/stylesheets/screen.scss */
 .main table th {
   padding: 7px 0;
   background: #d44040;
@@ -886,45 +890,45 @@ form.admin input[type=submit] {
   font-weight: bold;
   text-align: center;
 }
-/* line 543, ../../../app/stylesheets/screen.scss */
+/* line 546, ../../../app/stylesheets/screen.scss */
 .main table td {
   padding: 5px 0;
   background-color: transparent;
   text-align: center;
 }
-/* line 547, ../../../app/stylesheets/screen.scss */
+/* line 550, ../../../app/stylesheets/screen.scss */
 .main table td.b {
   font-weight: bold;
 }
-/* line 551, ../../../app/stylesheets/screen.scss */
+/* line 554, ../../../app/stylesheets/screen.scss */
 .main table td span.quantity {
   border-bottom: 1px dotted #444;
   cursor: pointer;
 }
-/* line 555, ../../../app/stylesheets/screen.scss */
+/* line 558, ../../../app/stylesheets/screen.scss */
 .main table td form {
   margin: 0;
 }
-/* line 557, ../../../app/stylesheets/screen.scss */
+/* line 560, ../../../app/stylesheets/screen.scss */
 .main table td form .field {
   margin: 0;
 }
-/* line 560, ../../../app/stylesheets/screen.scss */
+/* line 563, ../../../app/stylesheets/screen.scss */
 .main table td form select {
   margin: 0;
 }
-/* line 565, ../../../app/stylesheets/screen.scss */
+/* line 568, ../../../app/stylesheets/screen.scss */
 .main table tr {
   background: #fafafa;
   border-bottom: 1px solid #e8f0f5;
   border-left: 1px solid #a3b6c5;
   border-right: 1px solid #a3b6c5;
 }
-/* line 570, ../../../app/stylesheets/screen.scss */
+/* line 573, ../../../app/stylesheets/screen.scss */
 .main table tr:nth-child(2n+1) {
   background: #f4f4f4;
 }
-/* line 573, ../../../app/stylesheets/screen.scss */
+/* line 576, ../../../app/stylesheets/screen.scss */
 .main table tr:last-child {
   border-bottom: 1px solid #a3b6c5;
 }
@@ -932,13 +936,13 @@ form.admin input[type=submit] {
 /** END TABLES **/
 /** FOOTER **/
 /** STICKY FOOTER**/
-/* line 582, ../../../app/stylesheets/screen.scss */
+/* line 585, ../../../app/stylesheets/screen.scss */
 .push {
   height: 50px;
 }
 
 /** END STICKY FOOTER**/
-/* line 586, ../../../app/stylesheets/screen.scss */
+/* line 589, ../../../app/stylesheets/screen.scss */
 footer {
   height: 32px;
   padding: 18px 0 0 0;
@@ -950,15 +954,15 @@ footer {
   -o-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 3px 0 inset;
   box-shadow: rgba(0, 0, 0, 0.3) 0 2px 3px 0 inset;
 }
-/* line 593, ../../../app/stylesheets/screen.scss */
+/* line 596, ../../../app/stylesheets/screen.scss */
 footer .right {
   float: right;
 }
-/* line 596, ../../../app/stylesheets/screen.scss */
+/* line 599, ../../../app/stylesheets/screen.scss */
 footer a {
   color: #999;
 }
-/* line 598, ../../../app/stylesheets/screen.scss */
+/* line 601, ../../../app/stylesheets/screen.scss */
 footer a:hover {
   color: #d04c49;
 }

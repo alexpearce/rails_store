@@ -434,8 +434,9 @@ form {
 			border: 1px solid #888;
 		}
 	}
-	input[type=file]:hover {
+	input[type=file] {
 		border: none;
+		@include box-shadow(none);
 	}
 	input[type=text], input[type=password], textarea {
 		padding: 5px;
@@ -449,8 +450,10 @@ form {
 		&:focus {
 			// stops default focus highlight
 			outline:none;
-			@include box-shadow(#fbac86, 0, 0, 1px);
-			border: 1px solid #fbac86;
+			//@include box-shadow(#fbac86, 0, 0, 1px);
+			//border: 1px solid #fbac86;
+			border: 1px solid #fa8859;
+			@include box-shadow(#fa8859, 0, 0, 1px);
 		}
 	}
 	input[type=text], input[type=password] {
