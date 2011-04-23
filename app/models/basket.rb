@@ -1,6 +1,11 @@
 class Basket < ActiveRecord::Base
   has_many :line_items, :dependent => :destroy
   
+  # returns true if the basket contains no line items, i.e. if empty
+  def empty?
+    (line_items.count == 0)
+  end
+  
   # sum the prices of all the items in the basket,
   # not including postage
   def subtotal
