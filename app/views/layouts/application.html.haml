@@ -1,5 +1,5 @@
 !!!
-%html
+%html{:class => controller.controller_name}
 	%head
 		%meta{:charset => 'utf-8'}
 	
@@ -35,6 +35,9 @@
 						- flash.each do |key, msg|
 							%div{:id => key}
 								= msg
+						
+						-# javascript page classification
+						%span{:id => 'classifier', :class => classifier_class}
 						
 						= yield
 				

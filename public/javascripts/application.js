@@ -1,19 +1,28 @@
 var controllers = {
   application: {
     ready: function() {
-      controllers.baskets.ready();
-      //console.log(document.location.pathname);
+
+      for (var i = 0; i < this.controllers.length; i++) {
+        var regExp = new RegExp(this.controllers[i]);
+        
+        // if we're on a controller with a js ready function, call it
+        if (this.page_classification.match(regExp)) utilities.call_if_exists(window['controllers'][this.controllers[i]]['ready']);
+      }
       
       this.slide_up_flash_messages($('#notice, #alert, #error'));
     },
     slide_up_flash_messages: function(flash_messages) {
       // if there are any flash messages on the page, slide them up after 5 seconds
     	if (flash_messages.length !== 0) flash_messages.animate({opacity : 1}, 5e3).slideUp('fast');
-    }
-  }, // end application controller
+    },
+    controllers: ['baskets', 'items','pages'],
+    page_classification: document.getElementById('classifier').className
+  }, /* end application controller */
+
   baskets: {
     ready: function() {
-      this.show();
+      // basket only has a show action
+      controllers.baskets.show();
     },
     show: function() {
       this.prepare_quantity_forms($('.quantity_form'));
@@ -50,7 +59,7 @@ var controllers = {
         });
         
       }
-    }, // end prepare_quantity_forms
+    }, /* end prepare_quantity_forms */
     quantity_update_success: function(select, json_data) {
       
       // JSON object: "item_subtotal", "subtotal", "postage", "total"
@@ -66,9 +75,19 @@ var controllers = {
       $('#basket_postage').html(json_data["postage"]).animateHighlight();
       $('#basket_total').html(json_data["total"]).animateHighlight();
       
-    } // end quantity_update_success
-  } // end basket controller
-}; // end controllers
+    } /* end quantity_update_success */
+  }, /* end basket controller */
+  items: {
+    ready: function() {
+      
+    }
+  }, /* end items */
+  pages: {
+    ready: function() {
+      
+    }
+  }
+}; /* end controllers */
 
 // flashes background colours
 $.fn.animateHighlight = function(highlightColor, duration) {
@@ -77,6 +96,12 @@ $.fn.animateHighlight = function(highlightColor, duration) {
 		originalBg = this.parent().css("backgroundColor");
     this.stop().css("background-color", highlightBg).animate({backgroundColor: originalBg}, animateMs);
 };
+
+var utilities = {
+  call_if_exists: function(function_reference) {
+    if (typeof(function_reference) === 'function') function_reference();
+  }
+}
 
 $(function () {
   

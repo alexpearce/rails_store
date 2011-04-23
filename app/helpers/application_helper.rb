@@ -12,4 +12,9 @@ module ApplicationHelper
   def nav_collection
     Page.where("published = '1'").find_all_by_parent_id(nil)
   end
+  
+  #
+  def classifier_class
+    "#{controller.controller_name} #{controller.action_name}"
+  end
 end
