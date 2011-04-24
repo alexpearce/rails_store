@@ -38,8 +38,11 @@ class LineItemsController < ApplicationController
       @line_item ||= current_basket.line_items.build({:item_id => params[:line_item][:item_id]})
       if @line_item.save
         # all line items start with zero quantity
-        @line_item.increment!(:quantity)
-        flash[:notice] = render_to_string :partial => 'shared/added_to_basket'
+        if @line_item.update_attributes(:quantity => @line_item.quantity + 1)
+          flash[:notice] = render_to_string :partial => 'shared/added_to_basket'
+        else
+          flash[:error] = 'You already have the maximum number of a single item in your basket (9).'
+        end
       else
         flash[:error] = 'Basket update failed.'
       end
