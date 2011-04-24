@@ -992,14 +992,14 @@ footer a:hover {
 /* line 18, ../../../app/stylesheets/_lightbox.scss */
 #lightbox p {
   position: absolute;
-  bottom: 15px;
+  bottom: -8px;
   left: 200px;
   right: 200px;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(0, 0, 0, 0.55);
   text-align: center;
-  color: #000;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
@@ -1021,7 +1021,7 @@ footer a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 4px solid #eee;
+  border: 4px solid #eaeaea;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) 0;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) 0;
   -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) 0;

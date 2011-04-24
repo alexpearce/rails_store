@@ -161,7 +161,7 @@ var lightbox = {
 		img.onload = function() {
 		
 			// figure out the scale factor
-			var maxY = $(window).height() - 200;
+			var maxY = $(window).height() - 150;
 			var maxX = $(window).width() - 75;
 			var imgY = this.height;
 			var imgX = this.width;
