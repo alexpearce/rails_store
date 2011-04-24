@@ -1,5 +1,5 @@
 !!!
-%html{:class => controller.controller_name}
+%html
 	%head
 		%meta{:charset => 'utf-8'}
 	
@@ -36,7 +36,7 @@
 							%div{:id => key}
 								= msg
 						
-						-# javascript page classification
+						-# javascript page classification, see application helper
 						%span{:id => 'classifier', :class => classifier_class}
 						
 						= yield
@@ -58,4 +58,4 @@
 					- else
 						= link_to 'Login',  new_admin_session_path
 		
-		= javascript_include_tag 'jquery', 'rails', 'jquery.color', 'application'
+		= javascript_include_tag 'jquery', 'rails', 'jquery.color', 'lightbox', 'application'

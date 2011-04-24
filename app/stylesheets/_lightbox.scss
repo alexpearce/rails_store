@@ -1,6 +1,6 @@
 .ie6, .ie7, .ie8 {
   #lightbox {
-    background: url('../img/lightbox-bg.png');
+    background: url('../../images/lightbox-bg.png');
     p {
       background: #fff;
     }
@@ -13,7 +13,7 @@
 	height: 100%;
 	width: 100%;
 	z-index: 100;
-	background: rgba(255, 255, 255, 0.35) url('../img/spinner.gif') no-repeat 50% 50%;
+	background: rgba(255, 255, 255, 0.35) url('../../images/spinner.gif') no-repeat 50% 50%;
 	display: none;
 	p {
 		position: absolute;
@@ -47,7 +47,7 @@
 	position: absolute;
 	height: 34px;
 	width: 35px;
-	background: url('../img/lightbox.png');
+	background: url('../../images/lightbox.png');
 	cursor: pointer;
 }
 #lightboxClose {

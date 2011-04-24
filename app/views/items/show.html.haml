@@ -2,12 +2,12 @@
 		
 .media
 	.meta
-		%a{:href => @item.image.url, :title => @item.name}
+		%a{:href => @item.image.url, :title => @item.name, :rel => 'items-gallery'}
 			%img{:src => @item.image.url(:thumb), :alt => @item.name, :class => 'item-image'}
 		- unless @item.children.empty?
 			%h2 Options
 			- @item.children.each do |c|
-				%a{:href => c.image.url, :title => c.name, :rel => 'option'}
+				%a{:href => c.image.url, :title => "#{@item.name} - #{c.name}", :rel => 'items-gallery'}
 					%img{:src => c.image.url(:option), :alt => c.name}
 					
 

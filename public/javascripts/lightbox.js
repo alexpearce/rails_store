@@ -1,8 +1,15 @@
 /*
- * Lightbox for AlexPearce.me 
+ * Lightbox for AlexPearce.me
+ * 
  * @version 0.1
+ *
  * @author Alex Pearce <alex [at] alexpearce [dot] me>
+ *
  * @license http://creativecommons.org/licenses/by-sa/3.0/
+ *
+ * @usage
+ *   if ($('html.ie6').length === 0) lightbox.init($('a:has(img)'));
+ *
  * @comments I try to use 'pure' JS when applicable here, but trying
  * things likes animations and complex selectors is pointless when
  * jQuery offers such compatibility and scope.
@@ -23,71 +30,76 @@ var lightbox = {
 	
 	// accepts a selector that, when clicked, shows the lightbox
 	init: function(selector) {
-	  // shortcut to the body tag
-		var bd = document.body;
-    
-    // create the lightbox fragment
-	  var lb = '';
-	  lb += '<div class="png_bg" id="lightbox">';
-	  lb +=   '<div class="png_bg" id="lightboxClose"></div>';
-	  lb +=   '<div class="png_bg" id="lightboxNext"></div>';
-	  lb +=   '<div class="png_bg" id="lightboxPrev"></div>';
-	  lb +=   '<div id="lightboxImg"><img></div><p></p>';
-	  lb += '</div>';
 	  
-		// http://stackoverflow.com/questions/814564/inserting-html-elements-with-javascript
-		var fragment = document.createDocumentFragment();
-		var temp = document.createElement('div');
-		temp.innerHTML = lb;
-		while (temp.firstChild) {
-		  fragment.appendChild(temp.firstChild);
-		}
-		
-		// append the fragment to the inside of the body, at the top
-		bd.insertBefore(fragment, bd.childNodes[0]);
-		
-		// we've got the overlay now, so assign some properties		
-		var overlay = document.getElementById('lightbox');
-		this.$overlay = $(overlay);
-		
-		// close the lightbox when..
-	  overlay.onclick = function(event) {
-		  // only close if the lightbox itself is clicked
-		  
-		  // http://annevankesteren.nl/2005/07/dom-3-events
-		  if (!event) event = window.event;
-		  var target = event.target ? event.target : event.srcElement;
-		  
-			switch(target.id) {
-				case 'lightbox':
-					lightbox.close();
-					break;
-				case 'lightboxClose':
-					lightbox.close();
-					break;
-				case 'lightboxNext':
-					lightbox.next();
-					break;
-				case 'lightboxPrev':
-					lightbox.prev();
-					break;
-				default:
-					break;
-			}
-		};
-		
-		bd.onkeydown = function(event) {
-		  // right arrow
-		  if (event.keyCode === 39) lightbox.next();
-		  // left arrow
-			if (event.keyCode === 37) lightbox.prev();
-			// esc || x
-			if (event.keyCode === 27 || event.keyCode === 88) lightbox.close();
-		};
-		
-		// check for IE
-		lightbox._isIE();
-		
+	  // only setup the overlay if we haven't already
+	  if (this.$overlay === null) {
+	    // shortcut to the body tag
+  		var bd = document.body;
+
+      // create the lightbox fragment
+  	  var lb = '';
+  	  lb += '<div class="png_bg" id="lightbox">';
+  	  lb +=   '<div class="png_bg" id="lightboxClose"></div>';
+  	  lb +=   '<div class="png_bg" id="lightboxNext"></div>';
+  	  lb +=   '<div class="png_bg" id="lightboxPrev"></div>';
+  	  lb +=   '<div id="lightboxImg"><img></div><p></p>';
+  	  lb += '</div>';
+
+  		// http://stackoverflow.com/questions/814564/inserting-html-elements-with-javascript
+  		var fragment = document.createDocumentFragment();
+  		var temp = document.createElement('div');
+  		temp.innerHTML = lb;
+  		while (temp.firstChild) {
+  		  fragment.appendChild(temp.firstChild);
+  		}
+
+  		// append the fragment to the inside of the body, at the top
+  		bd.insertBefore(fragment, bd.childNodes[0]);
+
+  		// we've got the overlay now, so assign some properties		
+  		var overlay = document.getElementById('lightbox');
+  		this.$overlay = $(overlay);
+
+  		// close the lightbox when..
+  	  overlay.onclick = function(event) {
+  		  // only close if the lightbox itself is clicked
+
+  		  // http://annevankesteren.nl/2005/07/dom-3-events
+  		  if (!event) event = window.event;
+  		  var target = event.target ? event.target : event.srcElement;
+
+  			switch(target.id) {
+  				case 'lightbox':
+  					lightbox.close();
+  					break;
+  				case 'lightboxClose':
+  					lightbox.close();
+  					break;
+  				case 'lightboxNext':
+  					lightbox.next();
+  					break;
+  				case 'lightboxPrev':
+  					lightbox.prev();
+  					break;
+  				default:
+  					break;
+  			}
+  		};
+
+  		bd.onkeydown = function(event) {
+  		  // right arrow
+  		  if (event.keyCode === 39) lightbox.next();
+  		  // left arrow
+  			if (event.keyCode === 37) lightbox.prev();
+  			// esc || x
+  			if (event.keyCode === 27 || event.keyCode === 88) lightbox.close();
+  		};
+
+  		// check for IE
+  		lightbox._isIE();
+  		
+  	}
+
 		// activate the lightbox when the selector is clicked
 		// using jQuery here allows complex selectors
 		selector.click(function(event) {
@@ -106,7 +118,7 @@ var lightbox = {
 		var rel = event.currentTarget.rel;
 		
 		// anchor belongs to a group
-		this.$relGroup = $('a[rel=' + rel +']');
+		if (rel) this.$relGroup = $('a[rel=' + rel +']');
 		
 		// if there's more than one anchor in the rel group, show the next/prev buttons
 		var disp = '';
@@ -169,9 +181,8 @@ var lightbox = {
 			  $imgContainer.fadeIn();
 			}
 
-			var html = lightbox.$anchor.find('span.blurb').html();
-			if (html === null) html = lightbox.$anchor.parent().find('span.blurb').html();
-			$p.html(html).fadeIn('200');
+			var title = lightbox.$anchor.attr('title');
+			$p.text(title).fadeIn('200');
 		};
 		
 		// assign the href of the clicked anchor to the src of the image

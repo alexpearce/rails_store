@@ -971,7 +971,7 @@ footer a:hover {
 /** LIGHTBOX **/
 /* line 2, ../../../app/stylesheets/_lightbox.scss */
 .ie6 #lightbox, .ie7 #lightbox, .ie8 #lightbox {
-  background: url("../img/lightbox-bg.png");
+  background: url("../../images/lightbox-bg.png");
 }
 /* line 4, ../../../app/stylesheets/_lightbox.scss */
 .ie6 #lightbox p, .ie7 #lightbox p, .ie8 #lightbox p {
@@ -986,7 +986,7 @@ footer a:hover {
   height: 100%;
   width: 100%;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.35) url("../img/spinner.gif") no-repeat 50% 50%;
+  background: rgba(255, 255, 255, 0.35) url("../../images/spinner.gif") no-repeat 50% 50%;
   display: none;
 }
 /* line 18, ../../../app/stylesheets/_lightbox.scss */
@@ -1033,7 +1033,7 @@ footer a:hover {
   position: absolute;
   height: 34px;
   width: 35px;
-  background: url("../img/lightbox.png");
+  background: url("../../images/lightbox.png");
   cursor: pointer;
 }
 
