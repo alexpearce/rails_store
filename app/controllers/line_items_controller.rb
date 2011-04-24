@@ -39,7 +39,7 @@ class LineItemsController < ApplicationController
       if @line_item.save
         # all line items start with zero quantity
         @line_item.increment!(:quantity)
-        flash[:notice] = 'Basket updated.'
+        flash[:notice] = render_to_string :partial => 'shared/added_to_basket'
       else
         flash[:error] = 'Basket update failed.'
       end
