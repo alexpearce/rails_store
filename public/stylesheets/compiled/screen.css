@@ -968,3 +968,94 @@ footer a:hover {
 }
 
 /** END FOOTER **/
+/** LIGHTBOX **/
+/* line 2, ../../../app/stylesheets/_lightbox.scss */
+.ie6 #lightbox, .ie7 #lightbox, .ie8 #lightbox {
+  background: url("../img/lightbox-bg.png");
+}
+/* line 4, ../../../app/stylesheets/_lightbox.scss */
+.ie6 #lightbox p, .ie7 #lightbox p, .ie8 #lightbox p {
+  background: #fff;
+}
+
+/* line 9, ../../../app/stylesheets/_lightbox.scss */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.35) url("../img/spinner.gif") no-repeat 50% 50%;
+  display: none;
+}
+/* line 18, ../../../app/stylesheets/_lightbox.scss */
+#lightbox p {
+  position: absolute;
+  bottom: 15px;
+  left: 200px;
+  right: 200px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.45);
+  text-align: center;
+  color: #000;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 29, ../../../app/stylesheets/_lightbox.scss */
+#lightbox p a {
+  color: red;
+}
+/* line 31, ../../../app/stylesheets/_lightbox.scss */
+#lightbox p a:hover {
+  text-decoration: underline;
+}
+
+/* line 38, ../../../app/stylesheets/_lightbox.scss */
+#lightboxImg img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 4px solid #eee;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) 0;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) 0;
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) 0;
+}
+
+/* line 46, ../../../app/stylesheets/_lightbox.scss */
+#lightboxClose, #lightboxNext, #lightboxPrev {
+  position: absolute;
+  height: 34px;
+  width: 35px;
+  background: url("../img/lightbox.png");
+  cursor: pointer;
+}
+
+/* line 53, ../../../app/stylesheets/_lightbox.scss */
+#lightboxClose {
+  top: 10px;
+  left: 10px;
+  background-position: -70px 0;
+}
+
+/* line 58, ../../../app/stylesheets/_lightbox.scss */
+#lightboxNext {
+  top: 50%;
+  right: 40px;
+  background-position: -35px 0;
+}
+
+/* line 63, ../../../app/stylesheets/_lightbox.scss */
+#lightboxPrev {
+  top: 50%;
+  left: 40px;
+  background-position: 0 0;
+}
+
+/** END LIGHTBOX **/
