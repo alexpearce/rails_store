@@ -25,7 +25,7 @@
 		
 					%nav
 						%ul
-							= render 'layouts/navigation', :basket => current_basket
+							= render 'shared/navigation', :basket => current_basket
 
 			.content.ninesixty
 	
@@ -42,7 +42,7 @@
 						= yield
 				
 				%div.sidebar.grid_3
-					= render 'layouts/sidebar'
+					= render 'shared/sidebar'
 		
 			.push
 		

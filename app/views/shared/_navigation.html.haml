@@ -1,6 +1,6 @@
 - clss = ''
 
-= render :partial => 'layouts/page_navigation', :collection => nav_collection, :as => :page
+= render :partial => 'shared/page_navigation', :collection => nav_collection, :as => :page
 
 - unless basket.line_items.count.zero?
 	%li
