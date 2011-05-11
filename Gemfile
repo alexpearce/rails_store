@@ -8,6 +8,9 @@ gem 'rails', '3.0.7'
 # postgresql driver
 gem 'pg'
 
+# pretty models in console
+gem 'hirb'
+
 # Haml markup
 gem 'haml'
 # Haml generators
