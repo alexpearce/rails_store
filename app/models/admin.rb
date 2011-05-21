@@ -7,6 +7,8 @@ class Admin < ActiveRecord::Base
   
   private
 
+    # allows user with email user@email.com to sign in using
+    # either 'user' or 'user@email.com'
     def self.find_for_database_authentication(conditions)
       value = conditions[authentication_keys.first]
       where(["username = :value OR email = :value", { :value => value }]).first
